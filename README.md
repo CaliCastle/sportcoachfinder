@@ -1,5 +1,12 @@
 # Sport Coach Finder
 
-Sport Coach Finder
+__Sport Coach Finder__ Website Project
 
-A project by Graham Davidson and Cali Castle
+
+### Members:
+- Graham Davidson
+- Cali Castle
+
+### Specifications:
+- Backend: Laravel (PHP)
+- Frontend: HTML5, CSS3, JS6, Vue.js
