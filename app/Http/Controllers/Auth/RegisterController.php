@@ -2,7 +2,7 @@
 
 namespace SCF\Http\Controllers\Auth;
 
-use SCF\User;
+use SCF\Models\User;
 use SCF\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \SCF\User
+     * @return \SCF\Models\User
      */
     protected function create(array $data)
     {

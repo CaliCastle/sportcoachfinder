@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => SCF\User::class,
+        'model' => SCF\Models\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

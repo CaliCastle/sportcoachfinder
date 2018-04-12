@@ -13,7 +13,9 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => 'Sport Coach Finder',
+
+    'description' => 'Sport Coach Finder description',
 
     /*
     |--------------------------------------------------------------------------
