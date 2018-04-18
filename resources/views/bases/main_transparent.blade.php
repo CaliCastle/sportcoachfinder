@@ -27,8 +27,28 @@
 </nav>
 
 <section class="hero">
-	<div class="overlay--black"></div>
+	<div class="overlay overlay--black"></div>
+	<div class="hero__background"></div>
+	<div class="hero__content">
+		<div class="hero__content__logo">
+			<span class="logo--text">Sport Coach Finder</span>
+			<img src="/assets/images/logo-white.png" alt="Logo">
+		</div>
+		<div class="hero__content__search-container">
+			<div class="search-box search-box--sport shadowed">
 
+			</div>
+			<div class="search-box search-box--location shadowed">
+
+			</div>
+			<button class="search-button primary-gradient--reverse shadowed">
+				<i class="search-icon"></i>&nbsp;Search
+			</button>
+		</div>
+		<div class="hero__content__tips">
+			<p>The online directory of personal sport coaches and mentors</p>
+		</div>
+	</div>
 </section>
 @stop
 

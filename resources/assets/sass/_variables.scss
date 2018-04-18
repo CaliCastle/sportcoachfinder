@@ -9,7 +9,10 @@ $line-height-base: 1.6;
 // Colors
 $theme-primary: #2E7D32;
 $theme-primary-light: #50a946;
-$theme-primary-gradient: linear-gradient(110deg, $theme-primary, $theme-primary-light);
 
 // Shadows
 $standard-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+
+// Indexes
+$overlay-index: 9;
+$navigation-bar-index: 999;

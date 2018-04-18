@@ -5,4 +5,106 @@
 	top: 0;
 	position: absolute;
 	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include has('background') {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: url("/assets/images/hero/clipboard-field.png") center center;
+		background-size: cover;
+		position: absolute;
+		z-index: 1;
+	}
+
+	@include has('content') {
+		position: relative;
+		width: 90%;
+		max-width: 500px;
+		z-index: #{$overlay-index + 1};
+
+		@include has('logo') {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			.logo--text {
+				font-size: 2.8rem;
+				font-weight: 700;
+				color: #fff;
+				padding-right: 1.4rem;
+				display: block;
+				text-transform: capitalize;
+			}
+
+			img {
+				display: block;
+				max-width: 56px;
+				height: 56px;
+			}
+		}
+
+		@include has('search-container') {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 1rem .5rem;
+			
+			> * {
+				width: 100%;
+				height: 50px;
+				margin: .4rem 0;
+				background: #fff;
+				border-radius: 25px;
+			}
+			
+			.search-box {
+				@include as('sport') {
+					&:before {
+
+					}
+
+					&:after {
+
+					}
+				}
+				
+				@include as('location') {
+					&:before {
+
+					}
+
+					&:after {
+
+					}
+				}
+			}
+			
+			.search-button {
+				outline: none;
+				border: none;
+				color: #eeffff;
+				font-size: 1.3rem;
+				font-family: inherit;
+				font-weight: 600;
+				cursor: pointer;
+			}
+		}
+
+		@include has('tips') {
+			margin: 1.5rem 0 0;
+
+			p {
+				font-size: 1.2rem;
+				font-weight: 600;
+				text-align: center;
+				color: #fff;
+			}
+		}
+	}
 }

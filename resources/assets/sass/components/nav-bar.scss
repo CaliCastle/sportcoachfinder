@@ -3,29 +3,31 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	z-index: 999;
+	z-index: $navigation-bar-index;
+	top: 0;
+	left: 0;
 	
-	@include modifier('transparent') {
+	@include as('transparent') {
 		background: transparent;
 	}
 
-	@include element('container') {
+	@include has('container') {
 		max-width: 1440px;
 		width: 100%;
-		padding: 3rem 2rem;
+		padding: 3.5rem 2rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	@include element('link') {
+	@include has('link') {
 		padding: .8rem;
 		background: none;
 		margin: 0 .5rem;
 	}
 
-	@include element('action') {
+	@include has('action') {
 		padding: .8rem 1.4rem;
 		background: #7f7f7f;
 		border-radius: 2rem;
