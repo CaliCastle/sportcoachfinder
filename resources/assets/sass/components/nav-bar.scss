@@ -1,0 +1,41 @@
+.ui-navigation-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 999;
+	
+	@include modifier('transparent') {
+		background: transparent;
+	}
+
+	@include element('container') {
+		max-width: 1440px;
+		width: 100%;
+		padding: 3rem 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	@include element('link') {
+		padding: .8rem;
+		background: none;
+		margin: 0 .5rem;
+	}
+
+	@include element('action') {
+		padding: .8rem 1.4rem;
+		background: #7f7f7f;
+		border-radius: 2rem;
+	}
+
+	a {
+		color: #eff;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1.3rem;
+		text-transform: capitalize;
+	}
+}
