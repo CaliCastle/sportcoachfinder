@@ -17,7 +17,7 @@
 		</div>
 		<div class="ui-navigation-bar__right">
 			<a class="ui-navigation-bar__link ui-navigation-bar__action primary-gradient shadowed" href="#">
-				<i class="coach-icon"></i>&nbsp;Become a coach
+				<i class="coach-icon" style="font-size: 1.7rem;"></i>&nbsp;Become a coach
 			</a>
 			<a class="ui-navigation-bar__link" href="#">
 				Sign up / Sign in
@@ -36,13 +36,13 @@
 		</div>
 		<div class="hero__content__search-container">
 			<div class="search-box search-box--sport shadowed">
-
+				<input type="text" placeholder="Enter sport name">
 			</div>
 			<div class="search-box search-box--location shadowed">
-
+				<input type="text" placeholder="Enter location">
 			</div>
 			<button class="search-button primary-gradient--reverse shadowed">
-				<i class="search-icon"></i>&nbsp;Search
+				<span>Search</span>
 			</button>
 		</div>
 		<div class="hero__content__tips">

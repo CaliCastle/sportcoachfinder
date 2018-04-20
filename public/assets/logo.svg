@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="287px" viewBox="0 0 299 287" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <defs></defs>
+    <g id="Home" stroke="#000000" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-Design" transform="translate(-114.000000, -120.000000)">
+            <g id="Logo" transform="translate(87.000000, 93.000000)">
+                <g id="Sport-Coach-Finder-Logo-b&amp;w-no-background">
+                    <circle id="Oval" stroke="#000000" stroke-width="24" transform="translate(130.889276, 130.891043) rotate(-45.000000) translate(-130.889276, -130.891043) " cx="130.889276" cy="130.891043" r="91.89"></circle>
+                    <polygon id="Shape" stroke="#000000" stroke-width="0.22" fill="#000000" fill-rule="nonzero" points="209.51 187.65 325.29 288.83 302.1 313.45 198.73 200.33"></polygon>
+                    <path d="M85.19,169.99 L84.45,167.5 L110.89,177.97 L112.24,182.97 C112.24,182.97 87.76,173.04 85.73,172.27 L85.19,169.97 L85.19,169.99 Z M145.88,146.08 L119.6,137.95 L127.46,131.05 L154.77,138.45 L145.88,146.08 Z M83.11,173.28 L84.11,174.08 L108.22,184.08 C113.64,186.17 115.28,187.08 121.08,182.78 C123.08,181.27 131.48,174.7 132.93,174.57 C136.66,174.23 164.53,194.71 179.85,160.04 C180.351583,158.816475 180.733368,157.547205 180.99,156.25 C181.23,155.17 181.42,153.97 181.56,153.1 C181.655683,152.437844 181.695823,151.768846 181.68,151.1 C181.84,144.86 180.19,137.16 175.46,132.73 C172.05,129.54 166.55,128.26 161.73,127.05 C134.25,120.19 136.96,119.51 117.31,135.22 L86.67,159.79 L80.97,165.24 L83.11,173.28 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                    <polygon id="Shape" fill="#000000" fill-rule="nonzero" points="160.1 71.54 139.22 111.86 144.87 115.56 172.09 79.35"></polygon>
+                    <polygon id="Shape" fill="#000000" fill-rule="nonzero" points="74.54 105.2 115.77 124.3 119.22 118.49 81.86 92.86"></polygon>
+                    <polygon id="Shape" fill="#000000" fill-rule="nonzero" points="108.63 69.98 125.23 112.28 131.74 110.46 122.43 66.13"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

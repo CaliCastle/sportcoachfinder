@@ -64,35 +64,99 @@
 			}
 			
 			.search-box {
+				position: relative;
+				color: #696969;
+
+				&:before {
+					@include icons8-font();
+					position: absolute;
+					display: inline-block;
+					left: .8rem;
+					top: 0;
+					height: 100%;
+					vertical-align: middle;
+					line-height: 2;
+					font-size: 1.6rem;
+					color: #a7a7a7;
+				}
+
 				@include as('sport') {
 					&:before {
-
+						content: $icons8-var-whistle;
 					}
 
 					&:after {
-
+						@include icons8-font();
+						display: inline-block;
+						position: absolute;
+						height: 100%;
+						vertical-align: middle;
+						line-height: 2.7;
+						content: $icons8-var-caret-arrowhead-facing-down;
+						font-size: 1.2rem;
+						right: 1rem;
+						top: 0;
+						color: currentColor;
+						cursor: pointer;
 					}
 				}
 				
 				@include as('location') {
 					&:before {
+						content: $icons8-var-location-marker;
+					}
+				}
+				
+				> input {
+					height: 97%;
+					position: absolute;
+					border: none;
+					background: transparent;
+					left: 0;
+					top: 0;
+					width: calc(100% - 5.6rem);
+					margin: 0 2.8rem;
+					outline: none;
+					cursor: text;
+					font-size: 1.2rem;
+					font-weight: 600;
+					color: currentColor;
 
+					&::placeholder {
+						color: #aeadad;
+					}
+					&::-moz-placeholder {
+						color: #aeadad;
 					}
 
-					&:after {
-
+					&::-webkit-input-placeholder {
+						color: #aeadad;
 					}
 				}
 			}
 			
 			.search-button {
 				outline: none;
+				position: relative;
 				border: none;
 				color: #eeffff;
 				font-size: 1.3rem;
 				font-family: inherit;
 				font-weight: 600;
 				cursor: pointer;
+
+				&:before {
+					@include icons8-font();
+					position: absolute;
+					display: inline-block;
+					content: $icons8-var-search;
+					left: .8rem;
+					top: 0;
+					height: 100%;
+					vertical-align: middle;
+					line-height: 2;
+					font-size: 1.6rem;
+				}
 			}
 		}
 

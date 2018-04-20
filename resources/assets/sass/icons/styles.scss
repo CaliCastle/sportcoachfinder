@@ -1,0 +1,19 @@
+@import "variables";
+@import "core";
+@import "path";
+@import "icons";
+
+i.twitter:after {
+	@include icons8-font();
+	content: $icons8-var-black-twitter-logo;
+}
+
+i.search-icon:after {
+	@include icons8-font();
+	content: $icons8-var-search;
+}
+
+i.coach-icon:after {
+	@include icons8-font();
+	content: $icons8-var-personal-trainer-2;
+}

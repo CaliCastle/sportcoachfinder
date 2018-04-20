@@ -1,0 +1,53 @@
+// Icons
+// -------------------------
+
+[data-icon]:before,
+.icon-black-twitter-logo:before,
+.icon-caret-arrowhead-facing-down:before,
+.icon-checkmark:before,
+.icon-circular-arrow:before,
+.icon-close-button:before,
+.icon-coach:before,
+.icon-email-envelope:before,
+.icon-facebook:before,
+.icon-gender-neutral-user:before,
+.icon-instagram:before,
+.icon-left-arrow:before,
+.icon-location-marker:before,
+.icon-lock:before,
+.icon-login:before,
+.icon-personal-trainer:before,
+.icon-personal-trainer-2:before,
+.icon-phone:before,
+.icon-plus:before,
+.icon-search:before,
+.icon-search-button:before,
+.icon-wheelchair:before,
+.icon-whistle:before
+{ @include icons8-font; }
+
+[data-icon]:before { content: attr(data-icon); }
+
+.icon-black-twitter-logo:before { content: $icons8-var-black-twitter-logo; }
+.icon-caret-arrowhead-facing-down:before { content: $icons8-var-caret-arrowhead-facing-down; }
+.icon-checkmark:before { content: $icons8-var-checkmark; }
+.icon-circular-arrow:before { content: $icons8-var-circular-arrow; }
+.icon-close-button:before { content: $icons8-var-close-button; }
+.icon-coach:before { content: $icons8-var-coach; }
+.icon-email-envelope:before { content: $icons8-var-email-envelope; }
+.icon-facebook:before { content: $icons8-var-facebook; }
+.icon-gender-neutral-user:before { content: $icons8-var-gender-neutral-user; }
+.icon-instagram:before { content: $icons8-var-instagram; }
+.icon-left-arrow:before { content: $icons8-var-left-arrow; }
+.icon-location-marker:before { content: $icons8-var-location-marker; }
+.icon-lock:before { content: $icons8-var-lock; }
+.icon-login:before { content: $icons8-var-login; }
+.icon-personal-trainer:before { content: $icons8-var-personal-trainer; }
+.icon-personal-trainer-2:before { content: $icons8-var-personal-trainer-2; }
+.icon-phone:before { content: $icons8-var-phone; }
+.icon-plus:before { content: $icons8-var-plus; }
+.icon-search:before { content: $icons8-var-search; }
+.icon-search-button:before { content: $icons8-var-search-button; }
+.icon-wheelchair:before { content: $icons8-var-wheelchair; }
+.icon-whistle:before { content: $icons8-var-whistle; }
+

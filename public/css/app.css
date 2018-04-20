@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin:400,500,600,700);/* http://meyerweb.com/eric/tools/css/reset/
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,500,600,700);@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -600,6 +602,198 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Sport-Coach-Finder";
+  src: url("/fonts/icons.eot");
+  src: url("/fonts/icons.eot?#iefix") format("embedded-opentype"), url("/fonts/icons.woff2") format("woff2"), url("/fonts/icons.woff") format("woff"), url("/fonts/icons.ttf") format("truetype"), url("/fonts/icons.svg#Sport-Coach-Finder") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@font-face {
+    font-family: "Sport-Coach-Finder";
+    src: url("/fonts/icons.svg#Sport-Coach-Finder") format("svg");
+}
+}
+
+[data-icon]:before,
+.icon-black-twitter-logo:before,
+.icon-caret-arrowhead-facing-down:before,
+.icon-checkmark:before,
+.icon-circular-arrow:before,
+.icon-close-button:before,
+.icon-coach:before,
+.icon-email-envelope:before,
+.icon-facebook:before,
+.icon-gender-neutral-user:before,
+.icon-instagram:before,
+.icon-left-arrow:before,
+.icon-location-marker:before,
+.icon-lock:before,
+.icon-login:before,
+.icon-personal-trainer:before,
+.icon-personal-trainer-2:before,
+.icon-phone:before,
+.icon-plus:before,
+.icon-search:before,
+.icon-search-button:before,
+.icon-wheelchair:before,
+.icon-whistle:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+.icon-black-twitter-logo:before {
+  content: "\F109";
+}
+
+.icon-caret-arrowhead-facing-down:before {
+  content: "\F107";
+}
+
+.icon-checkmark:before {
+  content: "\F111";
+}
+
+.icon-circular-arrow:before {
+  content: "\F110";
+}
+
+.icon-close-button:before {
+  content: "\F114";
+}
+
+.icon-coach:before {
+  content: "\F100";
+}
+
+.icon-email-envelope:before {
+  content: "\F10C";
+}
+
+.icon-facebook:before {
+  content: "\F10A";
+}
+
+.icon-gender-neutral-user:before {
+  content: "\F112";
+}
+
+.icon-instagram:before {
+  content: "\F108";
+}
+
+.icon-left-arrow:before {
+  content: "\F10B";
+}
+
+.icon-location-marker:before {
+  content: "\F106";
+}
+
+.icon-lock:before {
+  content: "\F10D";
+}
+
+.icon-login:before {
+  content: "\F10E";
+}
+
+.icon-personal-trainer:before {
+  content: "\F101";
+}
+
+.icon-personal-trainer-2:before {
+  content: "\F102";
+}
+
+.icon-phone:before {
+  content: "\F113";
+}
+
+.icon-plus:before {
+  content: "\F10F";
+}
+
+.icon-search:before {
+  content: "\F104";
+}
+
+.icon-search-button:before {
+  content: "\F105";
+}
+
+.icon-wheelchair:before {
+  content: "\F115";
+}
+
+.icon-whistle:before {
+  content: "\F103";
+}
+
+i.twitter:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F109";
+}
+
+i.search-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F104";
+}
+
+i.coach-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F102";
+}
+
 body {
   background: #f5f8fa;
   font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
@@ -610,6 +804,29 @@ body {
 
 body > main {
   position: relative;
+}
+
+input {
+  font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
+}
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-shadow: 0 0 0px 0px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .ui-navigation-bar {
@@ -763,14 +980,142 @@ body > main {
   border-radius: 25px;
 }
 
+.hero__content__search-container .search-box {
+  position: relative;
+  color: #696969;
+}
+
+.hero__content__search-container .search-box:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  position: absolute;
+  display: inline-block;
+  left: .8rem;
+  top: 0;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 2;
+  font-size: 1.6rem;
+  color: #a7a7a7;
+}
+
+.hero__content__search-container .search-box--sport:before {
+  content: "\F103";
+}
+
+.hero__content__search-container .search-box--sport:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 2.7;
+  content: "\F107";
+  font-size: 1.2rem;
+  right: 1rem;
+  top: 0;
+  color: currentColor;
+  cursor: pointer;
+}
+
+.hero__content__search-container .search-box--location:before {
+  content: "\F106";
+}
+
+.hero__content__search-container .search-box > input {
+  height: 97%;
+  position: absolute;
+  border: none;
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: calc(100% - 5.6rem);
+  margin: 0 2.8rem;
+  outline: none;
+  cursor: text;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: currentColor;
+}
+
+.hero__content__search-container .search-box > input::-webkit-input-placeholder {
+  color: #aeadad;
+}
+
+.hero__content__search-container .search-box > input:-ms-input-placeholder {
+  color: #aeadad;
+}
+
+.hero__content__search-container .search-box > input::-ms-input-placeholder {
+  color: #aeadad;
+}
+
+.hero__content__search-container .search-box > input::placeholder {
+  color: #aeadad;
+}
+
+.hero__content__search-container .search-box > input::-moz-placeholder {
+  color: #aeadad;
+}
+
+.hero__content__search-container .search-box > input::-webkit-input-placeholder {
+  color: #aeadad;
+}
+
 .hero__content__search-container .search-button {
   outline: none;
+  position: relative;
   border: none;
   color: #eeffff;
   font-size: 1.3rem;
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
+}
+
+.hero__content__search-container .search-button:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  position: absolute;
+  display: inline-block;
+  content: "\F104";
+  left: .8rem;
+  top: 0;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 2;
+  font-size: 1.6rem;
 }
 
 .hero__content__tips {

@@ -7,19 +7,12 @@
 @import "normalize";
 // Variables
 @import "variables";
+// Icons
+@import "icons/styles";
+// Main styles
+@import "main";
 
-body {
-	background: $body-bg;
-	font-family: $font-family-sans-serif;
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-
-	> main {
-		position: relative;
-	}
-}
-
+// === Components ===
 @import "components/nav-bar";
 @import "components/hero";
 
