@@ -1,7 +1,7 @@
 // Mixin functions
 @import "mixins";
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Cabin:300,400,500,600,700');
 // Reset
 @import "reset";
 @import "normalize";
@@ -23,6 +23,11 @@
 	@include as('reverse') {
 		background: linear-gradient(250deg, $theme-primary, $theme-primary-light) !important;
 	}
+}
+
+.bg-white {
+	background: #fff !important;
+	color: $theme-primary !important;
 }
 
 .overlay {

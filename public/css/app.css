@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin:400,500,600,700);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cabin:300,400,500,600,700);@charset "UTF-8";
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -861,6 +861,10 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+a {
+  text-decoration: none;
+}
+
 .ui-navigation-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1197,6 +1201,24 @@ select:-webkit-autofill:focus {
   fill: #449151;
 }
 
+.ui-footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+}
+
 .ui-footer__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1263,6 +1285,42 @@ select:-webkit-autofill:focus {
   font-size: 1.75rem;
 }
 
+.ui-footer__related {
+  margin: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui-footer__links {
+  margin: 0 2.5rem;
+}
+
+.ui-footer__links__heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+}
+
+.ui-footer__links__list li {
+  display: block;
+  margin: 1.2rem 0;
+}
+
+.ui-footer__links__list li a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
 .ui-footer__separator {
   width: 52%;
   height: 2px;
@@ -1283,6 +1341,11 @@ select:-webkit-autofill:focus {
 
 .primary-gradient--reverse {
   background: linear-gradient(250deg, #2E7D32, #50a946) !important;
+}
+
+.bg-white {
+  background: #fff !important;
+  color: #2E7D32 !important;
 }
 
 .overlay {
