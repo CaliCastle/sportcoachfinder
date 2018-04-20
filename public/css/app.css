@@ -746,7 +746,7 @@ template {
   content: "\F103";
 }
 
-i.twitter:after {
+.twitter:after {
   display: inline-block;
   font-family: "Sport-Coach-Finder";
   font-style: normal;
@@ -760,6 +760,38 @@ i.twitter:after {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   content: "\F109";
+}
+
+.instagram:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F108";
+}
+
+.facebook:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F10A";
 }
 
 i.search-icon:after {
@@ -839,10 +871,11 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
   z-index: 999;
   top: 0;
   left: 0;
+  width: 100vw;
 }
 
 .ui-navigation-bar--transparent {
@@ -893,7 +926,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   left: 0;
   top: 0;
-  position: absolute;
+  position: relative;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -922,6 +955,7 @@ select:-webkit-autofill:focus {
   width: 90%;
   max-width: 500px;
   z-index: 10;
+  padding-bottom: 2rem;
 }
 
 .hero__content__logo {
@@ -1127,6 +1161,120 @@ select:-webkit-autofill:focus {
   font-weight: 600;
   text-align: center;
   color: #fff;
+}
+
+.ui-footer {
+  z-index: 998;
+  width: 100vw;
+  padding: 4rem 0 1rem;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#449151), color-stop(88%, #2a692d));
+  background: linear-gradient(to bottom, #449151, #2a692d 88%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui-footer__curve {
+  position: absolute;
+  width: 100%;
+  height: 95px;
+  top: -93px;
+  left: 0;
+}
+
+.ui-footer__curve path {
+  fill: #449151;
+}
+
+.ui-footer__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eff;
+  padding: 1rem 0 2.2rem;
+}
+
+.ui-footer__connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-shadow: 0 1px 15px rgba(0, 0, 0, 0.27);
+}
+
+.ui-footer__connect > * {
+  display: block;
+  margin: .5rem 0;
+}
+
+.ui-footer__connect .ui-footer__logo img {
+  max-width: 102px;
+  max-height: 94px;
+}
+
+.ui-footer__connect span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ui-footer__socials {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.ui-footer__socials a {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+  font-size: 1.75rem;
+}
+
+.ui-footer__separator {
+  width: 52%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ui-footer__copyright {
+  padding: 2.8rem 0;
+  text-align: center;
+  color: #e3e3e3;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .primary-gradient {

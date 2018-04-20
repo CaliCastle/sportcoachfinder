@@ -10,6 +10,12 @@ $line-height-base: 1.6;
 $theme-primary: #2E7D32;
 $theme-primary-light: #50a946;
 
+$theme-footer-light: #449151;
+$theme-footer-gradient: linear-gradient(to bottom, $theme-footer-light, #2a692d 88%);
+
+// Widths & Heights
+$footer-curve-height: 95px;
+
 // Shadows
 $standard-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
 

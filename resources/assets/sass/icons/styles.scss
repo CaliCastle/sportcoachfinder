@@ -3,9 +3,19 @@
 @import "path";
 @import "icons";
 
-i.twitter:after {
+.twitter:after {
 	@include icons8-font();
 	content: $icons8-var-black-twitter-logo;
+}
+
+.instagram:after {
+	@include icons8-font();
+	content: $icons8-var-instagram;
+}
+
+.facebook:after {
+	@include icons8-font();
+	content: $icons8-var-facebook;
 }
 
 i.search-icon:after {

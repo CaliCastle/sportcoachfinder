@@ -1,0 +1,93 @@
+.ui-footer {
+	z-index: #{$navigation-bar-index - 1};
+	width: 100vw;
+	padding: 4rem 0 1rem;
+	position: relative;
+	background: $theme-footer-gradient;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include has('curve') {
+		position: absolute;
+		width: 100%;
+		height: $footer-curve-height;
+		top: #{-$footer-curve-height + 2};
+		left: 0;
+
+		path {
+			fill: $theme-footer-light;
+		}
+	}
+
+	@include has('main') {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		color: #eff;
+		padding: 1rem 0 2.2rem;
+	}
+
+	@include has('connect') {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-shadow: 0 1px 15px rgba(0, 0, 0, 0.27);
+
+		> * {
+			display: block;
+			margin: .5rem 0;
+		}
+
+		.ui-footer__logo {
+			img {
+				max-width: 102px;
+				max-height: 94px;
+			}
+		}
+
+		span {
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
+
+	@include has('socials') {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: currentColor;
+			font-size: 1.75rem;
+		}
+	}
+
+	@include has('links') {
+
+	}
+
+	@include has('separator') {
+		width: 52%;
+		height: 2px;
+		background: rgba(#fff, 0.1);
+	}
+
+	@include has('coaches-counter') {
+
+	}
+
+	@include has('copyright') {
+		padding: 2.8rem 0;
+		text-align: center;
+		color: #e3e3e3;
+		font-size: 1.1rem;
+		font-weight: 500;
+	}
+}

@@ -15,6 +15,7 @@
 // === Components ===
 @import "components/nav-bar";
 @import "components/hero";
+@import "components/footer";
 
 .primary-gradient {
 	background: linear-gradient(110deg, $theme-primary, $theme-primary-light) !important;
@@ -39,3 +40,4 @@
 .shadowed {
 	box-shadow: $standard-shadow;
 }
+

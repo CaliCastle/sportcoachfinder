@@ -3,7 +3,7 @@
 	width: 100%;
 	left: 0;
 	top: 0;
-	position: absolute;
+	position: relative;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
@@ -25,6 +25,7 @@
 		width: 90%;
 		max-width: 500px;
 		z-index: #{$overlay-index + 1};
+		padding-bottom: 2rem;
 
 		@include has('logo') {
 			display: flex;
