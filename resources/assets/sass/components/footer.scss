@@ -109,7 +109,7 @@
 	@include has('newsletter') {
 		width: 100%;
 		max-width: 400px;
-		margin: 2rem 0;
+		margin: 0.1rem 0 2rem;
 
 		@include has('subscribe-container') {
 			width: 100%;

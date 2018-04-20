@@ -1,5 +1,5 @@
 .hero {
-	height: 100vh;
+	height: calc(100vh + #{$footer-curve-height});
 	width: 100%;
 	left: 0;
 	top: 0;
@@ -25,7 +25,7 @@
 		width: 90%;
 		max-width: 500px;
 		z-index: #{$overlay-index + 1};
-		padding-bottom: 2rem;
+		padding-bottom: $footer-curve-height;
 
 		@include has('logo') {
 			display: flex;

@@ -15,7 +15,9 @@
 	<title>@yield('title') | {{ config('app.name') }}</title>
 
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Cabin:300,500,600,800" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+	<link rel="prerender" href="{{ config('app.url') }}">
 
 	@stack('head')
 </head>
