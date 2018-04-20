@@ -44,6 +44,7 @@
 		justify-content: center;
 		align-items: center;
 		text-shadow: 0 1px 15px rgba(0, 0, 0, 0.27);
+		min-width: 125px;
 
 		> * {
 			display: block;
@@ -55,11 +56,6 @@
 				max-width: 102px;
 				max-height: 94px;
 			}
-		}
-
-		span {
-			font-size: 18px;
-			font-weight: 500;
 		}
 	}
 
@@ -82,7 +78,7 @@
 		margin: 0 2rem;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 	}
 
 	@include has('links') {
@@ -105,6 +101,52 @@
 					color: rgba(#fff, 0.8);
 					font-size: 1.1rem;
 					font-weight: 300;
+				}
+			}
+		}
+	}
+
+	@include has('newsletter') {
+		width: 100%;
+		max-width: 400px;
+		margin: 2rem 0;
+
+		@include has('subscribe-container') {
+			width: 100%;
+			position: relative;
+			margin: 1.2rem 0;
+
+			input[type=email] {
+				height: 40px;
+				background: #28632c;
+				border-radius: 2rem;
+				color: #eee;
+				font-size: 1.1rem;
+				font-weight: 500;
+				padding: 0 8rem 0 1.5rem;
+				width: calc(100% - 9.5rem);
+
+				&::placeholder {
+					color: #ccc;
+				}
+			}
+
+			button {
+				top: 0;
+				right: 0;
+				height: 100%;
+				background: #eff;
+				position: absolute;
+				color: $theme-primary;
+				border-radius: 2rem;
+				font-size: 1.05rem;
+				text-transform: uppercase;
+				padding: 0 1.4rem;
+				opacity: 1;
+
+				&[disabled] {
+					opacity: .4;
+					cursor: not-allowed;
 				}
 			}
 		}

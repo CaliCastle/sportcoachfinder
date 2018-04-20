@@ -840,6 +840,8 @@ body > main {
 
 input {
   font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
+  border: none;
+  outline: none;
 }
 
 /* Change Autocomplete styles in Chrome*/
@@ -863,6 +865,20 @@ select:-webkit-autofill:focus {
 
 a {
   text-decoration: none;
+}
+
+button {
+  outline: none;
+  position: relative;
+  border: none;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .ui-navigation-bar {
@@ -1247,6 +1263,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-shadow: 0 1px 15px rgba(0, 0, 0, 0.27);
+  min-width: 125px;
 }
 
 .ui-footer__connect > * {
@@ -1257,11 +1274,6 @@ a {
 .ui-footer__connect .ui-footer__logo img {
   max-width: 102px;
   max-height: 94px;
-}
-
-.ui-footer__connect span {
-  font-size: 18px;
-  font-weight: 500;
 }
 
 .ui-footer__socials {
@@ -1293,9 +1305,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .ui-footer__links {
@@ -1321,6 +1333,64 @@ a {
   font-weight: 300;
 }
 
+.ui-footer__newsletter {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem 0;
+}
+
+.ui-footer__newsletter__subscribe-container {
+  width: 100%;
+  position: relative;
+  margin: 1.2rem 0;
+}
+
+.ui-footer__newsletter__subscribe-container input[type=email] {
+  height: 40px;
+  background: #28632c;
+  border-radius: 2rem;
+  color: #eee;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 8rem 0 1.5rem;
+  width: calc(100% - 9.5rem);
+}
+
+.ui-footer__newsletter__subscribe-container input[type=email]::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.ui-footer__newsletter__subscribe-container input[type=email]:-ms-input-placeholder {
+  color: #ccc;
+}
+
+.ui-footer__newsletter__subscribe-container input[type=email]::-ms-input-placeholder {
+  color: #ccc;
+}
+
+.ui-footer__newsletter__subscribe-container input[type=email]::placeholder {
+  color: #ccc;
+}
+
+.ui-footer__newsletter__subscribe-container button {
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #eff;
+  position: absolute;
+  color: #2E7D32;
+  border-radius: 2rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  padding: 0 1.4rem;
+  opacity: 1;
+}
+
+.ui-footer__newsletter__subscribe-container button[disabled] {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
 .ui-footer__separator {
   width: 52%;
   height: 2px;
@@ -1341,6 +1411,10 @@ a {
 
 .primary-gradient--reverse {
   background: linear-gradient(250deg, #2E7D32, #50a946) !important;
+}
+
+.primary-gradient--dimmed {
+  background: linear-gradient(110deg, rgba(46, 125, 50, 0.3), rgba(80, 169, 70, 0.3)) !important;
 }
 
 .bg-white {

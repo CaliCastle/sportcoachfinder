@@ -23,6 +23,10 @@
 	@include as('reverse') {
 		background: linear-gradient(250deg, $theme-primary, $theme-primary-light) !important;
 	}
+
+	@include as('dimmed') {
+		background: linear-gradient(110deg, rgba($theme-primary, 0.3), rgba($theme-primary-light, 0.3)) !important;
+	}
 }
 
 .bg-white {

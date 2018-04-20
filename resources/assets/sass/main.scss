@@ -12,6 +12,8 @@ body {
 
 input {
 	font-family: $font-family-sans-serif;
+	border: none;
+	outline: none;
 }
 
 /* Change Autocomplete styles in Chrome*/
@@ -33,4 +35,18 @@ select:-webkit-autofill:focus {
 
 a {
 	text-decoration: none;
+}
+
+button {
+	outline: none;
+	position: relative;
+	border: none;
+	font-size: 1.3rem;
+	font-family: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.text-center {
+	text-align: center;
 }
