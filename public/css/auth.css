@@ -842,6 +842,38 @@ i.back-icon:after {
   content: "\F10B";
 }
 
+i.login-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F10E";
+}
+
+i.plus-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F10F";
+}
+
 body {
   background: #f5f8fa;
   font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
@@ -898,6 +930,12 @@ button {
   text-align: center;
 }
 
+.hidden,
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+
 body {
   background: #fff;
 }
@@ -909,9 +947,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -970,11 +1008,288 @@ body {
   font-weight: 700;
 }
 
-.auth__background {
+.auth__panel-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 8rem .5rem 0 5rem;
+}
+
+.auth__panel__logo span {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #2E7D32;
+  font-weight: bold;
+}
+
+.auth__panel__logo .logo {
+  display: inline-block;
+  width: 4.3rem;
+  margin-left: 1.5rem;
+}
+
+.auth__panel__greeting {
+  padding: 2rem 4rem 3rem 0;
+}
+
+.auth__panel__greeting h3 {
+  color: #989898;
+  font-weight: 600;
+  font-size: 1.65rem;
+}
+
+.auth__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth__form__input {
+  position: relative;
+  color: #696969;
+  margin: 0.65rem .2rem;
+  background: #f4f4f4;
+  width: 100%;
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.auth__form__input:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   position: absolute;
+  display: inline-block;
+  left: 1.3rem;
+  top: 0;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 1.9;
+  font-size: 1.55rem;
+  color: #adadad;
+}
+
+.auth__form__input--email:before {
+  content: "\F10C";
+  top: .1rem;
+  left: 1.45rem;
+}
+
+.auth__form__input--password:before {
+  content: "\F10D";
+}
+
+.auth__form__input > input {
+  height: 50px;
+  position: relative;
+  border: none;
+  background: transparent;
   left: 0;
   top: 0;
-  width: calc(50vw * 1.2);
+  width: calc(100% - 3.7rem);
+  margin: 0 0 0 3.65rem;
+  outline: none;
+  cursor: text;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: currentColor;
+}
+
+.auth__form__input > input::-webkit-input-placeholder {
+  color: #828181;
+}
+
+.auth__form__input > input:-ms-input-placeholder {
+  color: #828181;
+}
+
+.auth__form__input > input::-ms-input-placeholder {
+  color: #828181;
+}
+
+.auth__form__input > input::placeholder {
+  color: #828181;
+}
+
+.auth__form__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 1rem .2rem;
+}
+
+.auth__form__meta__remember {
+  cursor: pointer;
+}
+
+.auth__form__meta__remember .checkbox {
+  position: relative;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+  margin: 0 .5rem 0 0;
+  border-radius: 50%;
+  color: #8d8d8d;
+  border: 2.5px solid #8d8d8d;
+}
+
+.auth__form__meta__remember .checkbox.checked {
+  background: #8d8d8d;
+}
+
+.auth__form__meta__remember .checkbox.checked:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F111";
+  position: absolute;
+  top: .1rem;
+  left: .1rem;
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.auth__form__meta__remember span {
+  color: #828282;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.auth__form__meta__forgot {
+  color: #656565;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.auth__form__meta__forgot a {
+  color: currentColor;
+}
+
+.auth__form__actions {
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.auth__form__actions__button {
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 2rem;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+}
+
+.auth__form__actions__button--signin {
+  background: linear-gradient(211deg, #2E7D32, #50a946) !important;
+  margin-right: 1rem;
+}
+
+.auth__form__actions__button--signup {
+  background: #4A4A4A;
+}
+
+.auth__form__actions__button i {
+  font-size: 1.5rem;
+}
+
+.auth__form__actions__button span {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin: 0 .4rem;
+}
+
+.auth__form__separator {
+  margin: 1rem 0;
+}
+
+.auth__form__separator span {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.auth__disclaimer {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  line-height: 1.8;
+  margin: 1rem 0;
+}
+
+.auth__disclaimer a {
+  color: #50a946;
+  font-weight: bold;
+}
+
+.auth__background {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
   height: 100%;
   overflow: hidden;
   z-index: -1;
@@ -988,17 +1303,18 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -3;
 }
 
-.auth__background__image:before {
-  content: '';
-  background: rgba(0, 0, 0, 0.31);
+.auth__background__overlay {
+  background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
   width: 100%;
   height: 100%;
   display: block;
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -2;
 }
 
 .auth__background__cover {

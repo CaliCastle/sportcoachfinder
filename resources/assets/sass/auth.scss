@@ -19,7 +19,7 @@ body {
 .auth {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	width: 100%;
 	max-width: $container-width-large;
 	margin: 0 auto;
@@ -65,11 +65,226 @@ body {
 		}
 	}
 
+	@include has('panel-container') {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		//min-height: calc(100vh - 1.8rem - 103px);
+		margin: 8rem .5rem 0 5rem;
+	}
+
+	@include has('panel') {
+		@include has('logo') {
+			span {
+				display: inline-block;
+				font-size: 2.5rem;
+				color: $theme-primary;
+				font-weight: bold;
+			}
+
+			.logo {
+				display: inline-block;
+				width: 4.3rem;
+				margin-left: 1.5rem;
+			}
+		}
+
+		@include has('greeting') {
+			padding: 2rem 4rem 3rem 0;
+
+			h3 {
+				color: #989898;
+				font-weight: 600;
+				font-size: 1.65rem;
+			}
+		}
+	}
+
+	@include has('form') {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include has('input') {
+			position: relative;
+			color: #696969;
+			margin: 0.65rem .2rem;
+			background: #f4f4f4;
+			width: 100%;
+			border-radius: 3rem;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+
+			&:before {
+				@include icons8-font();
+				position: absolute;
+				display: inline-block;
+				left: 1.3rem;
+				top: 0;
+				height: 100%;
+				vertical-align: middle;
+				line-height: 1.9;
+				font-size: 1.55rem;
+				color: #adadad;
+			}
+
+			@include as('email') {
+				&:before {
+					content: $icons8-var-email-envelope;
+					top: .1rem;
+					left: 1.45rem;
+				}
+			}
+
+			@include as('password') {
+				&:before {
+					content: $icons8-var-lock;
+				}
+			}
+
+			> input {
+				height: 50px;
+				position: relative;
+				border: none;
+				background: transparent;
+				left: 0;
+				top: 0;
+				width: calc(100% - 3.7rem);
+				margin: 0 0 0 3.65rem;
+				outline: none;
+				cursor: text;
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: currentColor;
+
+				&::placeholder {
+					color: #828181;
+				}
+			}
+		}
+
+		@include has('meta') {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 1rem .2rem;
+
+			@include has('remember') {
+				cursor: pointer;
+
+				.checkbox {
+					position: relative;
+					width: 1.4rem;
+					height: 1.4rem;
+					display: inline-block;
+					margin: 0 .5rem 0 0;
+					border-radius: 50%;
+					color: #8d8d8d;
+					border: 2.5px solid #8d8d8d;
+
+					&.checked {
+						background: #8d8d8d;
+
+						&:before {
+							@include icons8-font();
+							content: $icons8-var-checkmark;
+							position: absolute;
+							top: .1rem;
+							left: .1rem;
+							font-size: 1.2rem;
+							color: #eee;
+						}
+					}
+				}
+
+				span {
+					color: #828282;
+					font-size: 1rem;
+					font-weight: 600;
+				}
+			}
+
+			@include has('forgot') {
+				color: #656565;
+				font-size: 1rem;
+				font-weight: 700;
+
+				a {
+					color: currentColor;
+				}
+			}
+		}
+
+		@include has('actions') {
+			margin: 1.5rem 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			@include has('button') {
+				cursor: pointer;
+				flex: 1;
+				border-radius: 2rem;
+				height: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+
+				@include as('signin') {
+					background: linear-gradient(211deg, $theme-primary, $theme-primary-light) !important;
+					margin-right: 1rem;
+				}
+
+				@include as('signup') {
+					background: #4A4A4A;
+				}
+
+				i {
+					font-size: 1.5rem;
+				}
+
+				span {
+					font-size: 1.05rem;
+					font-weight: bold;
+					margin: 0 .4rem;
+				}
+			}
+		}
+		
+		@include has('separator') {
+			margin: 1rem 0;
+			
+			span {
+				font-size: .9rem;
+				font-weight: bold;
+				color: #333;
+			}
+		}
+	}
+
+	@include has('disclaimer') {
+		font-size: 1rem;
+		font-weight: 500;
+		color: #444;
+		line-height: 1.8;
+		margin: 1rem 0;
+
+		a {
+			color: $theme-primary-light;
+			font-weight: bold;
+		}
+	}
+
 	@include has('background') {
-		position: absolute;
-		left: 0;
+		position: fixed;
+		right: 0;
 		top: 0;
-		width: calc(50vw * 1.2);
+		width: 50%;
 		height: 100%;
 		overflow: hidden;
 		z-index: -1;
@@ -82,17 +297,19 @@ body {
 			position: absolute;
 			left: 0;
 			top: 0;
+			z-index: -3;
+		}
 
-			&:before {
-				content: '';
-				background: rgba(0, 0, 0, .31);
-				width: 100%;
-				height: 100%;
-				display: block;
-				position: absolute;
-				left: 0;
-				top: 0;
-			}
+		@include has('overlay') {
+			//background: rgba(#000, 0.35);
+			background: radial-gradient(circle at top right, rgba(#000, .65), rgba(#000, .15));
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -2;
 		}
 		
 		@include has('cover') {

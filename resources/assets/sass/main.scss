@@ -51,3 +51,8 @@ button {
 .text-center {
 	text-align: center;
 }
+
+.hidden, [hidden] {
+	display: none;
+	visibility: hidden;
+}

@@ -32,3 +32,13 @@ i.back-icon:after {
 	@include icons8-font();
 	content: $icons8-var-left-arrow;
 }
+
+i.login-icon:after {
+	@include icons8-font();
+	content: $icons8-var-login;
+}
+
+i.plus-icon:after {
+	@include icons8-font();
+	content: $icons8-var-plus;
+}
