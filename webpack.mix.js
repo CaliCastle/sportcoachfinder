@@ -11,5 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+const assetsPath = 'resources/assets';
+const jsPath = `${assetsPath}/js`;
+const sassPath = `${assetsPath}/sass`;
+
+mix.js(`${jsPath}/app.js`, 'public/js')
+   .sass(`${sassPath}/app.scss`, 'public/css');
+
+mix.js(`${jsPath}/auth.js`, 'public/js')
+    .sass(`${sassPath}/auth.scss`, 'public/css');

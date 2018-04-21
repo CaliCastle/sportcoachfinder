@@ -27,3 +27,8 @@ i.coach-icon:after {
 	@include icons8-font();
 	content: $icons8-var-personal-trainer-2;
 }
+
+i.back-icon:after {
+	@include icons8-font();
+	content: $icons8-var-left-arrow;
+}

@@ -1,7 +1,10 @@
 @extends('bases.skeleton')
 
 @push('head')
+	<link rel="stylesheet" href="{{ mix('/css/auth.css') }}">
 @endpush
+
+@section('body.class', 'auth')
 
 @section('body')
 
@@ -10,5 +13,5 @@
 @stop
 
 @push('body.scripts')
-	<script src="/js/auth.js"></script>
+	<script src="{{ mix('/js/auth.js') }}"></script>
 @endpush

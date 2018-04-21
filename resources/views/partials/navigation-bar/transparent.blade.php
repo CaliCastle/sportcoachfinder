@@ -12,7 +12,7 @@
 			<a class="ui-navigation-bar__link ui-navigation-bar__action primary-gradient--dimmed" href="#">
 				<i class="coach-icon" style="font-size: 1.7rem;"></i>&nbsp;Become a coach
 			</a>
-			<a class="ui-navigation-bar__link" href="#">
+			<a class="ui-navigation-bar__link" href="{{ route('login') }}">
 				Sign up / Sign in
 			</a>
 		</div>

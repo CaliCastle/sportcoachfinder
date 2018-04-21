@@ -1,5 +1,5 @@
 <body>
-	<main id="app">
+	<main id="@yield('body.id', 'app')" class="@yield('body.class')">
 		@yield('body')
 	</main>
 

@@ -898,562 +898,119 @@ button {
   text-align: center;
 }
 
-.ui-navigation-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-}
-
-.ui-navigation-bar--transparent {
-  background: transparent;
-}
-
-.ui-navigation-bar__container {
-  max-width: 1440px;
-  width: 100%;
-  padding: 3.5rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.ui-navigation-bar__link {
-  padding: .8rem;
-  background: none;
-  margin: 0 .5rem;
-}
-
-.ui-navigation-bar__action {
-  padding: .8rem 1.4rem;
-  background: #7f7f7f;
-  border-radius: 2rem;
-}
-
-.ui-navigation-bar a {
-  color: #eff;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
-
-.hero {
-  height: calc(100vh + 95px);
-  width: 100%;
-  left: 0;
-  top: 0;
-  position: relative;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero__background {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: url("/assets/images/hero/clipboard-field.png") center center;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-}
-
-.hero__content {
-  position: relative;
-  width: 90%;
-  max-width: 500px;
-  z-index: 10;
-  padding-bottom: 95px;
-}
-
-.hero__content__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero__content__logo .logo--text {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #fff;
-  padding-right: 1.4rem;
-  display: block;
-  text-transform: capitalize;
-}
-
-.hero__content__logo img {
-  display: block;
-  max-width: 56px;
-  height: 56px;
-}
-
-.hero__content__search-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 1rem .5rem;
-}
-
-.hero__content__search-container > * {
-  width: 100%;
-  height: 50px;
-  margin: .4rem 0;
+body {
   background: #fff;
-  border-radius: 25px;
 }
 
-.hero__content__search-container .search-box {
-  position: relative;
-  color: #696969;
-}
-
-.hero__content__search-container .search-box:before {
-  display: inline-block;
-  font-family: "Sport-Coach-Finder";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  position: absolute;
-  display: inline-block;
-  left: .8rem;
-  top: 0;
-  height: 100%;
-  vertical-align: middle;
-  line-height: 2;
-  font-size: 1.6rem;
-  color: #a7a7a7;
-}
-
-.hero__content__search-container .search-box--sport:before {
-  content: "\F103";
-}
-
-.hero__content__search-container .search-box--sport:after {
-  display: inline-block;
-  font-family: "Sport-Coach-Finder";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  display: inline-block;
-  position: absolute;
-  height: 100%;
-  vertical-align: middle;
-  line-height: 2.7;
-  content: "\F107";
-  font-size: 1.2rem;
-  right: 1rem;
-  top: 0;
-  color: currentColor;
-  cursor: pointer;
-}
-
-.hero__content__search-container .search-box--location:before {
-  content: "\F106";
-}
-
-.hero__content__search-container .search-box > input {
-  height: 97%;
-  position: absolute;
-  border: none;
-  background: transparent;
-  left: 0;
-  top: 0;
-  width: calc(100% - 5.6rem);
-  margin: 0 2.8rem;
-  outline: none;
-  cursor: text;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: currentColor;
-}
-
-.hero__content__search-container .search-box > input::-webkit-input-placeholder {
-  color: #aeadad;
-}
-
-.hero__content__search-container .search-box > input:-ms-input-placeholder {
-  color: #aeadad;
-}
-
-.hero__content__search-container .search-box > input::-ms-input-placeholder {
-  color: #aeadad;
-}
-
-.hero__content__search-container .search-box > input::placeholder {
-  color: #aeadad;
-}
-
-.hero__content__search-container .search-box > input::-moz-placeholder {
-  color: #aeadad;
-}
-
-.hero__content__search-container .search-box > input::-webkit-input-placeholder {
-  color: #aeadad;
-}
-
-.hero__content__search-container .search-button {
-  outline: none;
-  position: relative;
-  border: none;
-  color: #eeffff;
-  font-size: 1.3rem;
-  font-family: inherit;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.hero__content__search-container .search-button:before {
-  display: inline-block;
-  font-family: "Sport-Coach-Finder";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  position: absolute;
-  display: inline-block;
-  content: "\F104";
-  left: .8rem;
-  top: 0;
-  height: 100%;
-  vertical-align: middle;
-  line-height: 2;
-  font-size: 1.6rem;
-}
-
-.hero__content__tips {
-  margin: 1.5rem 0 0;
-}
-
-.hero__content__tips p {
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: center;
-  color: #fff;
-}
-
-.ui-footer {
-  z-index: 998;
-  width: 100vw;
-  padding: 4rem 0 1rem;
-  position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(#449151), color-stop(88%, #2a692d));
-  background: linear-gradient(to bottom, #449151, #2a692d 88%);
+.auth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.ui-footer__curve {
-  position: absolute;
   width: 100%;
-  height: 95px;
-  top: -93px;
-  left: 0;
-}
-
-.ui-footer__curve path {
-  fill: #449151;
-}
-
-.ui-footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   max-width: 1440px;
-  width: 100%;
+  margin: 0 auto;
 }
 
-.ui-footer__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #eff;
-  padding: 1rem 0 2.2rem;
+.auth__container {
+  min-height: 100vh;
+  position: relative;
 }
 
-.ui-footer__connect {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-shadow: 0 1px 15px rgba(0, 0, 0, 0.27);
-  min-width: 125px;
+.auth__container--main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #fff;
 }
 
-.ui-footer__connect > * {
-  display: block;
-  margin: .5rem 0;
-}
-
-.ui-footer__connect .ui-footer__logo img {
-  max-width: 102px;
-  max-height: 94px;
-}
-
-.ui-footer__socials {
-  margin-top: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.auth__container--main > nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.auth__container--main > nav a {
+  color: #2E7D32;
+}
+
+.auth__container--side {
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
+  background: transparent;
+}
+
+.auth__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  padding-top: 1.8rem;
+  z-index: 999;
 }
 
-.ui-footer__socials a {
+.auth__nav > a {
   display: block;
-  text-decoration: none;
-  color: currentColor;
-  font-size: 1.75rem;
-}
-
-.ui-footer__related {
-  margin: 0 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.ui-footer__links {
-  margin: 0 2.5rem;
-}
-
-.ui-footer__links__heading {
+  padding: .6rem;
+  margin: 1rem;
+  color: #eee;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: .15rem;
 }
 
-.ui-footer__links__list li {
-  display: block;
-  margin: 1.2rem 0;
-}
-
-.ui-footer__links__list li a {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
-  font-weight: 300;
-}
-
-.ui-footer__newsletter {
-  width: 100%;
-  max-width: 400px;
-  margin: 0.1rem 0 2rem;
-}
-
-.ui-footer__newsletter__subscribe-container {
-  width: 100%;
-  position: relative;
-  margin: 1.2rem 0;
-}
-
-.ui-footer__newsletter__subscribe-container input[type=email] {
-  height: 40px;
-  background: #28632c;
-  border-radius: 2rem;
-  color: #eee;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 0 8rem 0 1.5rem;
-  width: calc(100% - 9.5rem);
-}
-
-.ui-footer__newsletter__subscribe-container input[type=email]::-webkit-input-placeholder {
-  color: #ccc;
-}
-
-.ui-footer__newsletter__subscribe-container input[type=email]:-ms-input-placeholder {
-  color: #ccc;
-}
-
-.ui-footer__newsletter__subscribe-container input[type=email]::-ms-input-placeholder {
-  color: #ccc;
-}
-
-.ui-footer__newsletter__subscribe-container input[type=email]::placeholder {
-  color: #ccc;
-}
-
-.ui-footer__newsletter__subscribe-container button {
+.auth__background {
+  position: absolute;
+  left: 0;
   top: 0;
-  right: 0;
+  width: calc(50vw * 1.2);
   height: 100%;
-  background: #eff;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.auth__background__image {
+  background: url("/assets/images/auth/whistle-in-the-sky.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  color: #2E7D32;
-  border-radius: 2rem;
-  font-size: 1.05rem;
-  text-transform: uppercase;
-  padding: 0 1.4rem;
-  opacity: 1;
+  left: 0;
+  top: 0;
 }
 
-.ui-footer__newsletter__subscribe-container button[disabled] {
-  opacity: .4;
-  cursor: not-allowed;
+.auth__background__image:before {
+  content: '';
+  background: rgba(0, 0, 0, 0.31);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.ui-footer__separator {
-  width: 52%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.ui-footer__copyright {
-  padding: 2.8rem 0;
-  text-align: center;
-  color: #e3e3e3;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.primary-gradient {
-  background: linear-gradient(110deg, #2E7D32, #50a946) !important;
-}
-
-.primary-gradient--reverse {
-  background: linear-gradient(250deg, #2E7D32, #50a946) !important;
-}
-
-.primary-gradient--dimmed {
-  background: linear-gradient(110deg, rgba(46, 125, 50, 0.3), rgba(80, 169, 70, 0.3)) !important;
-}
-
-.bg-white {
-  background: #fff !important;
-  color: #2E7D32 !important;
-}
-
-.overlay {
-  z-index: 9;
+.auth__background__cover {
   position: absolute;
   width: 100%;
   height: 100%;
-  pointer-events: all;
-}
-
-.overlay--black {
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(9, 9, 9, 0.7)), color-stop(70%, rgba(29, 29, 29, 0.6)));
-  background: linear-gradient(to bottom right, rgba(9, 9, 9, 0.7), rgba(29, 29, 29, 0.6) 70%);
-}
-
-.shadowed {
-  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+  left: -100%;
+  top: 0;
+  background: #fff;
+  -webkit-transform: skew(11deg);
+          transform: skew(11deg);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
 }
 

@@ -1,0 +1,109 @@
+// Mixin functions
+@import "mixins";
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Cabin:300,400,500,600,700');
+// Reset
+@import "reset";
+@import "normalize";
+// Variables
+@import "variables";
+// Icons
+@import "icons/styles";
+// Main styles
+@import "main";
+
+body {
+	background: #fff;
+}
+
+.auth {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: $container-width-large;
+	margin: 0 auto;
+
+	@include has('container') {
+		min-height: 100vh;
+		position: relative;
+
+		@include as('main') {
+			flex: 1;
+			background: #fff;
+
+			> nav {
+				justify-content: space-between;
+
+				a {
+					color: $theme-primary;
+				}
+			}
+		}
+
+		@include as('side') {
+			flex: 1.2;
+			background: transparent;
+		}
+	}
+
+	@include has('nav') {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+		padding-top: 1.8rem;
+		z-index: $navigation-bar-index;
+
+		> a {
+			display: block;
+			padding: .6rem;
+			margin: 1rem;
+			color: #eee;
+			font-size: 1.3rem;
+			font-weight: 700;
+		}
+	}
+
+	@include has('background') {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: calc(50vw * 1.2);
+		height: 100%;
+		overflow: hidden;
+		z-index: -1;
+
+		@include has('image') {
+			background: url("/assets/images/auth/whistle-in-the-sky.jpg") no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			&:before {
+				content: '';
+				background: rgba(0, 0, 0, .31);
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		
+		@include has('cover') {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			background: #fff;
+			transform: skew(11deg);
+			transform-origin: left top;
+		}
+	}
+}
