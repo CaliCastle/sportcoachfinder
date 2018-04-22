@@ -794,6 +794,22 @@ template {
   content: "\F10A";
 }
 
+.google:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F118";
+}
+
 i.search-icon:after {
   display: inline-block;
   font-family: "Sport-Coach-Finder";
@@ -1008,6 +1024,37 @@ body {
   font-weight: 700;
 }
 
+.auth__language-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: .4rem .7rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.auth__language-selector svg,
+.auth__language-selector svg use {
+  width: 30px;
+  height: 30px;
+}
+
+.auth__language-selector span {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #50a946;
+  margin-left: .3rem;
+}
+
 .auth__panel-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1019,7 +1066,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin: 8rem .5rem 0 5rem;
+  margin: 6rem .5rem 0 5rem;
 }
 
 .auth__panel__logo span {
@@ -1272,12 +1319,71 @@ body {
   color: #333;
 }
 
+.auth__social {
+  margin: 1.6rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.auth__social__button {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border-radius: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+  margin: .6rem 0;
+  cursor: pointer;
+}
+
+.auth__social__button i {
+  font-size: 1.5rem;
+  color: currentColor;
+  margin-right: .6rem;
+}
+
+.auth__social__button span {
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.auth__social__button--google {
+  background: #fff;
+  color: #EA4335;
+}
+
+.auth__social__button--facebook {
+  background: #3B5998;
+  color: #fff;
+}
+
 .auth__disclaimer {
   font-size: 1rem;
   font-weight: 500;
   color: #444;
   line-height: 1.8;
-  margin: 1rem 0;
+  margin: 3rem 0 1rem 0;
 }
 
 .auth__disclaimer a {

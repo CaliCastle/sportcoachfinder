@@ -18,6 +18,11 @@
 	content: $icons8-var-facebook;
 }
 
+.google:after {
+	@include icons8-font();
+	content: $icons8-var-google;
+}
+
 i.search-icon:after {
 	@include icons8-font();
 	content: $icons8-var-search;

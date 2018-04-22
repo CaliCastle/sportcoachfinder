@@ -6,6 +6,12 @@
 	<div class="auth__container auth__container--main">
 		<nav class="auth__nav">
 			<a href="{{ route('home') }}"><i class="back-icon"></i>&nbsp; Home</a>
+			<div class="auth__language-selector">
+				<svg viewBox="0 0 48 48">
+					<use xlink:href="#globe"></use>
+				</svg>
+				<span>English (US)</span>
+			</div>
 		</nav>
 		<div class="auth__panel-container">
 			<div class="auth__panel">
@@ -51,9 +57,13 @@
 					</div>
 					<div class="auth__social">
 						<div class="auth__social__button auth__social__button--google">
-							<i class="google-icon"></i>
+							<i class="google"></i>
+							<span>Login via Google</span>
 						</div>
-						<div class="auth__social__button auth__social__button--facebook"></div>
+						<div class="auth__social__button auth__social__button--facebook">
+							<i class="facebook"></i>
+							<span>Login via Facebook</span>
+						</div>
 					</div>
 					<div class="auth__disclaimer">
 						<p>By signing up, you agree to our <br><a href="#">Terms and Conditions</a> & <a href="#">Privacy Policy</a></p>

@@ -794,6 +794,22 @@ template {
   content: "\F10A";
 }
 
+.google:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F118";
+}
+
 i.search-icon:after {
   display: inline-block;
   font-family: "Sport-Coach-Finder";

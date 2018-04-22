@@ -65,13 +65,36 @@ body {
 		}
 	}
 
+	@include has('language-selector') {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+		padding: .4rem .7rem;
+		border-radius: 2rem;
+		cursor: pointer;
+
+		svg, svg use {
+			width: 30px;
+			height: 30px;
+		}
+
+		span {
+			font-weight: 600;
+			font-size: 1.05rem;
+			color: $theme-primary-light;
+			margin-left: .3rem;
+		}
+	}
+
 	@include has('panel-container') {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		width: 100%;
 		//min-height: calc(100vh - 1.8rem - 103px);
-		margin: 8rem .5rem 0 5rem;
+		margin: 6rem .5rem 0 5rem;
 	}
 
 	@include has('panel') {
@@ -267,12 +290,55 @@ body {
 		}
 	}
 
+	@include has('social') {
+		margin: 1.6rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		@include has('button') {
+			width: 100%;
+			height: 50px;
+			text-align: center;
+			border-radius: 2.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+			margin: .6rem 0;
+			cursor: pointer;
+
+			i {
+				font-size: 1.5rem;
+				color: currentColor;
+				margin-right: .6rem;
+			}
+
+			span {
+				font-size: 1.12rem;
+				font-weight: 600;
+			}
+
+			@include as('google') {
+				background: #fff;
+				color: #EA4335;
+			}
+			
+			@include as('facebook') {
+				background: #3B5998;
+				color: #fff;
+			}
+		}
+	}
+
 	@include has('disclaimer') {
 		font-size: 1rem;
 		font-weight: 500;
 		color: #444;
 		line-height: 1.8;
-		margin: 1rem 0;
+		margin: 3rem 0 1rem 0;
 
 		a {
 			color: $theme-primary-light;
