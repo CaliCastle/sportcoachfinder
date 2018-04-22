@@ -52,3 +52,8 @@ i.reset-icon:after {
 	@include icons8-font();
 	content: $icons8-var-circular-arrow;
 }
+
+i.location-icon:after {
+	@include icons8-font();
+	content: $icons8-var-location-marker;
+}

@@ -4,6 +4,17 @@
 			<a class="ui-navigation-bar__link" href="{{ route('home') }}">
 				<img src="/assets/images/logo-white.png" alt="Logo" class="nav-logo">
 			</a>
+			<div class="ui-navigation-bar__search">
+				<input type="search" name="query" placeholder="Search sports">
+			</div>
+			<a class="ui-navigation-bar__link ui-navigation-bar__link--dropdown ui-navigation-bar__link--no-padding" href="#">
+				<i class="location-icon"></i>
+			</a>
+			<a class="ui-navigation-bar__link ui-navigation-bar__link--dropdown ui-navigation-bar__link--no-padding" href="#">
+				<svg viewBox="0 0 48 48">
+					<use xlink:href="#globe"></use>
+				</svg>
+			</a>
 		</div>
 		<div class="ui-navigation-bar__right">
 			@guest

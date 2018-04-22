@@ -906,6 +906,22 @@ i.reset-icon:after {
   content: "\F110";
 }
 
+i.location-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F106";
+}
+
 body {
   background: #f5f8fa;
   font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
@@ -1209,10 +1225,89 @@ button {
           align-items: center;
 }
 
+.ui-navigation-bar__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui-navigation-bar__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .ui-navigation-bar__link {
   padding: .8rem;
   background: none;
   margin: 0 .5rem;
+}
+
+.ui-navigation-bar__link--dropdown {
+  width: 35px;
+  height: 35px;
+}
+
+.ui-navigation-bar__link--dropdown i {
+  font-size: 1.8rem;
+  left: .2rem;
+  top: .2rem;
+  position: relative;
+  color: currentColor;
+}
+
+.ui-navigation-bar__link--no-padding {
+  padding: 0 !important;
+}
+
+.ui-navigation-bar__search {
+  padding: .8rem 1.4rem;
+  margin: 0 1rem;
+  border-radius: 2rem;
+  min-width: 15rem;
+  background: rgba(255, 255, 255, 0.165);
+  position: relative;
+  color: #eee;
+}
+
+.ui-navigation-bar__search input {
+  width: calc(100% - 1rem);
+  font-size: 1rem;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+}
+
+.ui-navigation-bar__search:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F104";
+  position: absolute;
+  font-size: 1.25rem;
+  color: currentColor;
+  cursor: pointer;
 }
 
 .ui-navigation-bar__action {

@@ -906,6 +906,22 @@ i.reset-icon:after {
   content: "\F110";
 }
 
+i.location-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F106";
+}
+
 body {
   background: #f5f8fa;
   font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;

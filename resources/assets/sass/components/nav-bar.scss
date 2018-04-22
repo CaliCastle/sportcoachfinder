@@ -29,10 +29,66 @@
 		align-items: center;
 	}
 
+	@include has('left') {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include has('right') {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	@include has('link') {
 		padding: .8rem;
 		background: none;
 		margin: 0 .5rem;
+
+		@include as('dropdown') {
+			width: 35px;
+			height: 35px;
+
+			i {
+				font-size: 1.8rem;
+				left: .2rem;
+				top: .2rem;
+				position: relative;
+				color: currentColor;
+			}
+		}
+
+		@include as('no-padding') {
+			padding: 0!important;
+		}
+	}
+
+	@include has('search') {
+		padding: .8rem 1.4rem;
+		margin: 0 1rem;
+		border-radius: 2rem;
+		min-width: 15rem;
+		background: rgba(#fff, 0.165);
+		position: relative;
+		color: #eee;
+
+		input {
+			width: calc(100% - 1rem);
+			font-size: 1rem;
+			background: transparent;
+			color: #fff;
+			font-weight: 600;
+		}
+
+		&:after {
+			@include icons8-font();
+			content: $icons8-var-search;
+			position: absolute;
+			font-size: 1.25rem;
+			color: currentColor;
+			cursor: pointer;
+		}
 	}
 
 	@include has('action') {
