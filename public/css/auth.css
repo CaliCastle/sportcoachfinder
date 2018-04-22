@@ -940,7 +940,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: none;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: currentColor;
   -webkit-box-shadow: 0 0 0px 0px transparent inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
@@ -1663,12 +1663,13 @@ body {
 
 .auth__background__features {
   color: #fff;
-  width: 50%;
+  width: 60%;
+  padding-left: 2rem;
 }
 
 .auth__background__features ul li {
   padding: .8rem 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: 1px;
@@ -1689,6 +1690,6 @@ body {
   font-smoothing: antialiased;
   content: "\F111";
   color: #e9f77b;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 

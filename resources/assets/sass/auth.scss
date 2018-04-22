@@ -399,12 +399,13 @@ body {
 
 		@include has('features') {
 			color: #fff;
-			width: 50%;
+			width: 60%;
+			padding-left: 2rem;
 
 			ul {
 				li {
 					padding: .8rem 0;
-					font-size: 1.3rem;
+					font-size: 1.1rem;
 					font-weight: 600;
 					line-height: 1.35;
 					letter-spacing: 1px;
@@ -413,7 +414,7 @@ body {
 						@include icons8-font();
 						content: $icons8-var-checkmark;
 						color: #e9f77b;
-						font-size: 1.1rem;
+						font-size: 1.2rem;
 					}
 				}
 			}

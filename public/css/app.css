@@ -940,7 +940,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: none;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: currentColor;
   -webkit-box-shadow: 0 0 0px 0px transparent inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
