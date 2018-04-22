@@ -12,6 +12,13 @@
 		background: transparent;
 	}
 
+	@include as('main') {
+		position: relative;
+		background: linear-gradient(166deg, #4A944E, $theme-primary);
+		height: 100px;
+		margin-bottom: 150px;
+	}
+
 	@include has('container') {
 		max-width: 1440px;
 		width: 100%;
@@ -30,7 +37,7 @@
 
 	@include has('action') {
 		padding: .8rem 1.4rem;
-		background: #7f7f7f;
+		background: #2d7131;
 		border-radius: 2rem;
 	}
 
@@ -40,5 +47,9 @@
 		text-decoration: none;
 		font-size: 1.3rem;
 		text-transform: capitalize;
+	}
+
+	.nav-logo {
+		width: 50px;
 	}
 }

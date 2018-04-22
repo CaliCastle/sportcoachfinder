@@ -912,11 +912,13 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 body > main {
   position: relative;
+  min-height: 100vh;
 }
 
 input {
@@ -1506,7 +1508,6 @@ body {
 
 .auth__form__actions__button--reset {
   background: linear-gradient(211deg, #2E7D32, #50a946) !important;
-  margin-right: 1rem;
 }
 
 .auth__form__actions__button--signup {

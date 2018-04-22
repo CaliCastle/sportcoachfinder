@@ -266,7 +266,6 @@ body {
 
 				@include as('reset') {
 					background: linear-gradient(211deg, $theme-primary, $theme-primary-light) !important;
-					margin-right: 1rem;
 				}
 
 				@include as('signup') {

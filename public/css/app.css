@@ -912,11 +912,13 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 body > main {
   position: relative;
+  min-height: 100vh;
 }
 
 input {
@@ -1181,6 +1183,13 @@ button {
   background: transparent;
 }
 
+.ui-navigation-bar--main {
+  position: relative;
+  background: linear-gradient(166deg, #4A944E, #2E7D32);
+  height: 100px;
+  margin-bottom: 150px;
+}
+
 .ui-navigation-bar__container {
   max-width: 1440px;
   width: 100%;
@@ -1208,7 +1217,7 @@ button {
 
 .ui-navigation-bar__action {
   padding: .8rem 1.4rem;
-  background: #7f7f7f;
+  background: #2d7131;
   border-radius: 2rem;
 }
 
@@ -1218,6 +1227,10 @@ button {
   text-decoration: none;
   font-size: 1.3rem;
   text-transform: capitalize;
+}
+
+.ui-navigation-bar .nav-logo {
+  width: 50px;
 }
 
 .hero {
