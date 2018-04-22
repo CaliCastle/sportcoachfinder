@@ -1399,6 +1399,15 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .auth__background__image {
@@ -1413,7 +1422,7 @@ body {
 }
 
 .auth__background__overlay {
-  background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
+  background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2));
   width: 100%;
   height: 100%;
   display: block;
@@ -1434,5 +1443,36 @@ body {
           transform: skew(11deg);
   -webkit-transform-origin: left top;
           transform-origin: left top;
+}
+
+.auth__background__features {
+  color: #fff;
+  width: 50%;
+}
+
+.auth__background__features ul li {
+  padding: .8rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 1px;
+}
+
+.auth__background__features ul li:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F111";
+  color: #e9f77b;
+  font-size: 1.1rem;
 }
 

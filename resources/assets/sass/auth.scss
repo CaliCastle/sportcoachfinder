@@ -354,6 +354,9 @@ body {
 		height: 100%;
 		overflow: hidden;
 		z-index: -1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		@include has('image') {
 			background: url("/assets/images/auth/whistle-in-the-sky.jpg") no-repeat;
@@ -367,8 +370,7 @@ body {
 		}
 
 		@include has('overlay') {
-			//background: rgba(#000, 0.35);
-			background: radial-gradient(circle at top right, rgba(#000, .65), rgba(#000, .15));
+			background: radial-gradient(circle at top right, rgba(#000, .65), rgba(#000, .2));
 			width: 100%;
 			height: 100%;
 			display: block;
@@ -387,6 +389,28 @@ body {
 			background: #fff;
 			transform: skew(11deg);
 			transform-origin: left top;
+		}
+
+		@include has('features') {
+			color: #fff;
+			width: 50%;
+
+			ul {
+				li {
+					padding: .8rem 0;
+					font-size: 1.3rem;
+					font-weight: 600;
+					line-height: 1.35;
+					letter-spacing: 1px;
+
+					&:before {
+						@include icons8-font();
+						content: $icons8-var-checkmark;
+						color: #e9f77b;
+						font-size: 1.1rem;
+					}
+				}
+			}
 		}
 	}
 }
