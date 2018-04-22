@@ -1049,7 +1049,7 @@ body {
 }
 
 .auth__language-selector span {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.05rem;
   color: #50a946;
   margin-left: .3rem;
