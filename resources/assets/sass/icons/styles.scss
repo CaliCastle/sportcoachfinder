@@ -47,3 +47,8 @@ i.plus-icon:after {
 	@include icons8-font();
 	content: $icons8-var-plus;
 }
+
+i.reset-icon:after {
+	@include icons8-font();
+	content: $icons8-var-circular-arrow;
+}

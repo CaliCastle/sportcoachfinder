@@ -1,47 +1,25 @@
-@extends('layouts.app')
+@extends('bases.auth')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+@section('title', 'Reset Password')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+@section('body.content')
+    <div class="auth__panel__greeting">
+        <h3>Forgot your password?<br>No worries, reset it through your email</h3>
+    </div>
+    <div class="auth__panel__form">
+        <div class="auth__form">
+            <div class="auth__form__input auth__form__input--email">
+                <input type="email" placeholder="Email address" name="email" required>
+            </div>
+            <div class="auth__form__actions">
+                <div class="auth__form__actions__button auth__form__actions__button--reset">
+                    <i class="reset-icon"></i>
+                    <span>Send reset email</span>
                 </div>
             </div>
         </div>
+        <div class="auth__disclaimer text-center">
+            <p>Remembered your password? <a href="{{ route('login') }}">Sign in</a></p>
+        </div>
     </div>
-</div>
-@endsection
+@stop

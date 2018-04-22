@@ -9,7 +9,7 @@
 			</a>
 		</div>
 		<div class="ui-navigation-bar__right">
-			<a class="ui-navigation-bar__link ui-navigation-bar__action primary-gradient--dimmed" href="#">
+			<a class="ui-navigation-bar__link ui-navigation-bar__action primary-gradient--dimmed" href="{{ route('apply') }}">
 				<i class="coach-icon" style="font-size: 1.7rem;"></i>&nbsp;Become a coach
 			</a>
 			<a class="ui-navigation-bar__link" href="{{ route('login') }}">

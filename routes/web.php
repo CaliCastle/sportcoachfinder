@@ -15,6 +15,9 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index');
 
+// Apply for Coach
+Route::get('apply', 'HomeController@showBecomeACoach')->name('apply');
+
 Route::group(['namespace' => 'Auth'], function () {
     // Authentication Routes...
     Route::get('login', 'LoginController@showLoginForm')->name('login');

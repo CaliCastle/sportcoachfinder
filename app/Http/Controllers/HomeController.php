@@ -7,22 +7,39 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
+     * HTTP Request.
+     *
+     * @var Request
+     */
+    private $request;
+
+    /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
-
+        $this->request = $request;
     }
 
     /**
-     * Show the application home page.
+     * Show the home page.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
         return view('home');
+    }
+
+    /**
+     * Show the application page.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showBecomeACoach()
+    {
+        return view('apply');
     }
 }
