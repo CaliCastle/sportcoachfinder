@@ -21,7 +21,7 @@
 					<input type="hidden" name="remember">
 				</div>
 				<div class="auth__form__meta__forgot">
-					<a href="{{ route('password.request') }}">Forgot password?</a>
+					<a href="{{ route('password.request') }}" pjax>Forgot password?</a>
 				</div>
 			</div>
 			<div class="auth__form__actions">

@@ -21,8 +21,13 @@ mix.js(`${jsPath}/app.js`, 'public/js')
 mix.js(`${jsPath}/auth.js`, 'public/js')
     .sass(`${sassPath}/auth.scss`, 'public/css');
 
-mix.js([
+mix.scripts([
+    `${jsPath}/plugins/jquery.min.js`,
+    `${jsPath}/plugins/jquery.pjax.min.js`,
     `${jsPath}/plugins/switchery.js`,
     `${jsPath}/plugins/waves.js`,
+], 'public/js/plugins/core.js');
+
+mix.js([
     `${jsPath}/core.js`
 ], 'public/js/core.js');

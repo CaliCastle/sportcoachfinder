@@ -27,5 +27,7 @@
 	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
 	<link rel="prerender" href="{{ config('app.url') }}">
 
+	<script src="/js/plugins/pace.min.js"></script>
+
 	@stack('head')
 </head>

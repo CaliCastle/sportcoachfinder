@@ -19,6 +19,7 @@ class Kernel extends HttpKernel
         \SCF\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \SCF\Http\Middleware\TrustProxies::class,
+        \Spatie\Pjax\Middleware\FilterIfPjax::class
     ];
 
     /**

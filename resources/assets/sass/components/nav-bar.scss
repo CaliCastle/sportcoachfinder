@@ -81,6 +81,10 @@
 			background: transparent;
 			color: #fff;
 			font-weight: 600;
+			
+			&::placeholder {
+				color: #d7d7d7;
+			}
 		}
 
 		&:after {

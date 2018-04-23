@@ -57,7 +57,7 @@
 		<div class="ui-footer__newsletter text-center">
 			<div class="ui-footer__newsletter__subscribe-container">
 				<input type="email" placeholder="Enter email for newsletter" required>
-				<button>Subscribe</button>
+				<button class="waves-button-light">Subscribe</button>
 			</div>
 		</div>
 		<div class="ui-footer__separator"></div>

@@ -3,6 +3,7 @@
 	@yield('body')
 </main>
 
+<script src="/js/plugins/core.js"></script>
 <script src="{{ mix('js/core.js') }}"></script>
 @stack('body.scripts')
 

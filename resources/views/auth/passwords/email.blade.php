@@ -12,14 +12,14 @@
                 <input type="email" placeholder="Email address" name="email" required>
             </div>
             <div class="auth__form__actions">
-                <div class="auth__form__actions__button auth__form__actions__button--reset">
+                <div class="auth__form__actions__button auth__form__actions__button--reset waves-button-light">
                     <i class="reset-icon"></i>
                     <span>Send reset email</span>
                 </div>
             </div>
         </div>
         <div class="auth__disclaimer text-center">
-            <p>Remembered your password? <a href="{{ route('login') }}">Sign in</a></p>
+            <p>Remembered your password? <a href="{{ route('login') }}" pjax>Sign in</a></p>
         </div>
     </div>
 @stop
