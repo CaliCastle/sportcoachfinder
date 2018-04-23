@@ -18,6 +18,7 @@ Route::get('/home', 'HomeController@index');
 // Apply for Coach
 Route::get('apply', 'HomeController@showBecomeACoach')->name('apply');
 
+// Auth Routes...
 Route::group(['namespace' => 'Auth'], function () {
     // Authentication Routes...
     Route::get('login', 'LoginController@showLoginForm')->name('login');
@@ -33,4 +34,9 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('password/reset', 'ResetPasswordController@reset');
+});
+
+// Admin Routes...
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::get('/', 'DashboardController@index')->name('admin.dashboard');
 });

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'email', 'password',
     ];
 
     /**
@@ -26,4 +26,33 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * User's role.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * Make the user admin role.
+     */
+    public function makeAdmin()
+    {
+        $adminRole = Role::find(Role::ADMIN);
+
+        $this->role()->associate($adminRole);
+        $this->save();
+    }
+
+    /**
+     * Toggle verified attribute.
+     */
+    public function toggleVerified()
+    {
+        $this->verified = !$this->verified;
+    }
 }
