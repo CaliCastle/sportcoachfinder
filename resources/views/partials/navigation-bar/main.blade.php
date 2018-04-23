@@ -26,9 +26,10 @@
 					Sign up / Sign in
 				</a>
 			@else
-				<a class="ui-navigation-bar__link" href="#">
-
-				</a>
+				<form action="{{ route('logout') }}" method="POST">
+					@csrf
+					<button type="submit" class="ui-navigation-bar__link waves-button-light">Log out</button>
+				</form>
 			@endguest
 		</div>
 	</div>
