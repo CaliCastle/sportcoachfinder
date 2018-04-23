@@ -1,0 +1,21 @@
+.apply-for-coach {
+	.apply-heading {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-size: 3rem;
+		color: $theme-primary;
+
+		i {
+			font-size: 5.8rem;
+			color: currentColor;
+		}
+
+		span {
+			margin: 1rem 0;
+			color: currentColor;
+			font-weight: bold;
+		}
+	}
+}

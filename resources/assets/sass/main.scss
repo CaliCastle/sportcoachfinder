@@ -10,6 +10,10 @@ body {
 	> main {
 		position: relative;
 		min-height: 100vh;
+
+		> section:last-of-type:not(.hero) {
+			padding-bottom: $footer-curve-height;
+		}
 	}
 }
 
@@ -57,6 +61,10 @@ button {
 .hidden, [hidden] {
 	display: none;
 	visibility: hidden;
+}
+
+.rounded {
+	border-radius: 12px;
 }
 
 /* Switchery styles. */
@@ -205,21 +213,6 @@ button {
 	text-align: center;
 	text-decoration: none;
 	z-index: 1;
-}
-.waves-button {
-	padding: 0.85em 1.1em;
-	border-radius: 0.2em;
-}
-.waves-button-input {
-	margin: 0;
-	padding: 0.85em 1.1em;
-}
-.waves-input-wrapper {
-	border-radius: 0.2em;
-	vertical-align: bottom;
-}
-.waves-input-wrapper.waves-button {
-	padding: 0;
 }
 .waves-input-wrapper .waves-button-input {
 	position: relative;

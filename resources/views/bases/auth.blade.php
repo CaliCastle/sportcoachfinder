@@ -10,7 +10,7 @@
 
 	<div class="auth__container auth__container--main">
 		<nav class="auth__nav">
-			<a href="{{ route('home') }}"><i class="back-icon"></i>&nbsp; Home</a>
+			<a href="{{ route('home') }}" class="rounded waves-button-light"><i class="back-icon"></i>&nbsp; Home</a>
 			<div class="auth__language-selector">
 				<svg viewBox="0 0 48 48">
 					<use xlink:href="#globe"></use>
@@ -32,10 +32,10 @@
 	</div>
 	<aside class="auth__container auth__container--side">
 		<nav class="auth__nav">
-			<a href="#">FAQs</a>
-			<a href="#">Contact</a>
-			<a href="#">About</a>
-			<a href="#">Support</a>
+			<a href="#" class="rounded waves-button-light">FAQs</a>
+			<a href="#" class="rounded waves-button-light">Contact</a>
+			<a href="#" class="rounded waves-button-light">About</a>
+			<a href="#" class="rounded waves-button-light">Support</a>
 		</nav>
 		<div class="auth__background">
 			<div class="auth__background__image"></div>

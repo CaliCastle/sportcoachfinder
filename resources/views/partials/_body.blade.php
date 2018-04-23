@@ -3,6 +3,7 @@
 	@yield('body')
 </main>
 
+<script src="{{ mix('js/core.js') }}"></script>
 @stack('body.scripts')
 
 <div class="graphicons" hidden>

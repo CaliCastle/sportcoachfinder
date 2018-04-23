@@ -16,7 +16,7 @@
 		position: relative;
 		background: linear-gradient(166deg, #4A944E, $theme-primary);
 		height: 100px;
-		margin-bottom: 150px;
+		margin-bottom: 50px;
 	}
 
 	@include has('container') {
@@ -45,6 +45,7 @@
 		padding: .8rem;
 		background: none;
 		margin: 0 .5rem;
+		border-radius: 12px;
 
 		@include as('dropdown') {
 			width: 35px;
@@ -95,6 +96,9 @@
 		padding: .8rem 1.4rem;
 		background: #2d7131;
 		border-radius: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	a {

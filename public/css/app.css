@@ -937,6 +937,10 @@ body > main {
   min-height: 100vh;
 }
 
+body > main > section:last-of-type:not(.hero) {
+  padding-bottom: 95px;
+}
+
 input {
   font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
   border: none;
@@ -984,6 +988,10 @@ button {
 [hidden] {
   display: none;
   visibility: hidden;
+}
+
+.rounded {
+  border-radius: 12px;
 }
 
 /* Switchery styles. */
@@ -1127,25 +1135,6 @@ button {
   z-index: 1;
 }
 
-.waves-button {
-  padding: 0.85em 1.1em;
-  border-radius: 0.2em;
-}
-
-.waves-button-input {
-  margin: 0;
-  padding: 0.85em 1.1em;
-}
-
-.waves-input-wrapper {
-  border-radius: 0.2em;
-  vertical-align: bottom;
-}
-
-.waves-input-wrapper.waves-button {
-  padding: 0;
-}
-
 .waves-input-wrapper .waves-button-input {
   position: relative;
   top: 0;
@@ -1203,7 +1192,7 @@ button {
   position: relative;
   background: linear-gradient(166deg, #4A944E, #2E7D32);
   height: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 .ui-navigation-bar__container {
@@ -1253,6 +1242,7 @@ button {
   padding: .8rem;
   background: none;
   margin: 0 .5rem;
+  border-radius: 12px;
 }
 
 .ui-navigation-bar__link--dropdown {
@@ -1314,6 +1304,15 @@ button {
   padding: .8rem 1.4rem;
   background: #2d7131;
   border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .ui-navigation-bar a {
@@ -1790,6 +1789,35 @@ button {
   color: #e3e3e3;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+.apply-for-coach .apply-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 3rem;
+  color: #2E7D32;
+}
+
+.apply-for-coach .apply-heading i {
+  font-size: 5.8rem;
+  color: currentColor;
+}
+
+.apply-for-coach .apply-heading span {
+  margin: 1rem 0;
+  color: currentColor;
+  font-weight: bold;
 }
 
 .primary-gradient {

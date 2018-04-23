@@ -25,11 +25,11 @@
 				</div>
 			</div>
 			<div class="auth__form__actions">
-				<div class="auth__form__actions__button auth__form__actions__button--signin">
+				<div class="auth__form__actions__button auth__form__actions__button--signin waves-button-light">
 					<i class="login-icon"></i>
 					<span>Sign in</span>
 				</div>
-				<div class="auth__form__actions__button auth__form__actions__button--signup">
+				<div class="auth__form__actions__button auth__form__actions__button--signup waves-button-light">
 					<i class="plus-icon"></i>
 					<span>Sign up</span>
 				</div>
@@ -39,11 +39,11 @@
 			</div>
 		</div>
 		<div class="auth__social">
-			<div class="auth__social__button auth__social__button--google">
+			<div class="auth__social__button auth__social__button--google waves-button-light">
 				<i class="google"></i>
 				<span>Login via Google</span>
 			</div>
-			<div class="auth__social__button auth__social__button--facebook">
+			<div class="auth__social__button auth__social__button--facebook waves-button-light">
 				<i class="facebook"></i>
 				<span>Login via Facebook</span>
 			</div>

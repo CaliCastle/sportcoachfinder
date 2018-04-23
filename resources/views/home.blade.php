@@ -18,7 +18,7 @@
 				<div class="search-box search-box--location shadowed">
 					<input type="text" placeholder="Enter location">
 				</div>
-				<button class="search-button primary-gradient--reverse shadowed">
+				<button class="search-button primary-gradient--reverse shadowed waves-button">
 					<span>Search</span>
 				</button>
 			</div>

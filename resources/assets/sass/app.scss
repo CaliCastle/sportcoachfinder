@@ -17,6 +17,9 @@
 @import "components/hero";
 @import "components/footer";
 
+// === Pages ===
+@import "pages/apply";
+
 .primary-gradient {
 	background: linear-gradient(110deg, $theme-primary, $theme-primary-light) !important;
 
