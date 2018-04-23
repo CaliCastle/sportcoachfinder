@@ -62,6 +62,13 @@ body {
 			color: #eee;
 			font-size: 1.3rem;
 			font-weight: 700;
+			animation: 0.535s fadeInRight both;
+
+			@for $i from 1 through 5 {
+				&:nth-of-type(#{$i}) {
+					animation-delay: #{($i * 0.0349) + 0.15}s;
+				}
+			}
 		}
 	}
 
@@ -74,6 +81,7 @@ body {
 		padding: .4rem .7rem;
 		border-radius: 2rem;
 		cursor: pointer;
+		animation: 0.85s fadeIn 0.22s both;
 
 		svg, svg use {
 			width: 30px;
@@ -121,6 +129,16 @@ body {
 				font-weight: 600;
 				font-size: 1.65rem;
 				line-height: 1.8;
+			}
+		}
+
+		> div {
+			animation: 0.39s fadeIn 0.2s both;
+
+			@for $i from 1 through 4 {
+				&:nth-of-type(#{$i}) {
+					animation-delay: #{0.275 + ($i * 0.03187)}s;
+				}
 			}
 		}
 	}
@@ -409,12 +427,19 @@ body {
 					font-weight: 600;
 					line-height: 1.35;
 					letter-spacing: 1px;
+					animation: 0.41s fadeInDown both;
 
 					&:before {
 						@include icons8-font();
 						content: $icons8-var-checkmark;
 						color: #e9f77b;
 						font-size: 1.2rem;
+					}
+
+					@for $i from 1 through 4 {
+						&:nth-of-type(#{$i}) {
+							animation-delay: #{0.35 + ($i * 0.0289)}s;
+						}
 					}
 				}
 			}

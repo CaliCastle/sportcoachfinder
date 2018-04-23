@@ -1,6 +1,1333 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin:300,400,500,600,700);a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:middle}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}
+@import url(https://fonts.googleapis.com/css?family=Cabin:300,400,500,600,700);@charset "UTF-8";
 
-/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}legend{-webkit-box-sizing:border-box;box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}@font-face{font-family:Sport-Coach-Finder;src:url("/fonts/icons.eot");src:url("/fonts/icons.eot?#iefix") format("embedded-opentype"),url("/fonts/icons.woff2") format("woff2"),url("/fonts/icons.woff") format("woff"),url("/fonts/icons.ttf") format("truetype"),url("/fonts/icons.svg#Sport-Coach-Finder") format("svg");font-weight:400;font-style:normal}@media screen and (-webkit-min-device-pixel-ratio:0){@font-face{font-family:Sport-Coach-Finder;src:url("/fonts/icons.svg#Sport-Coach-Finder") format("svg")}}.icon-black-twitter-logo:before,.icon-caret-arrowhead-facing-down:before,.icon-checkmark:before,.icon-circular-arrow:before,.icon-close-button:before,.icon-coach:before,.icon-email-envelope:before,.icon-facebook:before,.icon-gender-neutral-user:before,.icon-instagram:before,.icon-left-arrow:before,.icon-location-marker:before,.icon-lock:before,.icon-login:before,.icon-personal-trainer-2:before,.icon-personal-trainer:before,.icon-phone:before,.icon-plus:before,.icon-search-button:before,.icon-search:before,.icon-wheelchair:before,.icon-whistle:before,[data-icon]:before{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased}[data-icon]:before{content:attr(data-icon)}.icon-black-twitter-logo:before{content:"\F109"}.icon-caret-arrowhead-facing-down:before{content:"\F107"}.icon-checkmark:before{content:"\F111"}.icon-circular-arrow:before{content:"\F110"}.icon-close-button:before{content:"\F114"}.icon-coach:before{content:"\F100"}.icon-email-envelope:before{content:"\F10C"}.icon-facebook:before{content:"\F10A"}.icon-gender-neutral-user:before{content:"\F112"}.icon-instagram:before{content:"\F108"}.icon-left-arrow:before{content:"\F10B"}.icon-location-marker:before{content:"\F106"}.icon-lock:before{content:"\F10D"}.icon-login:before{content:"\F10E"}.icon-personal-trainer:before{content:"\F101"}.icon-personal-trainer-2:before{content:"\F102"}.icon-phone:before{content:"\F113"}.icon-plus:before{content:"\F10F"}.icon-search:before{content:"\F104"}.icon-search-button:before{content:"\F105"}.icon-wheelchair:before{content:"\F115"}.icon-whistle:before{content:"\F103"}.twitter:after{content:"\F109"}.instagram:after,.twitter:after{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased}.instagram:after{content:"\F108"}.facebook:after{content:"\F10A"}.facebook:after,.google:after{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased}.google:after{content:"\F118"}i.search-icon:after{content:"\F104"}i.coach-icon:after,i.search-icon:after{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased}i.coach-icon:after{content:"\F102"}i.back-icon:after{content:"\F10B"}i.back-icon:after,i.login-icon:after{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased}i.login-icon:after{content:"\F10E"}i.plus-icon:after{content:"\F10F"}i.plus-icon:after,i.reset-icon:after{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased}i.reset-icon:after{content:"\F110"}i.location-icon:after{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-transform:none;font-smoothing:antialiased;content:"\F106"}body,i.location-icon:after{text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}body{background:#f5f8fa;font-family:Cabin,San Francisco,Helvetica Neue,sans-serif;overflow-x:hidden}body,body>main{min-height:100vh}body>main{position:relative}body>main>section:last-of-type:not(.hero){padding-bottom:95px}input{font-family:Cabin,San Francisco,Helvetica Neue,sans-serif;border:none;outline:none}input:-webkit-autofill,input:-webkit-autofill:focus input:-webkit-autofill,input:-webkit-autofill:hover,select:-webkit-autofill,select:-webkit-autofill:focus,select:-webkit-autofill:hover,textarea:-webkit-autofill,textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus{border:none;-webkit-text-fill-color:currentColor;-webkit-box-shadow:0 0 0 0 transparent inset;-webkit-transition:background-color 5000s ease-in-out 0s;transition:background-color 5000s ease-in-out 0s}a{text-decoration:none}button{outline:none;position:relative;border:none;font-size:1.3rem;font-family:inherit;font-weight:600;cursor:pointer}.text-center{text-align:center}.hidden,[hidden]{display:none;visibility:hidden}.rounded{border-radius:12px}.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#50a946;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}.pace .pace-progress-inner{display:block;position:absolute;right:0;width:100px;height:100%;-webkit-box-shadow:0 0 10px #50a946,0 0 5px #50a946;box-shadow:0 0 10px #50a946,0 0 5px #50a946;opacity:1;-webkit-transform:rotate(3deg) translateY(-4px);transform:rotate(3deg) translateY(-4px)}.pace .pace-activity{display:block;position:fixed;z-index:2000;top:15px;right:15px;width:14px;height:14px;border:2px solid transparent;border-top-color:#50a946;border-left-color:#50a946;border-radius:10px;-webkit-animation:pace-spinner .4s linear infinite;animation:pace-spinner .4s linear infinite}@-webkit-keyframes pace-spinner{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes pace-spinner{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.switchery{background-color:#fff;border:1px solid #dfdfdf;border-radius:20px;cursor:pointer;display:inline-block;height:30px;position:relative;vertical-align:middle;width:50px;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;-webkit-box-sizing:content-box;box-sizing:content-box;background-clip:content-box}.switchery>small{background:#fff;border-radius:100%;-webkit-box-shadow:0 1px 3px rgba(0,0,0,.4);box-shadow:0 1px 3px rgba(0,0,0,.4);height:30px;position:absolute;top:0;width:30px}.switchery-small{border-radius:20px;height:20px;width:33px}.switchery-small>small{height:20px;width:20px}.switchery-large{border-radius:40px;height:40px;width:66px}.switchery-large>small{height:40px;width:40px}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: "Sport-Coach-Finder";
+  src: url("/fonts/icons.eot");
+  src: url("/fonts/icons.eot?#iefix") format("embedded-opentype"), url("/fonts/icons.woff2") format("woff2"), url("/fonts/icons.woff") format("woff"), url("/fonts/icons.ttf") format("truetype"), url("/fonts/icons.svg#Sport-Coach-Finder") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@font-face {
+    font-family: "Sport-Coach-Finder";
+    src: url("/fonts/icons.svg#Sport-Coach-Finder") format("svg");
+}
+}
+
+[data-icon]:before,
+.icon-black-twitter-logo:before,
+.icon-caret-arrowhead-facing-down:before,
+.icon-checkmark:before,
+.icon-circular-arrow:before,
+.icon-close-button:before,
+.icon-coach:before,
+.icon-email-envelope:before,
+.icon-facebook:before,
+.icon-gender-neutral-user:before,
+.icon-instagram:before,
+.icon-left-arrow:before,
+.icon-location-marker:before,
+.icon-lock:before,
+.icon-login:before,
+.icon-personal-trainer:before,
+.icon-personal-trainer-2:before,
+.icon-phone:before,
+.icon-plus:before,
+.icon-search:before,
+.icon-search-button:before,
+.icon-wheelchair:before,
+.icon-whistle:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+.icon-black-twitter-logo:before {
+  content: "\F109";
+}
+
+.icon-caret-arrowhead-facing-down:before {
+  content: "\F107";
+}
+
+.icon-checkmark:before {
+  content: "\F111";
+}
+
+.icon-circular-arrow:before {
+  content: "\F110";
+}
+
+.icon-close-button:before {
+  content: "\F114";
+}
+
+.icon-coach:before {
+  content: "\F100";
+}
+
+.icon-email-envelope:before {
+  content: "\F10C";
+}
+
+.icon-facebook:before {
+  content: "\F10A";
+}
+
+.icon-gender-neutral-user:before {
+  content: "\F112";
+}
+
+.icon-instagram:before {
+  content: "\F108";
+}
+
+.icon-left-arrow:before {
+  content: "\F10B";
+}
+
+.icon-location-marker:before {
+  content: "\F106";
+}
+
+.icon-lock:before {
+  content: "\F10D";
+}
+
+.icon-login:before {
+  content: "\F10E";
+}
+
+.icon-personal-trainer:before {
+  content: "\F101";
+}
+
+.icon-personal-trainer-2:before {
+  content: "\F102";
+}
+
+.icon-phone:before {
+  content: "\F113";
+}
+
+.icon-plus:before {
+  content: "\F10F";
+}
+
+.icon-search:before {
+  content: "\F104";
+}
+
+.icon-search-button:before {
+  content: "\F105";
+}
+
+.icon-wheelchair:before {
+  content: "\F115";
+}
+
+.icon-whistle:before {
+  content: "\F103";
+}
+
+.twitter:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F109";
+}
+
+.instagram:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F108";
+}
+
+.facebook:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F10A";
+}
+
+.google:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F118";
+}
+
+i.search-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F104";
+}
+
+i.coach-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F102";
+}
+
+i.back-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F10B";
+}
+
+i.login-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F10E";
+}
+
+i.plus-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F10F";
+}
+
+i.reset-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F110";
+}
+
+i.location-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F106";
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+          animation-name: bounceInDown;
+}
+
+body {
+  background: #f5f8fa;
+  font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body > main {
+  position: relative;
+  min-height: 100vh;
+}
+
+body > main > section:last-of-type:not(.hero) {
+  padding-bottom: 95px;
+}
+
+input {
+  font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
+  border: none;
+  outline: none;
+}
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: currentColor;
+  -webkit-box-shadow: 0 0 0px 0px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  position: relative;
+  border: none;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden,
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+/**
+ Pace loader styles.
+*/
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #50a946;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  -webkit-box-shadow: 0 0 10px #50a946, 0 0 5px #50a946;
+          box-shadow: 0 0 10px #50a946, 0 0 5px #50a946;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #50a946;
+  border-left-color: #50a946;
+  border-radius: 10px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* Switchery styles. */
+
+.switchery {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-clip: content-box;
+}
+
+.switchery > small {
+  background: #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  height: 30px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+
+/* Switchery sizes. */
+
+.switchery-small {
+  border-radius: 20px;
+  height: 20px;
+  width: 33px;
+}
+
+.switchery-small > small {
+  height: 20px;
+  width: 20px;
+}
+
+.switchery-large {
+  border-radius: 40px;
+  height: 40px;
+  width: 66px;
+}
+
+.switchery-large > small {
+  height: 40px;
+  width: 40px;
+}
 
 /*!
  * Waves v0.7.6
@@ -8,4 +1335,721 @@
  *
  * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
  * Released under the MIT license
- * https://github.com/fians/Waves/blob/master/LICENSE */.waves-effect{position:relative;cursor:pointer;display:inline-block;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.waves-effect .waves-ripple{position:absolute;border-radius:50%;width:100px;height:100px;margin-top:-50px;margin-left:-50px;opacity:0;background:rgba(0,0,0,.2);background:radial-gradient(rgba(0,0,0,.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,hsla(0,0%,100%,0) 70%);-webkit-transition:all .5s ease-out;transition:all .5s ease-out;-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:opacity,-webkit-transform;transition-property:opacity,-webkit-transform;transition-property:transform,opacity;transition-property:transform,opacity,-webkit-transform;-webkit-transform:scale(0) translate(0);transform:scale(0) translate(0);pointer-events:none}.waves-effect.waves-light .waves-ripple{background:hsla(0,0%,100%,.4);background:radial-gradient(hsla(0,0%,100%,.2) 0,hsla(0,0%,100%,.3) 40%,hsla(0,0%,100%,.4) 50%,hsla(0,0%,100%,.5) 60%,hsla(0,0%,100%,0) 70%)}.waves-effect.waves-classic .waves-ripple{background:rgba(0,0,0,.2)}.waves-effect.waves-classic.waves-light .waves-ripple{background:hsla(0,0%,100%,.4)}.waves-notransition{-webkit-transition:none!important;transition:none!important}.waves-button,.waves-circle{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-mask-image:-webkit-radial-gradient(circle,#fff 100%,#000 0)}.waves-button,.waves-button-input,.waves-button:hover,.waves-button:visited{white-space:nowrap;vertical-align:middle;cursor:pointer;border:none;outline:none;color:inherit;background-color:transparent;font-size:1em;line-height:1em;text-align:center;text-decoration:none;z-index:1}.waves-input-wrapper .waves-button-input{position:relative;top:0;left:0;z-index:1}.waves-circle{text-align:center;width:2.5em;height:2.5em;line-height:2.5em;border-radius:50%}.waves-float{-webkit-mask-image:none;-webkit-box-shadow:0 1px 1.5px 1px rgba(0,0,0,.12);box-shadow:0 1px 1.5px 1px rgba(0,0,0,.12);-webkit-transition:all .3s;transition:all .3s}.waves-float:active{-webkit-box-shadow:0 8px 20px 1px rgba(0,0,0,.3);box-shadow:0 8px 20px 1px rgba(0,0,0,.3)}.waves-block{display:block}body{background:#fff}.auth{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;width:100%;max-width:1440px;margin:0 auto}.auth__container{min-height:100vh;position:relative}.auth__container--main{-webkit-box-flex:1;-ms-flex:1;flex:1;background:#fff}.auth__container--main>nav{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.auth__container--main>nav a{color:#2e7d32}.auth__container--side{-webkit-box-flex:1.2;-ms-flex:1.2;flex:1.2;background:transparent}.auth__nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;padding-top:1.8rem;z-index:999}.auth__nav>a{display:block;padding:.6rem;margin:1rem;color:#eee;font-size:1.3rem;font-weight:700}.auth__language-selector{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#fff;-webkit-box-shadow:0 0 15px rgba(0,0,0,.2);box-shadow:0 0 15px rgba(0,0,0,.2);padding:.4rem .7rem;border-radius:2rem;cursor:pointer}.auth__language-selector svg,.auth__language-selector svg use{width:30px;height:30px}.auth__language-selector span{font-weight:700;font-size:1.05rem;color:#50a946;margin-left:.3rem}.auth__panel-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;margin:6rem .5rem 0 5rem}.auth__panel__logo span{display:inline-block;font-size:2.5rem;color:#2e7d32;font-weight:700}.auth__panel__logo .logo{display:inline-block;width:4.3rem;margin-left:1.5rem}.auth__panel__greeting{padding:2rem 4rem 3rem 0}.auth__panel__greeting h3{color:#989898;font-weight:600;font-size:1.65rem;line-height:1.8}.auth__form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.auth__form__input{position:relative;color:#696969;margin:.65rem .2rem;background:#f4f4f4;width:100%;border-radius:3rem;-webkit-box-shadow:0 2px 8px rgba(0,0,0,.04);box-shadow:0 2px 8px rgba(0,0,0,.04)}.auth__form__input:before{font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;position:absolute;display:inline-block;left:1.3rem;top:0;height:100%;vertical-align:middle;line-height:1.9;font-size:1.55rem;color:#adadad}.auth__form__input--email:before{content:"\F10C";top:.1rem;left:1.45rem}.auth__form__input--password:before{content:"\F10D"}.auth__form__input>input{height:50px;position:relative;border:none;background:transparent;left:0;top:0;width:calc(100% - 3.7rem);margin:0 0 0 3.65rem;outline:none;cursor:text;font-size:1.2rem;font-weight:600;color:currentColor}.auth__form__input>input::-webkit-input-placeholder{color:#828181}.auth__form__input>input:-ms-input-placeholder,.auth__form__input>input::-ms-input-placeholder{color:#828181}.auth__form__input>input::placeholder{color:#828181}.auth__form__meta{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;padding:1rem .2rem}.auth__form__meta__remember{cursor:pointer}.auth__form__meta__remember .checkbox{position:relative;width:1.4rem;height:1.4rem;display:inline-block;margin:0 .5rem 0 0;border-radius:50%;color:#8d8d8d;border:2.5px solid #8d8d8d}.auth__form__meta__remember .checkbox.checked{background:#8d8d8d}.auth__form__meta__remember .checkbox.checked:before{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;content:"\F111";position:absolute;top:.1rem;left:.1rem;font-size:1.2rem;color:#eee}.auth__form__meta__remember span{color:#828282;font-size:1rem;font-weight:600}.auth__form__meta__forgot{color:#656565;font-size:1rem;font-weight:700}.auth__form__meta__forgot a{color:currentColor}.auth__form__actions{margin:1.5rem 0;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;width:100%}.auth__form__actions,.auth__form__actions__button{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;align-items:center}.auth__form__actions__button{cursor:pointer;-webkit-box-flex:1;-ms-flex:1;flex:1;border-radius:2rem;height:50px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;color:#fff;-webkit-box-shadow:0 1px 20px rgba(0,0,0,.25);box-shadow:0 1px 20px rgba(0,0,0,.25)}.auth__form__actions__button--signin{margin-right:1rem}.auth__form__actions__button--reset,.auth__form__actions__button--signin{background:linear-gradient(211deg,#2e7d32,#50a946)!important}.auth__form__actions__button--signup{background:#4a4a4a}.auth__form__actions__button i{font-size:1.5rem}.auth__form__actions__button span{font-size:1.05rem;font-weight:700;margin:0 .4rem;text-transform:capitalize}.auth__form__separator{margin:1rem 0}.auth__form__separator span{font-size:.9rem;font-weight:700;color:#333}.auth__social{margin:1.6rem 0;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.auth__social,.auth__social__button{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%}.auth__social__button{height:50px;text-align:center;border-radius:2.5rem;-webkit-box-shadow:0 1px 20px rgba(0,0,0,.08);box-shadow:0 1px 20px rgba(0,0,0,.08);margin:.6rem 0;cursor:pointer}.auth__social__button i{font-size:1.5rem;color:currentColor;margin-right:.6rem}.auth__social__button span{font-size:1.12rem;font-weight:600}.auth__social__button--google{background:#fff;color:#ea4335}.auth__social__button--facebook{background:#3b5998;color:#fff}.auth__disclaimer{font-size:1rem;font-weight:500;color:#444;line-height:1.8;margin:3rem 0 1rem}.auth__disclaimer a{color:#50a946;font-weight:700}.auth__background{position:fixed;right:0;top:0;width:50%;height:100%;overflow:hidden;z-index:-1;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.auth__background__image{background:url("/assets/images/auth/whistle-in-the-sky.jpg") no-repeat;background-size:cover;z-index:-3}.auth__background__image,.auth__background__overlay{width:100%;height:100%;position:absolute;left:0;top:0}.auth__background__overlay{background:radial-gradient(circle at top right,rgba(0,0,0,.65),rgba(0,0,0,.2));display:block;z-index:-2}.auth__background__cover{position:absolute;width:100%;height:100%;left:-100%;top:0;background:#fff;-webkit-transform:skew(11deg);transform:skew(11deg);-webkit-transform-origin:left top;transform-origin:left top}.auth__background__features{color:#fff;width:60%;padding-left:2rem}.auth__background__features ul li{padding:.8rem 0;font-size:1.1rem;font-weight:600;line-height:1.35;letter-spacing:1px}.auth__background__features ul li:before{display:inline-block;font-family:Sport-Coach-Finder;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;content:"\F111";color:#e9f77b;font-size:1.2rem}
+ * https://github.com/fians/Waves/blob/master/LICENSE */
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.waves-effect .waves-ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transform: scale(0) translate(0, 0);
+  transform: scale(0) translate(0, 0);
+  pointer-events: none;
+}
+
+.waves-effect.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.4);
+  background: radial-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+}
+
+.waves-effect.waves-classic .waves-ripple {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.waves-effect.waves-classic.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.waves-notransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.waves-button,
+.waves-circle {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.waves-button,
+.waves-button:hover,
+.waves-button:visited,
+.waves-button-input {
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: inherit;
+  background-color: transparent;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.waves-input-wrapper .waves-button-input {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.waves-circle {
+  text-align: center;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50%;
+}
+
+.waves-float {
+  -webkit-mask-image: none;
+  -webkit-box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.12);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.waves-float:active {
+  -webkit-box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.waves-block {
+  display: block;
+}
+
+body {
+  background: #fff;
+}
+
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.auth__container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.auth__container--main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #fff;
+}
+
+.auth__container--main > nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.auth__container--main > nav a {
+  color: #2E7D32;
+}
+
+.auth__container--side {
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
+  background: transparent;
+}
+
+.auth__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 1.8rem;
+  z-index: 999;
+}
+
+.auth__nav > a {
+  display: block;
+  padding: .6rem;
+  margin: 1rem;
+  color: #eee;
+  font-size: 1.3rem;
+  font-weight: 700;
+  -webkit-animation: 0.535s fadeInRight both;
+          animation: 0.535s fadeInRight both;
+}
+
+.auth__nav > a:nth-of-type(1) {
+  -webkit-animation-delay: 0.1849s;
+          animation-delay: 0.1849s;
+}
+
+.auth__nav > a:nth-of-type(2) {
+  -webkit-animation-delay: 0.2198s;
+          animation-delay: 0.2198s;
+}
+
+.auth__nav > a:nth-of-type(3) {
+  -webkit-animation-delay: 0.2547s;
+          animation-delay: 0.2547s;
+}
+
+.auth__nav > a:nth-of-type(4) {
+  -webkit-animation-delay: 0.2896s;
+          animation-delay: 0.2896s;
+}
+
+.auth__nav > a:nth-of-type(5) {
+  -webkit-animation-delay: 0.3245s;
+          animation-delay: 0.3245s;
+}
+
+.auth__language-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: .4rem .7rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  -webkit-animation: 0.85s fadeIn 0.22s both;
+          animation: 0.85s fadeIn 0.22s both;
+}
+
+.auth__language-selector svg,
+.auth__language-selector svg use {
+  width: 30px;
+  height: 30px;
+}
+
+.auth__language-selector span {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #50a946;
+  margin-left: .3rem;
+}
+
+.auth__panel-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 6rem .5rem 0 5rem;
+}
+
+.auth__panel__logo span {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #2E7D32;
+  font-weight: bold;
+}
+
+.auth__panel__logo .logo {
+  display: inline-block;
+  width: 4.3rem;
+  margin-left: 1.5rem;
+}
+
+.auth__panel__greeting {
+  padding: 2rem 4rem 3rem 0;
+}
+
+.auth__panel__greeting h3 {
+  color: #989898;
+  font-weight: 600;
+  font-size: 1.65rem;
+  line-height: 1.8;
+}
+
+.auth__panel > div {
+  -webkit-animation: 0.39s fadeIn 0.2s both;
+          animation: 0.39s fadeIn 0.2s both;
+}
+
+.auth__panel > div:nth-of-type(1) {
+  -webkit-animation-delay: 0.30687s;
+          animation-delay: 0.30687s;
+}
+
+.auth__panel > div:nth-of-type(2) {
+  -webkit-animation-delay: 0.33874s;
+          animation-delay: 0.33874s;
+}
+
+.auth__panel > div:nth-of-type(3) {
+  -webkit-animation-delay: 0.37061s;
+          animation-delay: 0.37061s;
+}
+
+.auth__panel > div:nth-of-type(4) {
+  -webkit-animation-delay: 0.40248s;
+          animation-delay: 0.40248s;
+}
+
+.auth__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth__form__input {
+  position: relative;
+  color: #696969;
+  margin: 0.65rem .2rem;
+  background: #f4f4f4;
+  width: 100%;
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.auth__form__input:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  position: absolute;
+  display: inline-block;
+  left: 1.3rem;
+  top: 0;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 1.9;
+  font-size: 1.55rem;
+  color: #adadad;
+}
+
+.auth__form__input--email:before {
+  content: "\F10C";
+  top: .1rem;
+  left: 1.45rem;
+}
+
+.auth__form__input--password:before {
+  content: "\F10D";
+}
+
+.auth__form__input > input {
+  height: 50px;
+  position: relative;
+  border: none;
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: calc(100% - 3.7rem);
+  margin: 0 0 0 3.65rem;
+  outline: none;
+  cursor: text;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: currentColor;
+}
+
+.auth__form__input > input::-webkit-input-placeholder {
+  color: #828181;
+}
+
+.auth__form__input > input:-ms-input-placeholder {
+  color: #828181;
+}
+
+.auth__form__input > input::-ms-input-placeholder {
+  color: #828181;
+}
+
+.auth__form__input > input::placeholder {
+  color: #828181;
+}
+
+.auth__form__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 1rem .2rem;
+}
+
+.auth__form__meta__remember {
+  cursor: pointer;
+}
+
+.auth__form__meta__remember .checkbox {
+  position: relative;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+  margin: 0 .5rem 0 0;
+  border-radius: 50%;
+  color: #8d8d8d;
+  border: 2.5px solid #8d8d8d;
+}
+
+.auth__form__meta__remember .checkbox.checked {
+  background: #8d8d8d;
+}
+
+.auth__form__meta__remember .checkbox.checked:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F111";
+  position: absolute;
+  top: .1rem;
+  left: .1rem;
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.auth__form__meta__remember span {
+  color: #828282;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.auth__form__meta__forgot {
+  color: #656565;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.auth__form__meta__forgot a {
+  color: currentColor;
+}
+
+.auth__form__actions {
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.auth__form__actions__button {
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 2rem;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+}
+
+.auth__form__actions__button--signin {
+  background: linear-gradient(211deg, #2E7D32, #50a946) !important;
+  margin-right: 1rem;
+}
+
+.auth__form__actions__button--reset {
+  background: linear-gradient(211deg, #2E7D32, #50a946) !important;
+}
+
+.auth__form__actions__button--signup {
+  background: #4A4A4A;
+}
+
+.auth__form__actions__button i {
+  font-size: 1.5rem;
+}
+
+.auth__form__actions__button span {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin: 0 .4rem;
+  text-transform: capitalize;
+}
+
+.auth__form__separator {
+  margin: 1rem 0;
+}
+
+.auth__form__separator span {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.auth__social {
+  margin: 1.6rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.auth__social__button {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border-radius: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+  margin: .6rem 0;
+  cursor: pointer;
+}
+
+.auth__social__button i {
+  font-size: 1.5rem;
+  color: currentColor;
+  margin-right: .6rem;
+}
+
+.auth__social__button span {
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.auth__social__button--google {
+  background: #fff;
+  color: #EA4335;
+}
+
+.auth__social__button--facebook {
+  background: #3B5998;
+  color: #fff;
+}
+
+.auth__disclaimer {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  line-height: 1.8;
+  margin: 3rem 0 1rem 0;
+}
+
+.auth__disclaimer a {
+  color: #50a946;
+  font-weight: bold;
+}
+
+.auth__background {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth__background__image {
+  background: url("/assets/images/auth/whistle-in-the-sky.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -3;
+}
+
+.auth__background__overlay {
+  background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2));
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.auth__background__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  background: #fff;
+  -webkit-transform: skew(11deg);
+          transform: skew(11deg);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+
+.auth__background__features {
+  color: #fff;
+  width: 60%;
+  padding-left: 2rem;
+}
+
+.auth__background__features ul li {
+  padding: .8rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 1px;
+  -webkit-animation: 0.41s fadeInDown both;
+          animation: 0.41s fadeInDown both;
+}
+
+.auth__background__features ul li:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F111";
+  color: #e9f77b;
+  font-size: 1.2rem;
+}
+
+.auth__background__features ul li:nth-of-type(1) {
+  -webkit-animation-delay: 0.3789s;
+          animation-delay: 0.3789s;
+}
+
+.auth__background__features ul li:nth-of-type(2) {
+  -webkit-animation-delay: 0.4078s;
+          animation-delay: 0.4078s;
+}
+
+.auth__background__features ul li:nth-of-type(3) {
+  -webkit-animation-delay: 0.4367s;
+          animation-delay: 0.4367s;
+}
+
+.auth__background__features ul li:nth-of-type(4) {
+  -webkit-animation-delay: 0.4656s;
+          animation-delay: 0.4656s;
+}
+

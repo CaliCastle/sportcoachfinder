@@ -11,7 +11,7 @@
 	<div class="auth__container auth__container--main">
 		<nav class="auth__nav">
 			<a href="{{ route('home') }}" class="rounded waves-button-light"><i class="back-icon"></i>&nbsp; Home</a>
-			<div class="auth__language-selector">
+			<div class="auth__language-selector waves-button-light">
 				<svg viewBox="0 0 48 48">
 					<use xlink:href="#globe"></use>
 				</svg>
