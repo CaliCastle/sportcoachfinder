@@ -37,6 +37,10 @@ Route::group(['namespace' => 'Auth'], function () {
 });
 
 // Admin Routes...
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+Route::group([
+    'namespace'  => 'Admin',
+    'prefix'     => 'admin',
+    'middleware' => ['auth', 'role:admin']
+], function () {
     Route::get('/', 'DashboardController@index')->name('admin.dashboard');
 });

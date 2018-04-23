@@ -38,6 +38,18 @@ class User extends Authenticatable
     }
 
     /**
+     * Check if user has the given role.
+     *
+     * @param string $role
+     *
+     * @return bool
+     */
+    public function hasRole(string $role) : bool
+    {
+        return optional($this->role)->name === $role;
+    }
+
+    /**
      * Make the user admin role.
      */
     public function makeAdmin()

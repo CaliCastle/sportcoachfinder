@@ -1243,6 +1243,7 @@ button {
   background: none;
   margin: 0 .5rem;
   border-radius: 12px;
+  color: #fff;
 }
 
 .ui-navigation-bar__link--dropdown {
