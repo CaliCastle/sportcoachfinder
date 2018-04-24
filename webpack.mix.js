@@ -23,7 +23,7 @@ mix.js(`${jsPath}/auth.js`, 'public/js')
 
 mix.scripts([
     `${jsPath}/plugins/jquery.min.js`,
-    `${jsPath}/plugins/jquery.pjax.min.js`,
+    `${jsPath}/plugins/jquery.pjax.js`,
     `${jsPath}/plugins/switchery.js`,
     `${jsPath}/plugins/waves.js`,
 ], 'public/js/plugins/core.js');

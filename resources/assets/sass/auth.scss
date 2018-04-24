@@ -225,18 +225,31 @@ body {
 					border-radius: 50%;
 					color: #8d8d8d;
 					border: 2.5px solid #8d8d8d;
+					background: transparent;
+					transition: background ease-in .285s;
+					will-change: background;
+
+					&:before {
+						@include icons8-font();
+						content: '';
+						position: absolute;
+						will-change: transform, opacity;
+						transition: transform .285s ease-in-out, opacity .255s ease;
+						top: .1rem;
+						left: .1rem;
+						font-size: 1.2rem;
+						color: #eee;
+						content: $icons8-var-checkmark;
+						opacity: 0;
+						transform: rotate(48deg);
+					}
 
 					&.checked {
 						background: #8d8d8d;
 
 						&:before {
-							@include icons8-font();
-							content: $icons8-var-checkmark;
-							position: absolute;
-							top: .1rem;
-							left: .1rem;
-							font-size: 1.2rem;
-							color: #eee;
+							opacity: 1;
+							transform: rotate(0deg);
 						}
 					}
 				}

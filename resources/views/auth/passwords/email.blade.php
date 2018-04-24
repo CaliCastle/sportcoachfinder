@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="auth__disclaimer text-center">
-            <p>Remembered your password? <a href="{{ route('login') }}" pjax>Sign in</a></p>
+            <p>Remembered your password? <a href="{{ route('login') }}">Sign in</a></p>
         </div>
     </div>
 @stop

@@ -9,19 +9,19 @@
 	<div class="auth__panel__form">
 		<div class="auth__form">
 			<div class="auth__form__input auth__form__input--email">
-				<input type="email" placeholder="Email address" name="email" required>
+				<input type="email" placeholder="Email address" name="email" v-model="email" required>
 			</div>
 			<div class="auth__form__input auth__form__input--password">
-				<input type="password" placeholder="Password" name="password" required>
+				<input type="password" placeholder="Password" name="password" v-model="password" required>
 			</div>
 			<div class="auth__form__meta">
-				<div class="auth__form__meta__remember">
-					<div class="checkbox checked"></div>
+				<div class="auth__form__meta__remember" @click="rememberMe = !rememberMe">
+					<div class="checkbox" v-bind:class="{ checked: rememberMe }"></div>
 					<span>Remember me</span>
-					<input type="hidden" name="remember">
+					<input type="hidden" name="remember" v-model="rememberMe">
 				</div>
 				<div class="auth__form__meta__forgot">
-					<a href="{{ route('password.request') }}" pjax>Forgot password?</a>
+					<a href="{{ route('password.request') }}">Forgot password?</a>
 				</div>
 			</div>
 			<div class="auth__form__actions">

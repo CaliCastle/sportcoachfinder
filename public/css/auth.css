@@ -1761,13 +1761,13 @@ body {
   border-radius: 50%;
   color: #8d8d8d;
   border: 2.5px solid #8d8d8d;
+  background: transparent;
+  -webkit-transition: background ease-in .285s;
+  transition: background ease-in .285s;
+  will-change: background;
 }
 
-.auth__form__meta__remember .checkbox.checked {
-  background: #8d8d8d;
-}
-
-.auth__form__meta__remember .checkbox.checked:before {
+.auth__form__meta__remember .checkbox:before {
   display: inline-block;
   font-family: "Sport-Coach-Finder";
   font-style: normal;
@@ -1780,12 +1780,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  content: "\F111";
+  content: '';
   position: absolute;
+  will-change: transform, opacity;
+  -webkit-transition: opacity .255s ease, -webkit-transform .285s ease-in-out;
+  transition: opacity .255s ease, -webkit-transform .285s ease-in-out;
+  transition: transform .285s ease-in-out, opacity .255s ease;
+  transition: transform .285s ease-in-out, opacity .255s ease, -webkit-transform .285s ease-in-out;
   top: .1rem;
   left: .1rem;
   font-size: 1.2rem;
   color: #eee;
+  content: "\F111";
+  opacity: 0;
+  -webkit-transform: rotate(48deg);
+          transform: rotate(48deg);
+}
+
+.auth__form__meta__remember .checkbox.checked {
+  background: #8d8d8d;
+}
+
+.auth__form__meta__remember .checkbox.checked:before {
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .auth__form__meta__remember span {

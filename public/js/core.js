@@ -89,7 +89,7 @@ function init() {
 init();
 
 // Re-init events when pjax ended.
-$(document).on('ready pjax:end', function () {
+$(document).on('ready pjax:success', function () {
     init();
 });
 

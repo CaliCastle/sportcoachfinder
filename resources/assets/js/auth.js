@@ -1,14 +1,20 @@
+const Vue = require('vue')
+
+const app = new Vue({
+    el: '#app',
+    data: {
+        email: '',
+        password: '',
+        rememberMe: false,
+        errors: []
+    }
+})
+
 // Initialize events
 function init() {
-
 }
 
 // When window is ready
 (() => {
-    init();
-})();
-
-// Re-init events when pjax ended.
-$(document).on('ready pjax:end', function() {
-    init();
-});
+    init()
+})()
