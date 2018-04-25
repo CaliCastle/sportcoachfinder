@@ -7,7 +7,7 @@
 		<h3>Welcome, let's get you signed in</h3>
 	</div>
 	<div class="auth__panel__form">
-		<div class="auth__form">
+		<form class="auth__form" loadable method="POST" action="{{ route('login') }}">
 			<div class="auth__form__input auth__form__input--email">
 				<input type="email" placeholder="Email address" name="email" v-model="email" required>
 			</div>
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 			<div class="auth__form__actions">
-				<div class="auth__form__actions__button auth__form__actions__button--signin waves-button-light">
+				<div class="auth__form__actions__button auth__form__actions__button--signin waves-button-light" @click="login">
 					<i class="login-icon"></i>
 					<span>Sign in</span>
 				</div>
@@ -37,7 +37,7 @@
 			<div class="auth__form__separator">
 				<span>or</span>
 			</div>
-		</div>
+		</form>
 		<div class="auth__social">
 			<div class="auth__social__button auth__social__button--google waves-button-light">
 				<i class="google"></i>

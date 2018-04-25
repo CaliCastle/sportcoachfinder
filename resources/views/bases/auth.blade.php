@@ -41,19 +41,19 @@
 			<div class="auth__background__image"></div>
 			<div class="auth__background__overlay"></div>
 			<div class="auth__background__cover"></div>
-			<div class="auth__background__features">
-				<ul>
-					<li>
-						View and review local sport coaches in your area
-					</li>
-					<li>
-						Access to coaches from a variety of backgrounds and areas of expertise
-					</li>
-					<li>
-						Background certified coaches
-					</li>
-				</ul>
-			</div>
+			{{--<div class="auth__background__features">--}}
+				{{--<ul>--}}
+					{{--<li>--}}
+						{{--View and review local sport coaches in your area--}}
+					{{--</li>--}}
+					{{--<li>--}}
+						{{--Access to coaches from a variety of backgrounds and areas of expertise--}}
+					{{--</li>--}}
+					{{--<li>--}}
+						{{--Background certified coaches--}}
+					{{--</li>--}}
+				{{--</ul>--}}
+			{{--</div>--}}
 		</div>
 	</aside>
 

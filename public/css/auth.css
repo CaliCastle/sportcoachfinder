@@ -1119,6 +1119,65 @@ i.location-icon:after {
           animation-name: bounceInDown;
 }
 
+@-webkit-keyframes line-scale-pulse-out-rapid {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+
+  80% {
+    -webkit-transform: scaley(0.3);
+    transform: scaley(0.3);
+  }
+
+  90% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+}
+
+@keyframes line-scale-pulse-out-rapid {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+
+  80% {
+    -webkit-transform: scaley(0.3);
+    transform: scaley(0.3);
+  }
+
+  90% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+}
+
+.line-scale-pulse-out-rapid > div {
+  background-color: currentColor;
+  width: 4px;
+  height: 35px;
+  border-radius: 2px;
+  margin: 2px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  display: inline-block;
+  -webkit-animation: line-scale-pulse-out-rapid 0.9s -0.5s infinite cubic-bezier(0.11, 0.49, 0.38, 0.78);
+  animation: line-scale-pulse-out-rapid 0.9s -0.5s infinite cubic-bezier(0.11, 0.49, 0.38, 0.78);
+}
+
+.line-scale-pulse-out-rapid > div:nth-child(2),
+.line-scale-pulse-out-rapid > div:nth-child(4) {
+  -webkit-animation-delay: -0.25s !important;
+  animation-delay: -0.25s !important;
+}
+
+.line-scale-pulse-out-rapid > div:nth-child(1),
+.line-scale-pulse-out-rapid > div:nth-child(5) {
+  -webkit-animation-delay: 0s !important;
+  animation-delay: 0s !important;
+}
+
 body {
   background: #f5f8fa;
   font-family: "Cabin", "San Francisco", "Helvetica Neue", sans-serif;
@@ -1189,6 +1248,21 @@ button {
 
 .rounded {
   border-radius: 12px;
+}
+
+.loading {
+  -webkit-filter: blur(2.5px);
+          filter: blur(2.5px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+[loadable] {
+  will-change: filter, opacity;
+  -webkit-transition: opacity .25s ease, -webkit-filter .19s ease-in-out;
+  transition: opacity .25s ease, -webkit-filter .19s ease-in-out;
+  transition: filter .19s ease-in-out, opacity .25s ease;
+  transition: filter .19s ease-in-out, opacity .25s ease, -webkit-filter .19s ease-in-out;
 }
 
 /**
@@ -2016,59 +2090,5 @@ body {
           transform: skew(11deg);
   -webkit-transform-origin: left top;
           transform-origin: left top;
-}
-
-.auth__background__features {
-  color: #fff;
-  width: 60%;
-  padding-left: 2rem;
-}
-
-.auth__background__features ul li {
-  padding: .8rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: 1px;
-  -webkit-animation: 0.41s fadeInDown both;
-          animation: 0.41s fadeInDown both;
-}
-
-.auth__background__features ul li:before {
-  display: inline-block;
-  font-family: "Sport-Coach-Finder";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  content: "\F111";
-  color: #e9f77b;
-  font-size: 1.2rem;
-}
-
-.auth__background__features ul li:nth-of-type(1) {
-  -webkit-animation-delay: 0.3789s;
-          animation-delay: 0.3789s;
-}
-
-.auth__background__features ul li:nth-of-type(2) {
-  -webkit-animation-delay: 0.4078s;
-          animation-delay: 0.4078s;
-}
-
-.auth__background__features ul li:nth-of-type(3) {
-  -webkit-animation-delay: 0.4367s;
-          animation-delay: 0.4367s;
-}
-
-.auth__background__features ul li:nth-of-type(4) {
-  -webkit-animation-delay: 0.4656s;
-          animation-delay: 0.4656s;
 }
 

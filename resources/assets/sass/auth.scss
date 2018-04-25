@@ -428,34 +428,34 @@ body {
 			transform-origin: left top;
 		}
 
-		@include has('features') {
-			color: #fff;
-			width: 60%;
-			padding-left: 2rem;
-
-			ul {
-				li {
-					padding: .8rem 0;
-					font-size: 1.1rem;
-					font-weight: 600;
-					line-height: 1.35;
-					letter-spacing: 1px;
-					animation: 0.41s fadeInDown both;
-
-					&:before {
-						@include icons8-font();
-						content: $icons8-var-checkmark;
-						color: #e9f77b;
-						font-size: 1.2rem;
-					}
-
-					@for $i from 1 through 4 {
-						&:nth-of-type(#{$i}) {
-							animation-delay: #{0.35 + ($i * 0.0289)}s;
-						}
-					}
-				}
-			}
-		}
+		//@include has('features') {
+		//	color: #fff;
+		//	width: 60%;
+		//	padding-left: 2rem;
+		//
+		//	ul {
+		//		li {
+		//			padding: .8rem 0;
+		//			font-size: 1.1rem;
+		//			font-weight: 600;
+		//			line-height: 1.35;
+		//			letter-spacing: 1px;
+		//			animation: 0.41s fadeInDown both;
+		//
+		//			&:before {
+		//				@include icons8-font();
+		//				content: $icons8-var-checkmark;
+		//				color: #e9f77b;
+		//				font-size: 1.2rem;
+		//			}
+		//
+		//			@for $i from 1 through 4 {
+		//				&:nth-of-type(#{$i}) {
+		//					animation-delay: #{0.35 + ($i * 0.0289)}s;
+		//				}
+		//			}
+		//		}
+		//	}
+		//}
 	}
 }

@@ -9,8 +9,9 @@
 	<meta property="og:title" content="{{ config('app.name') }}">
 	<meta property="og:description" content="{{ config('app.description') }}">
 	{{--<meta property="og:image" content="/">--}}
-	{{--<meta property="og:url" content="http://euro-travel-example.com/index.htm">--}}
+	<meta property="og:url" content="{{ config('app.url') }}">
 	<meta name="twitter:card" content="summary_large_image">
+	<meta name="base-url" content="{{ url('/') }}">
 
 	<title>@yield('title') | {{ config('app.name') }}</title>
 
@@ -28,6 +29,9 @@
 	<link rel="prerender" href="{{ config('app.url') }}">
 
 	<script src="/js/plugins/pace.min.js"></script>
+	<script>
+		var baseUrl = document.head.querySelector('meta[name=base-url]').content;
+	</script>
 
 	@stack('head')
 </head>
