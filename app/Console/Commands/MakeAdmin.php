@@ -38,22 +38,20 @@ class MakeAdmin extends Command
      */
     public function handle()
     {
-        $firstName = $this->ask('What is your first name');
-        $lastName = $this->ask('What about last name');
+        $fullName = $this->ask('What is your full name');
         $email = $this->ask('What is your email');
         $password = $this->secret('Type in the password');
 
         $user = User::create([
-            'first_name' => $firstName,
-            'last_name'  => $lastName,
-            'email'      => $email,
-            'password'   => bcrypt($password)
+            'name'     => $fullName,
+            'email'    => $email,
+            'password' => bcrypt($password)
         ]);
 
         if ($user instanceof User) {
             $user->toggleVerified();
             $user->makeAdmin();
-            $this->info("Admin [$firstName $lastName] created!");
+            $this->info("Admin [$fullName ($email)] created!");
         }
     }
 }

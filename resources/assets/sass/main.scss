@@ -80,6 +80,10 @@ button {
 	transition: filter .19s ease-in-out, opacity .25s ease;
 }
 
+.animated {
+	animation-duration: 0.45s;
+}
+
 /**
  Pace loader styles.
 */

@@ -22,7 +22,7 @@
 				   href="{{ route('apply') }}">
 					<i class="coach-icon" style="font-size: 1.7rem;"></i>&nbsp;Become a coach
 				</a>
-				<a class="ui-navigation-bar__link waves-button-light" href="{{ route('login') }}">
+				<a class="ui-navigation-bar__link waves-button-light" href="{{ route('sign-in') }}">
 					Sign up / Sign in
 				</a>
 			@else

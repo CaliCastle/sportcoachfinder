@@ -7,54 +7,107 @@ Vue.component('loader', require('./components/Loader.vue'))
 const app = new Vue({
     el: '#app',
     data: {
+        name: '',
         email: '',
         password: '',
-        rememberMe: false,
-        errors: []
+        rememberMe: true,
+        errors: [],
+        registering: false,
+        confirming: false
+    },
+    mounted() {
+        this.registering = registering
     },
     computed: {
-        $loginForm() {
-            return document.querySelector('.auth__form.login')
+        $form() {
+            return document.querySelector('.auth__form')
         },
-        loginData() {
-           return {
-               email: this.email,
-               password: this.password,
-               remember: this.rememberMe
-           }
+        formData() {
+            if (this.registering) {
+                return {
+                    name: this.name,
+                    email: this.email,
+                    password: this.password,
+                    remember: this.rememberMe
+                }
+            }
+
+            return {
+                email: this.email,
+                password: this.password,
+                remember: this.rememberMe
+            }
         }
     },
     methods: {
-        /*
-        * Login to API
-        * */
-        login() {
-            const form = this.$loginForm
+        submitForm() {
+            const form = this.$form
+
+            if (this.email == '') {
+                form.querySelector('input[name=email]').focus()
+                return
+            }
+
+            if (this.password == '') {
+                form.querySelector('input[name=password]').focus()
+                return
+            }
 
             // Remove all errors
             this.errors = []
 
             this.toggleFormLoading(form, true)
 
+            // Send api request
             axios({
-                method: form.method,
-                url: form.action,
-                data: this.loginData
+                method: 'POST',
+                url: this.getFormUrl(form),
+                data: this.formData
             }).then(response => {
-                window.location.href = response.data.redirect
+                if (!this.registering) {
+                    window.location.href = response.data.redirect
+                    return
+                }
+
+                // Confirmation code
+
             }).catch(error => {
-                let response = error.response
+                const response = error.response
 
                 switch (response.status) {
                     case 422:
                         this.errors = response.data.errors
-                        break
+                        return
                     case 500:
                         showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!')
                 }
             }).then(() => {
                 this.toggleFormLoading(form, false)
             });
+        },
+        /*
+        * Login to API
+        * */
+        login() {
+            if (this.registering) {
+                this.registering = false
+                return
+            }
+
+            this.submitForm()
+        },
+        register() {
+            this.errors = []
+
+            if (!this.registering) {
+                this.registering = true
+
+                setTimeout(() => this.$form.querySelector('input[name=name]').focus(), 500)
+
+                return
+            }
+
+            this.submitForm()
         },
         toggleFormLoading(form, on = null) {
             form.classList.toggle('loading', on)
@@ -68,8 +121,8 @@ const app = new Vue({
         inputBlurred(e) {
             e.target.parentElement.classList.remove('focused')
         },
-        submitForm() {
-            this.login()
+        getFormUrl(form) {
+            return this.registering ? form.getAttribute('register-action') : form.getAttribute('login-action')
         }
     }
 })

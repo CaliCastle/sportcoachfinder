@@ -18,16 +18,20 @@ Route::get('/home', 'HomeController@index');
 // Apply for Coach
 Route::get('apply', 'HomeController@showBecomeACoach')->name('apply');
 
+Route::get('mail', function () {
+    return new \SCF\Mail\AccountCreated(\SCF\Models\User::first(), '64539');
+});
+
 // Auth Routes...
 Route::group(['namespace' => 'Auth'], function () {
     // Authentication Routes...
-    Route::get('login', 'LoginController@showLoginForm')->name('login');
-    Route::post('login', 'LoginController@login');
+    Route::get('sign-in', 'LoginController@showLoginForm')->name('sign-in');
+    Route::post('sign-in', 'LoginController@login');
     Route::post('logout', 'LoginController@logout')->name('logout');
 
     // Registration Routes...
-    Route::get('register', 'LoginController@showLoginForm');
-    Route::post('register', 'RegisterController@register');
+    Route::get('sign-up', 'LoginController@showLoginForm')->name('sign-up');
+    Route::post('sign-up', 'RegisterController@register');
 
     // Password Reset Routes...
     Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');

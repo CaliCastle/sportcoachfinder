@@ -12212,16 +12212,32 @@ Vue.component('loader', __webpack_require__(38));
 var app = new Vue({
     el: '#app',
     data: {
+        name: '',
         email: '',
         password: '',
-        rememberMe: false,
-        errors: []
+        rememberMe: true,
+        errors: [],
+        registering: false,
+        confirming: false
     },
+    mounted: function mounted() {
+        this.registering = registering;
+    },
+
     computed: {
-        $loginForm: function $loginForm() {
-            return document.querySelector('.auth__form.login');
+        $form: function $form() {
+            return document.querySelector('.auth__form');
         },
-        loginData: function loginData() {
+        formData: function formData() {
+            if (this.registering) {
+                return {
+                    name: this.name,
+                    email: this.email,
+                    password: this.password,
+                    remember: this.rememberMe
+                };
+            }
+
             return {
                 email: this.email,
                 password: this.password,
@@ -12230,38 +12246,80 @@ var app = new Vue({
         }
     },
     methods: {
-        /*
-        * Login to API
-        * */
-        login: function login() {
+        submitForm: function submitForm() {
             var _this = this;
 
-            var form = this.$loginForm;
+            var form = this.$form;
+
+            if (this.email == '') {
+                form.querySelector('input[name=email]').focus();
+                return;
+            }
+
+            if (this.password == '') {
+                form.querySelector('input[name=password]').focus();
+                return;
+            }
 
             // Remove all errors
             this.errors = [];
 
             this.toggleFormLoading(form, true);
 
+            // Send api request
             axios({
-                method: form.method,
-                url: form.action,
-                data: this.loginData
+                method: 'POST',
+                url: this.getFormUrl(form),
+                data: this.formData
             }).then(function (response) {
-                window.location.href = response.data.redirect;
+                if (!_this.registering) {
+                    window.location.href = response.data.redirect;
+                    return;
+                }
+
+                // Confirmation code
             }).catch(function (error) {
                 var response = error.response;
 
                 switch (response.status) {
                     case 422:
                         _this.errors = response.data.errors;
-                        break;
+                        return;
                     case 500:
                         showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!');
                 }
             }).then(function () {
                 _this.toggleFormLoading(form, false);
             });
+        },
+
+        /*
+        * Login to API
+        * */
+        login: function login() {
+            if (this.registering) {
+                this.registering = false;
+                return;
+            }
+
+            this.submitForm();
+        },
+        register: function register() {
+            var _this2 = this;
+
+            this.errors = [];
+
+            if (!this.registering) {
+                this.registering = true;
+
+                setTimeout(function () {
+                    return _this2.$form.querySelector('input[name=name]').focus();
+                }, 500);
+
+                return;
+            }
+
+            this.submitForm();
         },
         toggleFormLoading: function toggleFormLoading(form) {
             var on = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
@@ -12277,8 +12335,8 @@ var app = new Vue({
         inputBlurred: function inputBlurred(e) {
             e.target.parentElement.classList.remove('focused');
         },
-        submitForm: function submitForm() {
-            this.login();
+        getFormUrl: function getFormUrl(form) {
+            return this.registering ? form.getAttribute('register-action') : form.getAttribute('login-action');
         }
     }
 });
