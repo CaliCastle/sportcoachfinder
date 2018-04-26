@@ -13,8 +13,8 @@ const app = new Vue({
         errors: []
     },
     computed: {
-        $form() {
-            return document.querySelector('.auth__form')
+        $loginForm() {
+            return document.querySelector('.auth__form.login')
         },
         loginData() {
            return {
@@ -28,8 +28,9 @@ const app = new Vue({
         * Login to API
         * */
         login() {
-            const form = this.$form
-            form.classList.add('loading')
+            const form = this.$loginForm
+
+            this.toggleFormLoading(form, true)
 
             axios({
                 method: form.method,
@@ -39,8 +40,13 @@ const app = new Vue({
                 // form.classList.remove('loading')
             }).catch(error => {
                 console.log(error)
-                form.classList.remove('loading')
+
+            }).then(() => {
+                this.toggleFormLoading(form, false)
             });
+        },
+        toggleFormLoading(form, on = null) {
+            form.classList.toggle('loading', on)
         }
     }
 })

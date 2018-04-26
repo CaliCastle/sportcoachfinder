@@ -1,16 +1,15 @@
-// Pjax binding.
-$(document).pjax('a[pjax]', '#pjax-container')
+Waves.attach('.waves-button')
+Waves.attach('.waves-button-light', ['.waves-button', '.waves-light'])
+Waves.init()
 
-// Initialize events
-function init() {
-    Waves.attach('.waves-button')
-    Waves.attach('.waves-button-light', ['.waves-button', '.waves-light'])
-    Waves.init()
+function showErrorToast(title, message, timeout = 5500, position = 'topLeft') {
+    iziToast.error({
+        title,
+        message,
+        position,
+        timeout,
+        layout: 2
+    })
 }
 
-init()
-
-// Re-init events when pjax ended.
-$(document).on('ready pjax:success', function() {
-    init()
-})
+window.showErrorToast = showErrorToast

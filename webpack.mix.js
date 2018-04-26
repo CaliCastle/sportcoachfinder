@@ -15,19 +15,26 @@ const assetsPath = 'resources/assets';
 const jsPath = `${assetsPath}/js`;
 const sassPath = `${assetsPath}/sass`;
 
+// Main app
 mix.js(`${jsPath}/app.js`, 'public/js')
    .sass(`${sassPath}/app.scss`, 'public/css');
 
+// Auth page
 mix.js(`${jsPath}/auth.js`, 'public/js')
     .sass(`${sassPath}/auth.scss`, 'public/css');
 
+// Core js plugins
 mix.scripts([
-    `${jsPath}/plugins/jquery.min.js`,
-    `${jsPath}/plugins/jquery.pjax.js`,
     `${jsPath}/plugins/switchery.js`,
     `${jsPath}/plugins/waves.js`,
+    `${jsPath}/plugins/iziToast.min.js`
 ], 'public/js/plugins/core.js');
 
+// Core js custom
 mix.js([
     `${jsPath}/core.js`
 ], 'public/js/core.js');
+
+// Admin page
+// mix.js(`${jsPath}/admin.js`, 'public/js/admin/admin.js')
+//     .sass(`${sassPath}/admin.scss`, 'public/css/admin/core.css');

@@ -60,38 +60,40 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 46);
+/******/ 	return __webpack_require__(__webpack_require__.s = 42);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 46:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(47);
+module.exports = __webpack_require__(43);
 
 
 /***/ }),
 
-/***/ 47:
+/***/ 43:
 /***/ (function(module, exports) {
 
-// Pjax binding.
-$(document).pjax('a[pjax]', '#pjax-container');
+Waves.attach('.waves-button');
+Waves.attach('.waves-button-light', ['.waves-button', '.waves-light']);
+Waves.init();
 
-// Initialize events
-function init() {
-    Waves.attach('.waves-button');
-    Waves.attach('.waves-button-light', ['.waves-button', '.waves-light']);
-    Waves.init();
+function showErrorToast(title, message) {
+    var timeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 5500;
+    var position = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'topLeft';
+
+    iziToast.error({
+        title: title,
+        message: message,
+        position: position,
+        timeout: timeout,
+        layout: 2
+    });
 }
 
-init();
-
-// Re-init events when pjax ended.
-$(document).on('ready pjax:success', function () {
-    init();
-});
+window.showErrorToast = showErrorToast;
 
 /***/ })
 

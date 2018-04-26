@@ -7,7 +7,7 @@
 		<h3>Welcome, let's get you signed in</h3>
 	</div>
 	<div class="auth__panel__form">
-		<form class="auth__form" loadable method="POST" action="{{ route('login') }}">
+		<form class="auth__form login" loadable method="POST" action="{{ route('login') }}">
 			<div class="auth__form__input auth__form__input--email">
 				<input type="email" placeholder="Email address" name="email" v-model="email" required>
 			</div>

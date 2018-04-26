@@ -11519,7 +11519,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 __webpack_require__(13);
 __webpack_require__(14);
-module.exports = __webpack_require__(16);
+module.exports = __webpack_require__(15);
 
 
 /***/ }),
@@ -11539,8 +11539,7 @@ var app = new Vue({
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 15 */,
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
