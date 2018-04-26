@@ -28,7 +28,7 @@
 	}
 
 	@include as('dimmed') {
-		background: linear-gradient(110deg, rgba($theme-primary, 0.3), rgba($theme-primary-light, 0.3)) !important;
+		background: linear-gradient(110deg, rgba($theme-primary, 0.4), rgba($theme-primary-light, 0.3)) !important;
 	}
 }
 

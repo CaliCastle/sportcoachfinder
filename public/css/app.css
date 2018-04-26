@@ -3284,7 +3284,7 @@ button {
   height: 100%;
   left: 0;
   top: 0;
-  background: url("/assets/images/hero/clipboard-field.png") center center;
+  background: url("/assets/images/hero/hero-field.jpg") center center;
   background-size: cover;
   position: absolute;
   z-index: 1;
@@ -3763,7 +3763,7 @@ button {
 }
 
 .primary-gradient--dimmed {
-  background: linear-gradient(110deg, rgba(46, 125, 50, 0.3), rgba(80, 169, 70, 0.3)) !important;
+  background: linear-gradient(110deg, rgba(46, 125, 50, 0.4), rgba(80, 169, 70, 0.3)) !important;
 }
 
 .bg-white {

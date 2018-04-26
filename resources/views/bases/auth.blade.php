@@ -19,7 +19,7 @@
 			</div>
 		</nav>
 		<div class="auth__panel-container">
-			<div class="auth__panel" id="pjax-container">
+			<div class="auth__panel">
 				<div class="auth__panel__logo">
 					<span>{{ config('app.name') }}</span>
 					<img class="logo" src="/assets/images/logo-green.png" alt="Logo">
