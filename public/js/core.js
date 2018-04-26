@@ -92,8 +92,15 @@ function showErrorToast(title, message) {
         layout: 2
     });
 }
-
 window.showErrorToast = showErrorToast;
+
+function handleFormResponse(response, message) {
+    switch (response.status) {
+        case 422:
+        case 500:
+        case 200:
+    }
+}
 
 /***/ })
 

@@ -12224,7 +12224,8 @@ var app = new Vue({
         loginData: function loginData() {
             return {
                 email: this.email,
-                password: this.password
+                password: this.password,
+                remember: this.rememberMe
             };
         }
     },
@@ -12237,6 +12238,9 @@ var app = new Vue({
 
             var form = this.$loginForm;
 
+            // Remove all errors
+            this.errors = [];
+
             this.toggleFormLoading(form, true);
 
             axios({
@@ -12244,9 +12248,17 @@ var app = new Vue({
                 url: form.action,
                 data: this.loginData
             }).then(function (response) {
-                // form.classList.remove('loading')
+                window.location.href = response.data.redirect;
             }).catch(function (error) {
-                console.log(error);
+                var response = error.response;
+
+                switch (response.status) {
+                    case 422:
+                        _this.errors = response.data.errors;
+                        break;
+                    case 500:
+                        showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!');
+                }
             }).then(function () {
                 _this.toggleFormLoading(form, false);
             });
@@ -12255,6 +12267,18 @@ var app = new Vue({
             var on = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
             form.classList.toggle('loading', on);
+        },
+        hasError: function hasError(field) {
+            return this.errors.hasOwnProperty(field);
+        },
+        inputFocused: function inputFocused(e) {
+            e.target.parentElement.classList.add('focused');
+        },
+        inputBlurred: function inputBlurred(e) {
+            e.target.parentElement.classList.remove('focused');
+        },
+        submitForm: function submitForm() {
+            this.login();
         }
     }
 });

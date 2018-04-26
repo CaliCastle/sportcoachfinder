@@ -19,7 +19,8 @@ const app = new Vue({
         loginData() {
            return {
                email: this.email,
-               password: this.password
+               password: this.password,
+               remember: this.rememberMe
            }
         }
     },
@@ -30,6 +31,9 @@ const app = new Vue({
         login() {
             const form = this.$loginForm
 
+            // Remove all errors
+            this.errors = []
+
             this.toggleFormLoading(form, true)
 
             axios({
@@ -37,16 +41,35 @@ const app = new Vue({
                 url: form.action,
                 data: this.loginData
             }).then(response => {
-                // form.classList.remove('loading')
+                window.location.href = response.data.redirect
             }).catch(error => {
-                console.log(error)
+                let response = error.response
 
+                switch (response.status) {
+                    case 422:
+                        this.errors = response.data.errors
+                        break
+                    case 500:
+                        showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!')
+                }
             }).then(() => {
                 this.toggleFormLoading(form, false)
             });
         },
         toggleFormLoading(form, on = null) {
             form.classList.toggle('loading', on)
+        },
+        hasError(field) {
+            return this.errors.hasOwnProperty(field)
+        },
+        inputFocused(e) {
+            e.target.parentElement.classList.add('focused')
+        },
+        inputBlurred(e) {
+            e.target.parentElement.classList.remove('focused')
+        },
+        submitForm() {
+            this.login()
         }
     }
 })

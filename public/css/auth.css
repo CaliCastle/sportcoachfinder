@@ -3304,6 +3304,9 @@ body {
   border-radius: 3rem;
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  will-change: background, border;
+  -webkit-transition: background-color ease-in-out .3s, border ease .25s, margin-bottom ease-in-out .25s;
+  transition: background-color ease-in-out .3s, border ease .25s, margin-bottom ease-in-out .25s;
 }
 
 .auth__form__input:before {
@@ -3328,6 +3331,9 @@ body {
   line-height: 1.9;
   font-size: 1.55rem;
   color: #adadad;
+  will-change: color;
+  -webkit-transition: color ease-in-out .268s;
+  transition: color ease-in-out .268s;
 }
 
 .auth__form__input--email:before {
@@ -3370,6 +3376,34 @@ body {
 
 .auth__form__input > input::placeholder {
   color: #828181;
+}
+
+.auth__form__input.focused {
+  background: #ececec;
+}
+
+.auth__form__input.focused:before {
+  color: #50a946;
+}
+
+.auth__form__input.has-error {
+  border: 2px solid #fb5050;
+  margin-bottom: 1.5rem;
+}
+
+.auth__form__input.has-error:before {
+  color: #fb5050;
+}
+
+.auth__form__input__message {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 600;
+  left: 1rem;
+  top: calc(100% + 0.5rem);
+  color: #fb5050;
+  -webkit-animation: fadeInDown .4s both;
+          animation: fadeInDown .4s both;
 }
 
 .auth__form__meta {

@@ -157,6 +157,8 @@ body {
 			width: 100%;
 			border-radius: 3rem;
 			box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+			will-change: background, border;
+			transition: background-color ease-in-out .3s, border ease .25s, margin-bottom ease-in-out .25s;
 
 			&:before {
 				@include icons8-font();
@@ -169,6 +171,8 @@ body {
 				line-height: 1.9;
 				font-size: 1.55rem;
 				color: #adadad;
+				will-change: color;
+				transition: color ease-in-out .268s;
 			}
 
 			@include as('email') {
@@ -203,6 +207,33 @@ body {
 				&::placeholder {
 					color: #828181;
 				}
+			}
+
+			&.focused {
+				background: #ececec;
+
+				&:before {
+					color: $theme-primary-light;
+				}
+			}
+
+			&.has-error {
+				border: 2px solid $form-error-red;
+				margin-bottom: 1.5rem;
+
+				&:before {
+					color: $form-error-red;
+				}
+			}
+
+			@include has('message') {
+				position: absolute;
+				font-size: 1rem;
+				font-weight: 600;
+				left: 1rem;
+				top: calc(100% + 0.5rem);
+				color: $form-error-red;
+				animation: fadeInDown .4s both;
 			}
 		}
 

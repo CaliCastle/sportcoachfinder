@@ -11,5 +11,12 @@ function showErrorToast(title, message, timeout = 5500, position = 'topLeft') {
         layout: 2
     })
 }
-
 window.showErrorToast = showErrorToast
+
+function handleFormResponse(response, message) {
+    switch (response.status) {
+        case 422:
+        case 500:
+        case 200:
+    }
+}
