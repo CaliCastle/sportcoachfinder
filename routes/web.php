@@ -29,6 +29,7 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::get('sign-up', 'LoginController@showLoginForm')->name('sign-up');
     Route::post('sign-up', 'RegisterController@register');
     Route::post('confirm', 'ConfirmController@attemptConfirmation')->name('confirmation');
+    Route::put('confirm', 'ConfirmController@resendConfirmation');
 
     // Password Reset Routes...
     Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');

@@ -127,7 +127,12 @@ const app = new Vue({
             this.submitForm()
         },
         toggleFormLoading(form, on = null) {
-            form.classList.toggle('loading', on)
+            form.parentNode.classList.toggle('loading', on)
+        },
+        checkFormLoading(e) {
+            console.log(e)
+
+            return false
         },
         hasError(field) {
             return this.errors.hasOwnProperty(field)
@@ -209,14 +214,35 @@ const app = new Vue({
                         this.errors = response.data.errors
                         return
                     case 500:
-                        showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!')
+                        showServerError()
                 }
             }).then(() => {
                 this.toggleFormLoading(form, false)
             });
         },
         resendConfirmationCode() {
+            if (this.resendingConfirmation) {
+                return
+            }
 
+            const form = document.querySelector('.auth__form--confirm')
+
+            this.toggleFormLoading(form, true)
+            this.resendingConfirmation = true
+
+            axios({
+                method: 'PUT',
+                url: form.action,
+                data: {}
+            }).then(response => {
+                // Code resent
+                showSuccessToast('Success', form.getAttribute('resend-message'))
+            }).catch(error => {
+                showServerError()
+            }).then(() => {
+                this.resendingConfirmation = false
+                this.toggleFormLoading(form, false)
+            })
         }
     }
 })

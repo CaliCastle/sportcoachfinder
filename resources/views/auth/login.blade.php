@@ -20,9 +20,10 @@
 		</transition>
 	</div>
 	<div class="auth__panel__form">
+		<Loader></Loader>
 		<transition name="fadeInLeft" mode="out-in">
-			<form action="{{ route('confirmation') }}" method="POST" class="auth__form auth__form--confirm"
-			      v-if="confirming">
+			<form action="{{ route('confirmation') }}" method="POST" loadable class="auth__form auth__form--confirm"
+			      v-if="confirming" resend-message="Confirmation has been re-sent to your email, check your mailbox!">
 				<div class="confirmation-inputs">
 					@for($i = 0; $i <= 5; $i++)
 						<div class="confirmation-input">
@@ -35,7 +36,7 @@
 				</div>
 				<span v-if="hasError('code')" class="auth__form__input__message">@{{ errors.code[0] }}</span>
 				<div class="padding-v-mid text-center">
-					<button v-bind:class="{ 'disabled': resendingConfirmation }" @click="resendConfirmationCode"
+					<button v-bind:class="{ 'disabled': resendingConfirmation }" @click.prevent="resendConfirmationCode"
 					        class="resend">Resend the code
 					</button>
 				</div>

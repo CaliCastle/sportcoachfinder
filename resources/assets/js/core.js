@@ -11,12 +11,21 @@ function showErrorToast(title, message, timeout = 5500, position = 'topLeft') {
         layout: 2
     })
 }
-window.showErrorToast = showErrorToast
 
-function handleFormResponse(response, message) {
-    switch (response.status) {
-        case 422:
-        case 500:
-        case 200:
-    }
+function showSuccessToast(title, message, timeout = 5500, position = 'topLeft') {
+    iziToast.success({
+        title,
+        message,
+        position,
+        timeout,
+        layout: 2
+    })
 }
+
+function showServerError() {
+    showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!')
+}
+
+window.showErrorToast = showErrorToast
+window.showServerError = showServerError
+window.showSuccessToast = showSuccessToast

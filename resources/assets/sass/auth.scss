@@ -107,6 +107,10 @@ body {
 	}
 
 	@include has('panel') {
+		@include has('form') {
+			position: relative;
+		}
+
 		@include has('logo') {
 			span {
 				display: inline-block;

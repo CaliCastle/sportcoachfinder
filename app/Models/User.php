@@ -2,12 +2,17 @@
 
 namespace SCF\Models;
 
+use Mail;
+use Illuminate\Http\Request;
+use SCF\Mail\AccountCreated;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
+    const CONFIRM_CODE_KEY = 'confirmation_code';
 
     /**
      * The attributes that are mass assignable.
@@ -67,5 +72,32 @@ class User extends Authenticatable
     {
         $this->verified = true;
         $this->save();
+    }
+
+    /**
+     * Generate confirmation code and send to user.
+     *
+     * @param Request $request
+     */
+    public function generateConfirmationCode(Request $request)
+    {
+        // Generate code
+        $codes = [];
+
+        for ($i = 0; $i <= 5; $i++) {
+            $codes[$i] = random_int(0, 9);
+        }
+
+        $code = implode('', $codes);
+
+        // Store code
+        if ($request->session()->exists(self::CONFIRM_CODE_KEY)) {
+            $request->session()->remove(self::CONFIRM_CODE_KEY);
+        }
+
+        $request->session()->put(self::CONFIRM_CODE_KEY, $code);
+
+        // Send email
+        Mail::to($this)->send(new AccountCreated($this, $code));
     }
 }

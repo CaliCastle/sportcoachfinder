@@ -3,11 +3,12 @@
 namespace SCF\Http\Controllers\Auth;
 
 use Mail;
-use SCF\Mail\AccountCreated;
 use SCF\Models\User;
 use Illuminate\Http\Request;
+use SCF\Mail\AccountCreated;
 use SCF\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -69,30 +70,38 @@ class RegisterController extends Controller
     }
 
     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->guard()->login($user, $request->input('remember'));
+
+        return $this->registered($request, $user)
+            ? : redirect($this->redirectPath());
+    }
+
+    /**
      * The user has been registered.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
+     * @param  \Illuminate\Http\Request $request
+     * @param  mixed                    $user
+     *
      * @return mixed
      */
     protected function registered(Request $request, $user)
     {
-        $codes = [];
-
-        for ($i = 0; $i <= 5; $i++) {
-            $codes[$i] = random_int(0, 9);
-        }
-
-        $code = implode('', $codes);
-
-        // Store code
-        $request->session()->put('confirmation_code', $code);
-
-        // Send email
-        Mail::to($user)->send(new AccountCreated($user, $code));
+        $user->generateConfirmationCode($request);
 
         return [
-            'redirect' => route('home')
+            'token' => csrf_token()
         ];
     }
 }

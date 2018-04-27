@@ -44,4 +44,24 @@ class ConfirmController extends Controller
             'code' => ['Invalid code']
         ]);
     }
+
+    /**
+     * Resend confirmation to user.
+     *
+     * @param Request $request
+     *
+     * @return array
+     */
+    public function resendConfirmation(Request $request)
+    {
+        $user = $request->user();
+
+        if ($user->verified == false) {
+            $user->generateConfirmationCode($request);
+
+            return ['status' => 'success'];
+        }
+
+        abort(403, 'Invalid action');
+    }
 }
