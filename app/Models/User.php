@@ -100,4 +100,14 @@ class User extends Authenticatable
         // Send email
         Mail::to($this)->send(new AccountCreated($this, $code));
     }
+
+    /**
+     * Get user email's gravatar url.
+     *
+     * @return String
+     */
+    public function getGravatarUrl()
+    {
+        return get_gravatar($this->email);
+    }
 }

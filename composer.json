@@ -25,7 +25,10 @@
         ],
         "psr-4": {
             "SCF\\": "app/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
