@@ -84,6 +84,19 @@ button {
 	animation-duration: 0.45s;
 }
 
+.padding-v-large {
+	padding: 2rem 0;
+}
+
+.padding-v-mid {
+	padding: 1.2rem 0;
+}
+
+.disabled {
+	opacity: 0.25 !important;
+	pointer-events: none !important;
+}
+
 /**
  Pace loader styles.
 */

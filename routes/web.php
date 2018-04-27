@@ -18,10 +18,6 @@ Route::get('/home', 'HomeController@index');
 // Apply for Coach
 Route::get('apply', 'HomeController@showBecomeACoach')->name('apply');
 
-Route::get('mail', function () {
-    return new \SCF\Mail\AccountCreated(\SCF\Models\User::first(), '64539');
-});
-
 // Auth Routes...
 Route::group(['namespace' => 'Auth'], function () {
     // Authentication Routes...
@@ -32,6 +28,7 @@ Route::group(['namespace' => 'Auth'], function () {
     // Registration Routes...
     Route::get('sign-up', 'LoginController@showLoginForm')->name('sign-up');
     Route::post('sign-up', 'RegisterController@register');
+    Route::post('confirm', 'ConfirmController@attemptConfirmation')->name('confirmation');
 
     // Password Reset Routes...
     Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');

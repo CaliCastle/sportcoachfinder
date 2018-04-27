@@ -49,7 +49,7 @@ class MakeAdmin extends Command
         ]);
 
         if ($user instanceof User) {
-            $user->toggleVerified();
+            $user->verified();
             $user->makeAdmin();
             $this->info("Admin [$fullName ($email)] created!");
         }

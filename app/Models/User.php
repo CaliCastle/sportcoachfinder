@@ -61,10 +61,11 @@ class User extends Authenticatable
     }
 
     /**
-     * Toggle verified attribute.
+     * Set verified attribute.
      */
-    public function toggleVerified()
+    public function verified()
     {
-        $this->verified = !$this->verified;
+        $this->verified = true;
+        $this->save();
     }
 }

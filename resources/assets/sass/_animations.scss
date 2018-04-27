@@ -123,6 +123,13 @@
 	animation: fadeInLeft .35s reverse;
 }
 
+.fadeInRight-enter-active {
+	animation: fadeInRight .35s;
+}
+.fadeInRight-leave-active {
+	animation: fadeInRight .35s reverse;
+}
+
 .fadeInDown-enter-active {
 	animation: fadeInDown .35s;
 }

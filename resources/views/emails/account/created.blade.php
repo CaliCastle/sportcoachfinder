@@ -7,6 +7,8 @@ You just created an account at our website, to confirm it's really you here is t
 {{ $code }}
 @endcomponent
 
+(This code will expire in 2 hours)
+
 <p style="text-align:center;">
 	<small>If you didn't create an account at our website, then you can ignore this email.</small>
 </p>
