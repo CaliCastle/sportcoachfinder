@@ -105,6 +105,9 @@ const app = new Vue({
         login() {
             if (this.registering) {
                 this.registering = false
+
+                setTimeout(() => this.$form.querySelector('input[name=email]').focus(), 500)
+
                 return
             }
 
