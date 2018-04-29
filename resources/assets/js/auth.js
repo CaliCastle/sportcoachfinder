@@ -6,19 +6,23 @@ Vue.component('loader', require('./components/Loader.vue'))
 
 const app = new Vue({
     el: '#app',
-    data: {
-        name: '',
-        email: '',
-        password: '',
-        rememberMe: true,
-        errors: [],
-        registering: false,
-        confirming: false,
-        confirmCodes: [
-            null, null, null, null, null, null
-        ],
-        resendingConfirmation: false,
-        redirectTo: null
+    data() {
+        return {
+            name: '',
+            email: '',
+            password: '',
+            passwordConfirmation: '',
+            rememberMe: true,
+            token: '',
+            errors: [],
+            registering: false,
+            confirming: false,
+            confirmCodes: [
+                null, null, null, null, null, null
+            ],
+            resendingConfirmation: false,
+            redirectTo: null
+        }
     },
     mounted() {
         this.registering = registering
@@ -215,7 +219,11 @@ const app = new Vue({
                     code: this.confirmationCode
                 }
             }).then(response => {
-
+                setTimeout(() => {
+                    if (this.redirectTo != null) {
+                        window.location.href = this.redirectTo
+                    }
+                }, 100)
             }).catch(error => {
                 const response = error.response
 
@@ -228,12 +236,6 @@ const app = new Vue({
                 }
             }).then(() => {
                 this.toggleFormLoading(form, false)
-
-                setTimeout(() => {
-                    if (this.redirectTo != null) {
-                        window.location.href = this.redirectTo
-                    }
-                })
             });
         },
         resendConfirmationCode() {
@@ -259,9 +261,74 @@ const app = new Vue({
                 this.resendingConfirmation = false
                 this.toggleFormLoading(form, false)
             })
+        },
+        passwordReset(e) {
+            this.errors = []
+
+            const form = e.target.closest('form.auth__form')
+
+            this.toggleFormLoading(form, true)
+
+            axios({
+                method: form.method,
+                url: form.action,
+                data: {
+                    email: this.email
+                }
+            }).then(response => {
+                showSuccessToast('Success', response.data.status)
+            }).catch(error => {
+                const response = error.response
+
+                switch (response.status) {
+                    case 422:
+                        this.errors = response.data.errors
+                        return
+                    case 500:
+                        showServerError()
+                }
+            }).then(() => {
+                this.toggleFormLoading(form, false)
+            })
+        },
+        completePasswordReset(e) {
+            this.errors = []
+
+            const form = e.target.closest('form.auth__form')
+
+            this.toggleFormLoading(form)
+
+            axios({
+                method: form.method,
+                url: form.action,
+                data: {
+                    email: this.email,
+                    token: this.token,
+                    password: this.password,
+                    password_confirmation: this.passwordConfirmation
+                }
+            }).then(response => {
+                showSuccessToast('Success', response.data.status)
+
+                setTimeout(() => window.location.href = response.data.redirect, 1000)
+            }).catch(error => {
+                const response = error.response
+
+                switch (response.status) {
+                    case 422:
+                        this.errors = response.data.errors
+                        return
+                    case 500:
+                        showServerError()
+                }
+            }).then(() => {
+                this.toggleFormLoading(form, false)
+            })
         }
     }
 })
+
+window.vm = app
 
 // Initialize events
 function init() {

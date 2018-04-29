@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use SCF\Mail\AccountCreated;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use SCF\Mail\ResetPassword;
 
 class User extends Authenticatable
 {
@@ -98,7 +99,7 @@ class User extends Authenticatable
         $request->session()->put(self::CONFIRM_CODE_KEY, $code);
 
         // Send email
-        Mail::to($this)->send(new AccountCreated($this, $code));
+        Mail::to($this)->sendNow(new AccountCreated($this, $code));
     }
 
     /**
@@ -146,5 +147,15 @@ class User extends Authenticatable
         }
 
         return '';
+    }
+
+    /**
+     * Send password reset mail.
+     *
+     * @param string $token
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        Mail::to($this)->sendNow(new ResetPassword($this, $token));
     }
 }

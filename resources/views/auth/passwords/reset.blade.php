@@ -1,71 +1,61 @@
-@extends('layouts.app')
+@extends('bases.auth')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+@push('head')
+    <script>
+        var registering = false;
+    </script>
+@endpush
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('password.request') }}">
-                        @csrf
+@section('title', 'Password Reset')
 
-                        <input type="hidden" name="token" value="{{ $token }}">
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="password_confirmation" required>
-
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Reset Password') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+@section('body.content')
+    <div class="auth__panel__greeting">
+        <h3>Finish resetting your password</h3>
+    </div>
+    <div class="auth__panel__form">
+        <Loader></Loader>
+        <form class="auth__form" method="POST" action="{{ route('password.request') }}" loadable>
+            <input type="hidden" class="hidden" hidden v-model="token" name="token">
+            <transition name="fadeInDown">
+                <div class="auth__form__input auth__form__input--email"
+                     v-bind:class="{ 'has-error': hasError('email') }">
+                    <input type="email" placeholder="Your email address" name="email" v-model="email" @focus="inputFocused"
+                           @blur="inputBlurred" @keyup.enter.prevent="completePasswordReset" required autofocus>
+                    <span v-if="hasError('email')" class="auth__form__input__message">@{{ errors.email[0] }}</span>
+                </div>
+            </transition>
+            <transition name="fadeInDown">
+                <div class="auth__form__input auth__form__input--password" v-bind:class="{'has-error': hasError('password')}">
+                    <input type="password" placeholder="New password"
+                           name="password" v-model="password" required @focus="inputFocused"
+                           @blur="inputBlurred" @keyup.enter.prevent="completePasswordReset">
+                    <span v-if="hasError('password')" class="auth__form__input__message">@{{ errors.password[0] }}</span>
+                </div>
+            </transition>
+            <div class="auth__form__input auth__form__input--password">
+                <input type="password" placeholder="Confirm password"
+                       name="confirm_password" required v-model="passwordConfirmation" @focus="inputFocused"
+                       @blur="inputBlurred" @keyup.enter.prevent="completePasswordReset">
+            </div>
+            <div class="auth__form__actions">
+                <div class="auth__form__actions__button auth__form__actions__button--reset waves-button-light"
+                     @click.prevent="completePasswordReset">
+                    <i class="reset-icon"></i>
+                    <span>Reset password</span>
                 </div>
             </div>
+        </form>
+        <div class="auth__disclaimer text-center">
+            <p>Remembered your password? <a href="{{ route('sign-in') }}">Sign in</a></p>
         </div>
     </div>
-</div>
-@endsection
+@stop
+
+@push('body.scripts-bottom')
+    <script>
+        @if(isset($email))
+            vm.email = '{{ $email }}';
+        @endif
+        vm.token = '{{ $token }}';
+    </script>
+@endpush

@@ -58,12 +58,15 @@
 						<span v-if="hasError('name')" class="auth__form__input__message">@{{ errors.name[0] }}</span>
 					</div>
 				</transition>
+				<transition name="fadeInDown">
 				<div class="auth__form__input auth__form__input--email"
 				     v-bind:class="{ 'has-error': hasError('email') }">
 					<input type="email" placeholder="Email address" name="email" v-model="email" @focus="inputFocused"
-					       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required>
+					       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required autofocus>
 					<span v-if="hasError('email')" class="auth__form__input__message">@{{ errors.email[0] }}</span>
 				</div>
+				</transition>
+				<transition name="fadeInDown">
 				<div class="auth__form__input auth__form__input--password"
 				     v-bind:class="{ 'has-error': hasError('password') }">
 					<input type="password" placeholder="Password" name="password" v-model="password"
@@ -71,6 +74,7 @@
 					<span v-if="hasError('password')"
 					      class="auth__form__input__message">@{{ errors.password[0] }}</span>
 				</div>
+				</transition>
 				<div class="auth__form__meta">
 					<div class="auth__form__meta__remember" @click="rememberMe = !rememberMe">
 						<div class="checkbox" v-bind:class="{ checked: rememberMe }"></div>
