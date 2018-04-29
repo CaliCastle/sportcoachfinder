@@ -4,6 +4,8 @@
 	<link rel="stylesheet" href="{{ mix('/css/admin/core.css') }}">
 @endpush
 
+@section('body.id', 'admin')
+
 @section('body')
 
 

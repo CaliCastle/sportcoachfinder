@@ -13,14 +13,14 @@ const app = new Vue({
 
             profileEl.classList.toggle('active', force)
             this.$el.classList.toggle('dimmed', force)
-            this.profileOpen = !this.profileOpen
+            this.profileOpen = force == null ? !this.profileOpen : force
         },
         bodyClicked(e) {
             const hasClosestProfileDropdown = e.target.closest('.ui-navigation-bar__user')
 
-            if (hasClosestProfileDropdown == null && this.profileOpen)
+            if (hasClosestProfileDropdown == null && this.profileOpen) {
                 this.toggleUserProfileDropdown(false)
-
+            }
         }
     }
 });
