@@ -1,4 +1,4 @@
-@extends('bases.skeleton')
+@extends('bases.skeleton-auth')
 
 @push('head')
 	<link rel="stylesheet" href="{{ mix('/css/auth.css') }}">
