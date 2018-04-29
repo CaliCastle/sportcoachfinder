@@ -92,3 +92,13 @@ i.support-icon:after {
 	@include icons8-font();
 	content: $icons8-var-online-support;
 }
+
+i.users-icon:after {
+	@include icons8-font();
+	content: $icons8-var-user-group-man-man;
+}
+
+i.server-icon:after {
+	@include icons8-font();
+	content: $icons8-var-server;
+}

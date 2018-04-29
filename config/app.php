@@ -162,6 +162,8 @@ return [
         SCF\Providers\EventServiceProvider::class,
         SCF\Providers\RouteServiceProvider::class,
 
+        \SCF\Providers\ComposerServiceProvider::class,
+
     ],
 
     /*

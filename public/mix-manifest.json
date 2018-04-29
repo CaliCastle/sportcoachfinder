@@ -4,7 +4,7 @@
     "/css/app.css": "/css/app.css",
     "/css/auth.css": "/css/auth.css",
     "/css/admin/core.css": "/css/admin/core.css",
-    "/js/core.js": "/js/core.js",
     "/js/admin/manage.js": "/js/admin/manage.js",
+    "/js/core.js": "/js/core.js",
     "/js/plugins/core.js": "/js/plugins/core.js"
 }
