@@ -102,12 +102,49 @@ class User extends Authenticatable
     }
 
     /**
-     * Get user email's gravatar url.
+     * Get user's avatar url (use gravatar by default)
      *
      * @return String
      */
-    public function getGravatarUrl()
+    public function getAvatarUrlAttribute()
     {
-        return get_gravatar($this->email);
+        return optional($this->avatar)->url ?? get_gravatar($this->email);
+    }
+
+    /**
+     * Get css class for user's role.
+     *
+     * @return string
+     */
+    public function roleClass()
+    {
+        if ($this->role === null) {
+            return '';
+        }
+
+        if ($this->verified == false) {
+            return 'unverified';
+        }
+
+        return $this->role->name;
+    }
+
+    /**
+     * Get user's readable role.
+     *
+     * @return string
+     */
+    public function readableRole()
+    {
+        switch (optional($this->role)->name) {
+            case 'admin':
+                return 'Administrator';
+            case 'coach':
+                return 'Coach';
+            case 'normal':
+                return 'Verified';
+        }
+
+        return '';
     }
 }

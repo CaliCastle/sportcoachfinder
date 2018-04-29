@@ -7,8 +7,13 @@ use SCF\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
+    /**
+     * Show dashboard of admin.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
-        return '';
+        return view('admin.dashboard');
     }
 }

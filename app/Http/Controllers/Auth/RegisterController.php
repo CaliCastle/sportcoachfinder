@@ -101,7 +101,7 @@ class RegisterController extends Controller
         $user->generateConfirmationCode($request);
 
         return [
-            'token' => csrf_token()
+            'redirect' => redirect()->intended()->getTargetUrl()
         ];
     }
 }

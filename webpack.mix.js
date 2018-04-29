@@ -36,5 +36,5 @@ mix.js([
 ], 'public/js/core.js');
 
 // Admin page
-// mix.js(`${jsPath}/admin.js`, 'public/js/admin/admin.js')
-//     .sass(`${sassPath}/admin.scss`, 'public/css/admin/core.css');
+mix.js(`${jsPath}/admin.js`, 'public/js/admin/manage.js')
+    .sass(`${sassPath}/admin.scss`, 'public/css/admin/core.css');

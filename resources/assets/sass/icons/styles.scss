@@ -57,3 +57,38 @@ i.location-icon:after {
 	@include icons8-font();
 	content: $icons8-var-location-marker;
 }
+
+i.shutdown-icon:after {
+	@include icons8-font();
+	content: $icons8-var-shutdown;
+}
+
+i.dashboard-icon:after {
+	@include icons8-font();
+	content: $icons8-var-dashboard;
+}
+
+i.profile-icon:after {
+	@include icons8-font();
+	content: $icons8-var-identification-documents;
+}
+
+i.reviews-icon:after {
+	@include icons8-font();
+	content: $icons8-var-survey;
+}
+
+i.settings-icon:after {
+	@include icons8-font();
+	content: $icons8-var-settings-button;
+}
+
+i.help-icon:after {
+	@include icons8-font();
+	content: $icons8-var-help;
+}
+
+i.support-icon:after {
+	@include icons8-font();
+	content: $icons8-var-online-support;
+}

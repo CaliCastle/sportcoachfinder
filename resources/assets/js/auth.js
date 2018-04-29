@@ -17,7 +17,8 @@ const app = new Vue({
         confirmCodes: [
             null, null, null, null, null, null
         ],
-        resendingConfirmation: false
+        resendingConfirmation: false,
+        redirectTo: null
     },
     mounted() {
         this.registering = registering
@@ -76,8 +77,14 @@ const app = new Vue({
                 url: this.getFormUrl(form),
                 data: this.formData
             }).then(response => {
+                let redirect = response.data.redirect
+
+                if (redirect != null) {
+                    this.redirectTo = redirect
+                }
+
                 if (!this.registering) {
-                    window.location.href = response.data.redirect
+                    window.location.href = redirect
                     return
                 }
 
@@ -208,7 +215,7 @@ const app = new Vue({
                     code: this.confirmationCode
                 }
             }).then(response => {
-                window.location.href = response.data.redirect
+
             }).catch(error => {
                 const response = error.response
 
@@ -221,6 +228,12 @@ const app = new Vue({
                 }
             }).then(() => {
                 this.toggleFormLoading(form, false)
+
+                setTimeout(() => {
+                    if (this.redirectTo != null) {
+                        window.location.href = this.redirectTo
+                    }
+                })
             });
         },
         resendConfirmationCode() {

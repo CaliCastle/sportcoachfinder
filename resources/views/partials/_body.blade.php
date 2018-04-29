@@ -1,5 +1,5 @@
 <body>
-<main id="@yield('body.id', 'app')" class="@yield('body.class')">
+<main id="@yield('body.id', 'app')" class="@yield('body.class')" @click="bodyClicked">
 	@yield('body')
 </main>
 
