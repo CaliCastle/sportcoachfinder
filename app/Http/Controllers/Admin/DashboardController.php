@@ -16,4 +16,44 @@ class DashboardController extends Controller
     {
         return view('admin.dashboard');
     }
+
+    /**
+     * Users page.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function users()
+    {
+        return view('admin.users');
+    }
+
+    /**
+     * Reviews page.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function reviews()
+    {
+        return view('admin.dashboard');
+    }
+
+    /**
+     * Report page.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function report()
+    {
+        return view('admin.report');
+    }
+
+    /**
+     * Settings page.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function settings()
+    {
+        return view('admin.settings');
+    }
 }

@@ -1,0 +1,42 @@
+.admin-panel {
+	margin-left: $admin-side-menu-width;
+	padding: 2rem 2.3rem !important;
+
+	@include has('header') {
+		color: $theme-primary;
+
+		@include has('title') {
+			font-size: 1.15rem;
+			font-weight: bold;
+
+			i {
+				&:before {
+					@include icons8-font();
+					font-size: 2.1rem;
+					padding: 0 .6rem 0 0;
+					vertical-align: middle;
+				}
+
+				&.Dashboard:before {
+					content: $icons8-var-dashboard;
+				}
+
+				&.Users:before {
+					content: $icons8-var-social-group;
+				}
+
+				&.Report:before {
+					content: $icons8-var-presentation;
+				}
+
+				&.Settings:before {
+					content: $icons8-var-web-design;
+				}
+			}
+
+			h1 {
+				display: inline-block;
+			}
+		}
+	}
+}

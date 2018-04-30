@@ -4,7 +4,7 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 180px;
+	width: $admin-side-menu-width;
 	background: linear-gradient(to right bottom, darken($theme-primary, 0.15), $theme-primary);
 	color: #fff;
 	display: flex;
@@ -13,6 +13,7 @@
 	align-items: center;
 	overflow: hidden;
 	z-index: 999;
+	box-shadow: 8px 0 20px rgba(0, 0, 0, 0.15);
 
 	@include has('user') {
 		padding-top: 1.5rem;
@@ -48,7 +49,7 @@
 	}
 
 	main {
-		margin: 2rem 0;
+		margin: 3rem 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -67,7 +68,7 @@
 			position: relative;
 			z-index: 1;
 			transform: translateX(2rem);
-			margin: 0.2rem 0;
+			margin: 0.25rem 0;
 
 			&:before {
 				content: '';
@@ -95,7 +96,7 @@
 			}
 
 			span {
-				font-size: 0.95rem;
+				font-size: 0.9rem;
 				z-index: 2;
 				font-weight: bold;
 			}
@@ -104,9 +105,9 @@
 				&:before {
 					opacity: 1;
 				}
-				
+
 				i {
-					color: #bbf252;
+					color: #49f84b;
 				}
 			}
 		}

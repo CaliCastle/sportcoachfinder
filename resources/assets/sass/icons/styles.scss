@@ -95,10 +95,20 @@ i.support-icon:after {
 
 i.users-icon:after {
 	@include icons8-font();
-	content: $icons8-var-user-group-man-man;
+	content: $icons8-var-social-group;
 }
 
-i.server-icon:after {
+i.reviews-manage-icon:after {
 	@include icons8-font();
-	content: $icons8-var-server;
+	content: $icons8-var-review;
+}
+
+i.report-icon:after {
+	@include icons8-font();
+	content: $icons8-var-presentation;
+}
+
+i.website-icon:after {
+	@include icons8-font();
+	content: $icons8-var-web-design;
 }

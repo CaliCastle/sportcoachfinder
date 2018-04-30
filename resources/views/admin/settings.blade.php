@@ -1,6 +1,6 @@
 @extends('bases.admin')
 
-@section('title', 'Dashboard')
+@section('title', 'Settings')
 
 @section('body.content')
 

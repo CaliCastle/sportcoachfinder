@@ -44,10 +44,10 @@ Route::group([
 });
 
 // Admin Routes...
-Route::group([
-    'namespace'  => 'Admin',
-    'prefix'     => 'admin',
-    'middleware' => ['auth', 'role:admin']
-], function () {
-    Route::get('/', 'DashboardController@index')->name('admin.dashboard');
+Route::name('admin.')->namespace('Admin')->prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::get('users', 'DashboardController@users')->name('users');
+    Route::get('reviews', 'DashboardController@reviews')->name('reviews');
+    Route::get('report', 'DashboardController@report')->name('report');
+    Route::get('settings', 'DashboardController@settings')->name('settings');
 });
