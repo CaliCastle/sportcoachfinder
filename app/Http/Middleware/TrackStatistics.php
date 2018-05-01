@@ -39,7 +39,7 @@ class TrackStatistics
             return false;
         }
         // Only 'GET' method
-        if (strtoupper($request->method()) === 'GET') {
+        if (strtoupper($request->method()) !== 'GET') {
             return false;
         }
         // Do not track local ip
