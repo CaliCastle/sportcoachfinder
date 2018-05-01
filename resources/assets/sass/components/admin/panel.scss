@@ -1,7 +1,7 @@
 .admin-panel {
 	margin-left: $admin-side-menu-width;
-	padding: 2rem 0 !important;
-	min-height: calc(100vh - 4rem);
+	padding: 2rem 0 0 !important;
+	min-height: calc(100vh - 2rem);
 
 	@include has('header') {
 		color: $theme-primary;
@@ -48,6 +48,7 @@
 
 	@include has('content') {
 		padding: 1rem 2.3rem 3rem;
+		min-height: calc(100vh - 11rem - 102px);
 	}
 
 	@include has('footer') {

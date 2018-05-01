@@ -604,8 +604,8 @@ template {
 
 @font-face {
   font-family: "Sport-Coach-Finder";
-  src: url(/fonts/icons.eot?v=6);
-  src: url(/fonts/icons.eot?#iefix) format("embedded-opentype"), url(/fonts/icons.woff2?v=6) format("woff2"), url(/fonts/icons.woff?v=6) format("woff"), url(/fonts/icons.ttf?v=6) format("truetype"), url(/fonts/icons.svg?v=6#Sport-Coach-Finder) format("svg");
+  src: url(/fonts/icons.eot?v=7);
+  src: url(/fonts/icons.eot?#iefix) format("embedded-opentype"), url(/fonts/icons.woff2?v=7) format("woff2"), url(/fonts/icons.woff?v=7) format("woff"), url(/fonts/icons.ttf?v=7) format("truetype"), url(/fonts/icons.svg?v=7#Sport-Coach-Finder) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -613,7 +613,7 @@ template {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 @font-face {
     font-family: "Sport-Coach-Finder";
-    src: url(/fonts/icons.svg?v=6#Sport-Coach-Finder) format("svg");
+    src: url(/fonts/icons.svg?v=7#Sport-Coach-Finder) format("svg");
 }
 }
 
@@ -1096,6 +1096,38 @@ i.website-icon:after {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   content: "\F128";
+}
+
+i.edit-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F132";
+}
+
+i.delete-icon:after {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  content: "\F131";
 }
 
 @-webkit-keyframes fadeIn {
@@ -3535,8 +3567,8 @@ button {
 
 .admin-panel {
   margin-left: 180px;
-  padding: 2rem 0 !important;
-  min-height: calc(100vh - 4rem);
+  padding: 2rem 0 0 !important;
+  min-height: calc(100vh - 2rem);
 }
 
 .admin-panel__header {
@@ -3593,6 +3625,7 @@ button {
 
 .admin-panel__content {
   padding: 1rem 2.3rem 3rem;
+  min-height: calc(100vh - 11rem - 102px);
 }
 
 .admin-panel__footer {
@@ -3604,5 +3637,180 @@ button {
   font-size: .9rem;
   font-weight: 500;
   color: #5c5c5c;
+}
+
+.table {
+  position: relative;
+}
+
+.table .table-heading {
+  padding: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table .table-heading h2 {
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.table .table-heading .create {
+  margin: 0 1rem;
+  color: #555;
+  font-size: 1.8rem;
+}
+
+.table .table-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: .8rem 0;
+}
+
+.table .table-content .row {
+  width: 100%;
+  height: 55px;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .4rem .5rem;
+  margin: .25rem 0;
+  border-radius: 10px;
+  will-change: box-shadow;
+  -webkit-transition: -webkit-box-shadow ease-in-out .22s;
+  transition: -webkit-box-shadow ease-in-out .22s;
+  transition: box-shadow ease-in-out .22s;
+  transition: box-shadow ease-in-out .22s, -webkit-box-shadow ease-in-out .22s;
+}
+
+.table .table-content .row:hover {
+  -webkit-box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.table .table-content .row:hover .row__actions {
+  opacity: 1 !important;
+}
+
+.table .table-content .row__actions {
+  opacity: 0;
+  will-change: opacity;
+  -webkit-transition: opacity ease-in-out .2s;
+  transition: opacity ease-in-out .2s;
+  font-size: 1.2rem;
+}
+
+.table .table-content .row__actions .edit {
+  margin: 0 1rem;
+  color: #333;
+}
+
+.table .table-content .row__actions .delete {
+  color: #a44336;
+}
+
+.table.users-table .user-row .user-row__avatar {
+  width: 45px;
+  height: 45px;
+  margin: 0 1.1rem;
+}
+
+.table.users-table .user-row .user-row__avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.table.users-table .user-row .user-row__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 180px;
+}
+
+.table.users-table .user-row .user-row__name strong {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.table.users-table .user-row .user-row__name span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #8f8f8f;
+}
+
+.table.users-table .user-row .user-row__status {
+  margin: 0 .8rem;
+  color: #222;
+}
+
+.table.users-table .user-row .user-row__status:before {
+  display: inline-block;
+  font-family: "Sport-Coach-Finder";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  margin-right: .2rem;
+  font-size: 1.2rem;
+}
+
+.table.users-table .user-row .user-row__status.unverified:before {
+  content: "\F11B";
+}
+
+.table.users-table .user-row .user-row__status.normal:before {
+  content: "\F11C";
+}
+
+.table.users-table .user-row .user-row__status.coach:before {
+  content: "\F102";
+}
+
+.table.users-table .user-row .user-row__status.admin:before {
+  content: "\F11D";
+  font-size: 1.3rem;
 }
 

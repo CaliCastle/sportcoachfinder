@@ -1,10 +1,10 @@
 <nav class="side-menu">
 	<header class="side-menu__user">
 		<div class="avatar">
-			<img src="{{ $user->avatarUrl }}" alt="Avatar">
+			<img src="{{ $myself->avatarUrl }}" alt="Avatar">
 		</div>
-		<strong>{{ $user->name }}</strong>
-		<span>{{ $user->email }}</span>
+		<strong>{{ $myself->name }}</strong>
+		<span>{{ $myself->email }}</span>
 	</header>
 	<main>
 		<a href="{{ route('admin.dashboard') }}" class="menu-link{{ Route::currentRouteName() == 'admin.dashboard' ? ' active' : ''}}">

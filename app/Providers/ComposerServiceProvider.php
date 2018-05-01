@@ -15,9 +15,9 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('admin/*', function ($view) {
-            $user = auth()->user();
+            $myself = \Auth::user();
 
-            $view->with(compact('user'));
+            $view->with(compact('myself'));
         });
     }
 

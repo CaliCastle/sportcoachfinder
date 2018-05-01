@@ -13,6 +13,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $perPage = 30;
+
     const CONFIRM_CODE_KEY = 'confirmation_code';
 
     /**

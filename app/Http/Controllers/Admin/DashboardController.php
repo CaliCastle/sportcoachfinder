@@ -5,6 +5,8 @@ namespace SCF\Http\Controllers\Admin;
 use GeoIp2\Database\Reader;
 use Illuminate\Http\Request;
 use SCF\Http\Controllers\Controller;
+use SCF\Library\Location;
+use SCF\Models\User;
 
 class DashboardController extends Controller
 {
@@ -25,7 +27,9 @@ class DashboardController extends Controller
      */
     public function users()
     {
-        return view('admin.users');
+        $users = User::paginate();
+
+        return view('admin.users', compact('users'));
     }
 
     /**

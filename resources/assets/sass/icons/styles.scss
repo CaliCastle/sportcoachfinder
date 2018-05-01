@@ -112,3 +112,13 @@ i.website-icon:after {
 	@include icons8-font();
 	content: $icons8-var-web-design;
 }
+
+i.edit-icon:after {
+	@include icons8-font();
+	content: $icons8-var-edit;
+}
+
+i.delete-icon:after {
+	@include icons8-font();
+	content: $icons8-var-delete;
+}
