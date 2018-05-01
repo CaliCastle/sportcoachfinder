@@ -25,9 +25,10 @@ class Statistic extends Model
     public static function visited(Request $request)
     {
         $userAgent = new Agent();
+        $previous = url()->previous();
 
         static::create([
-            'referer'  => url()->previous(),
+            'referer'  => str_contains($previous, config('app.url')) ? null : $previous,
             'uri'      => $request->path(),
             'browser'  => $userAgent->browser(),
             'platform' => $userAgent->platform(),
