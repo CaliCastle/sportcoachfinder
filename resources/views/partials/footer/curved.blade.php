@@ -63,7 +63,7 @@
 		<div class="ui-footer__separator"></div>
 		<div class="ui-footer__coaches-counter"></div>
 		<div class="ui-footer__copyright">
-			<span>Copyright &copy; {{ date('Y') }} - {{ config('app.name') }}. All rights reserved.</span>
+			<span>Copyright &copy; {{ date('Y') }} - {{ site('site_title') }}. All rights reserved.</span>
 		</div>
 	</div>
 </footer>

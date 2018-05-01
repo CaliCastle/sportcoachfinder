@@ -15,8 +15,6 @@ return [
 
     'name' => 'Sport Coach Finder',
 
-    'description' => 'Sport Coach Finder description',
-
     /*
     |--------------------------------------------------------------------------
     | Application Environment

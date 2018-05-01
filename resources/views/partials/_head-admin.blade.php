@@ -7,7 +7,7 @@
 
 	<meta name="base-url" content="{{ url('/') }}">
 
-	<title>@yield('title') | Admin | {{ config('app.name') }}</title>
+	<title>@yield('title') | Admin | {{ site('site_title') }}</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

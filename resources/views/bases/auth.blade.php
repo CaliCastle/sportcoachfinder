@@ -21,7 +21,7 @@
 		<div class="auth__panel-container">
 			<div class="auth__panel">
 				<div class="auth__panel__logo">
-					<span>{{ config('app.name') }}</span>
+					<span>{{ site('site_title') }}</span>
 					<img class="logo" src="/assets/images/logo-green.png" alt="Logo">
 				</div>
 

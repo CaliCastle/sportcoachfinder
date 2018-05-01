@@ -6,14 +6,14 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="{{ config('app.name') }}">
-	<meta property="og:description" content="{{ config('app.description') }}">
+	<meta property="og:title" content="{{ site('site_title') }}">
+	<meta property="og:description" content="{{ site('site_description') }}">
 	{{--<meta property="og:image" content="/">--}}
 	<meta property="og:url" content="{{ config('app.url') }}">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="base-url" content="{{ url('/') }}">
 
-	<title>@yield('title') | {{ config('app.name') }}</title>
+	<title>@yield('title') | {{ site('site_title') }}</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

@@ -1,9 +1,11 @@
 .admin-panel {
 	margin-left: $admin-side-menu-width;
-	padding: 2rem 2.3rem !important;
+	padding: 2rem 0 !important;
+	min-height: calc(100vh - 4rem);
 
 	@include has('header') {
 		color: $theme-primary;
+		padding: 0 2.3rem 1rem;
 
 		@include has('title') {
 			font-size: 1.15rem;
@@ -25,6 +27,10 @@
 					content: $icons8-var-social-group;
 				}
 
+				&.Reviews:before {
+					content: $icons8-var-review;
+				}
+
 				&.Report:before {
 					content: $icons8-var-presentation;
 				}
@@ -37,6 +43,21 @@
 			h1 {
 				display: inline-block;
 			}
+		}
+	}
+
+	@include has('content') {
+		padding: 1rem 2.3rem 3rem;
+	}
+
+	@include has('footer') {
+		padding: 1.8rem 2.3rem;
+		background: #eee;
+		
+		.copyright {
+			font-size: .9rem;
+			font-weight: 500;
+			color: #5c5c5c;
 		}
 	}
 }

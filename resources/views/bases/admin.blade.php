@@ -23,7 +23,9 @@
 		</div>
 
 		<footer class="admin-panel__footer">
-
+			<span class="copyright">
+				&copy; {{ date('Y') }} {{ site('site_title') }}
+			</span>
 		</footer>
 	</section>
 

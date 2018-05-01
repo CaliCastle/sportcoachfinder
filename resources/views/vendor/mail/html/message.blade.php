@@ -3,7 +3,7 @@
     @slot('header')
         @component('mail::header', ['url' => config('app.url')])
             <img src="{{ url('/assets/images/logo-white.png') }}" alt="Logo">
-            <span>{{ config('app.name') }}</span>
+            <span>{{ site('site_title') }}</span>
         @endcomponent
     @endslot
 
@@ -22,7 +22,7 @@
     {{-- Footer --}}
     @slot('footer')
         @component('mail::footer')
-            &copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
+            &copy; {{ date('Y') }} {{ site('site_title') }}. All rights reserved.
         @endcomponent
     @endslot
 @endcomponent

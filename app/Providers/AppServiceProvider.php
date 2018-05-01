@@ -2,6 +2,8 @@
 
 namespace SCF\Providers;
 
+use SCF\Models\Site;
+use SCF\Library\Location;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('Site', function () {
+            return new Site;
+        });
+
+        $this->app->singleton('Location', function () {
+            return new Location;
+        });
     }
 }
