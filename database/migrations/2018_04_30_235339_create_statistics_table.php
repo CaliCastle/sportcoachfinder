@@ -14,7 +14,7 @@ class CreateStatisticsTable extends Migration
     public function up()
     {
         Schema::create('statistics', function (Blueprint $table) {
-            $table->text('referer');
+            $table->text('referer')->nullable();
             $table->string('uri')->index();
             $table->string('browser');
             $table->string('platform');
