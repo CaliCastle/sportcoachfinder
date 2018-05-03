@@ -46,7 +46,13 @@ Route::group([
 // Admin Routes...
 Route::name('admin.')->namespace('Admin')->prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
-    Route::get('users', 'DashboardController@users')->name('users');
+
+    // Users management...
+    Route::prefix('users')->name('users')->group(function () {
+        Route::get('/', 'DashboardController@users')->name('');
+        Route::delete('{user}', 'UsersController@deleteUser')->name('.delete');
+    });
+
     Route::get('reviews', 'DashboardController@reviews')->name('reviews');
     Route::get('report', 'DashboardController@report')->name('report');
     Route::get('settings', 'DashboardController@settings')->name('settings');

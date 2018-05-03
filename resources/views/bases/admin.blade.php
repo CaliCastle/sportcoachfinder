@@ -26,6 +26,9 @@
 			<span class="copyright">
 				&copy; {{ date('Y') }} {{ site('site_title') }}
 			</span>
+			<span class="developer">
+				Developed & Designed by <strong>Cali Castle</strong>
+			</span>
 		</footer>
 	</section>
 

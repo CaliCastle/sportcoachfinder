@@ -1,10 +1,5 @@
 const Vue = require('vue')
+const axios = require('axios')
 
-const app = new Vue({
-    el: '#admin',
-    data() {
-        return {
-
-        }
-    }
-})
+window.Vue = Vue
+window.axios = axios

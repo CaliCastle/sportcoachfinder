@@ -37,7 +37,7 @@
 			align-items: center;
 			padding: .4rem .5rem;
 			margin: .25rem 0;
-			border-radius: 10px;
+			border-radius: 8px;
 			will-change: box-shadow;
 			transition: box-shadow ease-in-out .22s;
 
@@ -45,15 +45,23 @@
 				box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 
 				.row__actions {
-					opacity: 1 !important;
+					display: block;
+
+					@for $i from 1 through 4 {
+						> a:nth-of-type(#{$i}) {
+							animation-duration: .28s;
+							animation-delay: #{($i * 0.0819) + 0.01}s;
+							animation-name: fadeInLeft;
+							animation-fill-mode: both;
+						}
+					}
 				}
 			}
 
 			@include has('actions') {
-				opacity: 0;
-				will-change: opacity;
-				transition: opacity ease-in-out .2s;
 				font-size: 1.2rem;
+				display: none;
+				position: relative;
 
 				.edit {
 					margin: 0 1rem;
@@ -97,6 +105,7 @@
 					font-size: 0.9rem;
 					font-weight: 500;
 					color: #8f8f8f;
+					margin: .55rem 0 0;
 				}
 			}
 

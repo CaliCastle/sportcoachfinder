@@ -8,6 +8,16 @@
 	}
 }
 
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
 @keyframes fadeInDown {
 	from {
 		opacity: 0;
@@ -91,6 +101,10 @@
 
 .fadeIn {
 	animation-name: fadeIn;
+}
+
+.fadeOut {
+	animation: fadeOut .23s both;
 }
 
 .fadeInDown {
