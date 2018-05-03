@@ -6,7 +6,7 @@
 	<div class="table users-table" id="users">
 		<header class="table-heading">
 			<h2>Manage users</h2>
-			<a href="#" class="create"><i class="plus-icon"></i></a>
+			<a href="{{ route('admin.users.new') }}" class="create"><i class="plus-icon"></i></a>
 		</header>
 		<section class="table-content">
 		@foreach($users as $user)
@@ -19,12 +19,12 @@
 					<span>{{ $user->email }}</span>
 				</div>
 				<div class="user-row__status {{ $user->roleClass() }}"></div>
-				@unless($user->id == $myself->id)
 				<div class="row__actions">
-					<a href="#" class="edit"><i class="edit-icon"></i></a>
+					<a href="{{ route('admin.users.edit', compact('user')) }}" class="edit"><i class="edit-icon"></i></a>
+					@unless($user->id == $myself->id)
 					<a href="#" class="delete" @click.prevent="confirmDeleteUser"><i class="delete-icon"></i></a>
+					@endunless
 				</div>
-				@endunless
 			</div>
 		@endforeach
 		</section>
@@ -56,10 +56,12 @@
 
                         return axios.delete(vm.deleteUrl + userId);
                     }).then(function (response) {
-                        el.classList.add('fadeOut');
-                        setTimeout(function () {
-                            el.remove();
-                        }, 300);
+                        if (response) {
+                            el.classList.add('fadeOut');
+                            setTimeout(function () {
+                                el.remove();
+                            }, 300);
+                        }
 
                         return;
                     }).catch(function (error) {

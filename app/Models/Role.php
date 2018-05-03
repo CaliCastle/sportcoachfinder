@@ -31,4 +31,23 @@ class Role extends Model
             'name' => 'admin'
         ]);
     }
+
+    /**
+     * Get role's readable name.
+     *
+     * @return string
+     */
+    public function readableName()
+    {
+        switch ($this->name) {
+            case 'normal':
+                return 'Normal';
+            case 'coach':
+                return 'Coach';
+            case 'admin':
+                return 'Administrator';
+            default:
+                return '';
+        }
+    }
 }

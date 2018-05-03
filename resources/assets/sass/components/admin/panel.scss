@@ -73,3 +73,110 @@
 		}
 	}
 }
+
+.card {
+	max-width: 800px;
+	background: #fff;
+	box-shadow: 0 16px 36px rgba(0, 0, 0, 0.055);
+	min-height: 120px;
+	border-radius: 8px;
+	padding: 1.5rem 2.1rem;
+
+	@include has('content') {
+
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+
+	@include has('input') {
+		display: flex;
+		margin: .5rem 0;
+		padding: .33rem .5rem;
+
+		label.label {
+			padding: .3rem;
+			font-weight: 700;
+			margin-right: .5rem;
+			display: inline-block;
+
+			&[required] {
+				&:after {
+					margin-left: .3rem;
+					content: '*';
+				}
+			}
+		}
+
+		input.text-input {
+			background: #f6f6f6;
+			font-size: 1.15rem;
+			padding: .5rem 1rem;
+			margin: .5rem 0;
+			border-radius: 8px;
+			transition: background-color ease-in-out .22s, border ease .25s;
+			will-change: background, border;
+
+			&:focus {
+				background: #efefef;
+			}
+		}
+
+		select {
+			-webkit-appearance: button;
+			-moz-appearance: button;
+			appearance: button;
+			border: none;
+			background: #f2f2f2 url("/assets/images/down-arrow.png") 93% / 14% no-repeat;
+			padding: .5rem .4rem;
+			border-radius: 6px;
+			font-size: 0.9rem;
+			font-weight: bold;
+			color: #333;
+			width: 100px;
+			outline: none;
+
+			&.long {
+				width: 160px;
+				background: #f2f2f2 url("/assets/images/down-arrow.png") 96% / 9% no-repeat;
+			}
+		}
+
+		@include has('message') {
+			color: $form-error-red;
+			font-weight: 600;
+
+		}
+
+		@include as('vertical') {
+			flex-direction: column;
+		}
+
+		@include as('horizontal') {
+			flex-direction: row;
+			align-items: center;
+
+			.label {
+				width: 80px;
+			}
+		}
+
+		&.has-error {
+			input {
+				border: 1.5px solid $form-error-red;
+			}
+		}
+	}
+
+	@include has('submit') {
+		background: linear-gradient(110deg, $theme-primary, $theme-primary-light);
+		border-radius: 28px;
+		font-size: 1.15rem;
+		font-weight: bold;
+		padding: .6rem .8rem;
+		margin: .5rem;
+		color: #fff;
+	}
+}

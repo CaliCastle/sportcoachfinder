@@ -33,9 +33,19 @@ i.coach-icon:after {
 	content: $icons8-var-personal-trainer-2;
 }
 
+i.check-icon:after {
+	@include icons8-font();
+	content: $icons8-var-checkmark;
+}
+
 i.back-icon:after {
 	@include icons8-font();
 	content: $icons8-var-left-arrow;
+}
+
+i.down-icon:after {
+	@include icons8-font();
+	content: $icons8-var-caret-arrowhead-facing-down;
 }
 
 i.login-icon:after {

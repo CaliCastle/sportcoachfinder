@@ -25,7 +25,6 @@ mix.js(`${jsPath}/auth.js`, 'public/js')
 
 // Core js plugins
 mix.scripts([
-    `${jsPath}/plugins/switchery.js`,
     `${jsPath}/plugins/waves.js`,
     `${jsPath}/plugins/iziToast.min.js`,
     `${jsPath}/plugins/swal.min.js`

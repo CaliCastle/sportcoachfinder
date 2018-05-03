@@ -29,7 +29,7 @@ class DashboardController extends Controller
     {
         $users = User::paginate();
 
-        return view('admin.users', compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
     /**

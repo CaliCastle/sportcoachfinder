@@ -50,6 +50,10 @@ Route::name('admin.')->namespace('Admin')->prefix('admin')->middleware(['auth', 
     // Users management...
     Route::prefix('users')->name('users')->group(function () {
         Route::get('/', 'DashboardController@users')->name('');
+        Route::get('new', 'UsersController@editUser')->name('.new');
+        Route::post('new', 'UsersController@createUser')->name('.new');
+        Route::get('{user}', 'UsersController@editUser')->name('.edit');
+        Route::put('{user}', 'UsersController@updateUser')->name('.update');
         Route::delete('{user}', 'UsersController@deleteUser')->name('.delete');
     });
 
