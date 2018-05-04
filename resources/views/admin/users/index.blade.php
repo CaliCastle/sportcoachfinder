@@ -12,7 +12,7 @@
 		@foreach($users as $user)
 			<div class="row user-row" user-id="{{ $user->id }}">
 				<div class="user-row__avatar">
-					<img src="{{ $user->avatarUrl }}" alt="Avatar">
+					<avatar username="{{ $user->name }}" src="{{ $user->avatarUrl ?? "" }}" :size="45"></avatar>
 				</div>
 				<div class="user-row__name">
 					<strong>{{ $user->name }}</strong>

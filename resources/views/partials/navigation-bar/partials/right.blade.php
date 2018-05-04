@@ -9,10 +9,10 @@
 		</a>
 	@else
 		@php
-			$user = Auth::user();
+			$myself = Auth::user();
 		@endphp
 
-		@if(auth()->user()->hasRole('normal'))
+		@if($myself->hasRole('normal'))
 			<a class="ui-navigation-bar__link ui-navigation-bar__action primary-gradient--dimmed waves-button-light"
 			   href="{{ route('apply') }}">
 				<i class="coach-icon" style="font-size: 1.7rem;"></i>&nbsp;Become a coach
@@ -20,10 +20,10 @@
 		@endif
 		<div class="ui-navigation-bar__user">
 			<div class="ui-navigation-bar__user__avatar waves-button-light" @click="toggleUserProfileDropdown">
-				<img src="{{ $user->avatarUrl }}" alt="Avatar">
+				<avatar username="{{ $myself->name }}" src="{{ $myself->avatarUrl ?? "" }}" :size="45" :rounded="false"></avatar>
 			</div>
 			<div class="ui-navigation-bar__user__name" @click="toggleUserProfileDropdown">
-				<span>{{ $user->name }}</span>
+				<span>{{ $myself->name }}</span>
 			</div>
 			<div class="ui-navigation-bar__user__caret" @click="toggleUserProfileDropdown"></div>
 			<div class="ui-navigation-bar__user__dropdown">
@@ -37,23 +37,23 @@
 					</form>
 					<div class="user-info">
 						<div class="avatar">
-							<img src="{{ $user->avatarUrl }}" alt="Avatar">
+							<avatar username="{{ $myself->name }}" src="{{ $myself->avatarUrl ?? "" }}" :size="75" :rounded="false"></avatar>
 						</div>
-						<strong>{{ $user->name }}</strong>
-						<span>{{ $user->email }}</span>
-						@if($user->verified)
-							<em class="{{ $user->roleClass() }}">
-								{{ $user->readableRole() }}
+						<strong>{{ $myself->name }}</strong>
+						<span>{{ $myself->email }}</span>
+						@if($myself->verified)
+							<em class="{{ $myself->roleClass() }}">
+								{{ $myself->readableRole() }}
 							</em>
 						@else
-							<em class="{{ $user->roleClass() }} waves-button-light">
+							<em class="{{ $myself->roleClass() }} waves-button-light">
 								Verify your email
 							</em>
 						@endif
 					</div>
 				</header>
 				<main>
-					@if($user->hasRole('admin'))
+					@if($myself->hasRole('admin'))
 					<a href="{{ route('admin.dashboard') }}" class="dropdown-link waves-button-light">
 						<i class="dashboard-icon"></i>
 						<span>Manage website</span>

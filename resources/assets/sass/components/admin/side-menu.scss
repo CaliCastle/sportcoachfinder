@@ -23,7 +23,7 @@
 		justify-content: space-between;
 		align-items: center;
 
-		.avatar {
+		> .avatar {
 			width: 60px;
 			height: 60px;
 			cursor: pointer;
@@ -33,6 +33,10 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			> * {
+				pointer-events: none;
+			}
 
 			img {
 				pointer-events: none;
@@ -85,13 +89,13 @@
 			}
 		}
 
-		strong {
+		> strong {
 			font-size: 1.12rem;
 			font-weight: bold;
 			margin: .6rem 0;
 		}
 
-		span {
+		> span {
 			font-size: 0.8rem;
 			font-weight: 500;
 			color: #d2d2d2;

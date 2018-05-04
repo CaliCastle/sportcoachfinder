@@ -2,7 +2,7 @@
 	<header class="side-menu__user">
 		<input type="file" accept="image/*" style="display: none;" name="avatar" @change="avatarSelected($event)" data-url="{{ route('avatar') }}">
 		<div class="avatar" @click.prevent="selectAvatar">
-			<img src="{{ $myself->avatarUrl }}" alt="Avatar">
+			<avatar username="{{ $myself->name }}" src="{{ $myself->avatarUrl ?? "" }}" :size="60"></avatar>
 		</div>
 		<strong>{{ $myself->name }}</strong>
 		<span>{{ $myself->email }}</span>

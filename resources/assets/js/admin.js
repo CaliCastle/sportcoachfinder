@@ -1,9 +1,13 @@
 require('./bootstrap')
 const Vue = require('vue')
+
 import ToggleButton from 'vue-js-toggle-button'
 
 window.Vue = Vue
 
+const Avatar = require('vue-avatar')
+
+Vue.component('avatar', Avatar.Avatar)
 Vue.component('loader', require('./components/Loader.vue'))
 Vue.use(ToggleButton)
 
@@ -91,11 +95,11 @@ new Vue({
             setTimeout(() => {
                 this.croppie = new Croppie(img, {
                     viewport: {
-                        width: 200,
-                        height: 200,
+                        width: 120,
+                        height: 120,
                         type: 'square'
                     },
-                    boundary: {width: 300, height: 300},
+                    boundary: {width: 240, height: 240},
                     enableExif: true
                 })
             }, 10)

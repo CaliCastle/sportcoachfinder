@@ -2,6 +2,11 @@ require('./bootstrap')
 
 window.Vue = require('vue');
 
+const Avatar = require('vue-avatar')
+
+Vue.component('avatar', Avatar.Avatar)
+Vue.component('loader', require('./components/Loader.vue'))
+
 const app = new Vue({
     el: '#app',
     data() {

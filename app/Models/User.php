@@ -2,12 +2,14 @@
 
 namespace SCF\Models;
 
+use Illuminate\Http\UploadedFile;
 use Mail;
 use Illuminate\Http\Request;
 use SCF\Mail\AccountCreated;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use SCF\Mail\ResetPassword;
+use Storage;
 
 class User extends Authenticatable
 {
@@ -121,7 +123,7 @@ class User extends Authenticatable
      */
     public function getAvatarUrlAttribute()
     {
-        return optional($this->avatar)->url ?? UserAvatar::defaultUrl();
+        return optional($this->avatar)->url;
     }
 
     /**

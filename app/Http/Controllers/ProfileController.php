@@ -25,24 +25,7 @@ class ProfileController extends Controller
         $file = $request->file('avatar');
 
         if ($file instanceof UploadedFile) {
-            // Configure file name, {user_id}_{time}.{ext}
-            $fileName = $request->user()->id . '_' . time() . '.' . $file->clientExtension();
-            // Save file to storage in `avatars` directory
-            $file->storePubliclyAs('public/'. UserAvatar::PATH, $fileName);
-            // Persist into database
-            $attributes = [
-                'src' => $fileName,
-                'type'   => UserAvatar::LOCAL
-            ];
-            // Create or update
-            if ($request->user()->avatar instanceof UserAvatar) {
-                // Delete old avatar
-                Storage::delete(UserAvatar::PATH . '/' . $request->user()->avatar->src);
-                // Update to the new one
-                $request->user()->avatar()->update($attributes);
-            } else {
-                $request->user()->avatar()->create($attributes);
-            }
+            UserAvatar::store($file, $request->user());
 
             return $this->successResponse();
         }

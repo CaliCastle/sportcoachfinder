@@ -18,6 +18,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "vue-avatar": "^2.1.4",
         "vue-focus": "^2.1.0",
         "vue-js-toggle-button": "^1.2.3"
     }
