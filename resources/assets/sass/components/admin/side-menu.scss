@@ -33,17 +33,10 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			box-shadow: 0 0 20px rgba(#000, 0.2);
 
 			> * {
 				pointer-events: none;
-			}
-
-			img {
-				pointer-events: none;
-				width: 100%;
-				height: 100%;
-				border-radius: 50%;
-				box-shadow: 0 0 20px rgba(#000, 0.2);
 			}
 
 			input {
@@ -53,7 +46,7 @@
 			&:before {
 				pointer-events: none;
 				@include icons8-font();
-				content: $icons8-var-plus;
+				content: $icons8-var-circular-arrow;
 				color: #fff;
 				font-size: 1.5rem;
 				position: absolute;

@@ -6,7 +6,7 @@
 	<div class="card">
 		<div class="card__banner--avatar">
 			<div class="avatar">
-				<img src="{{ optional($user)->avatarUrl ?? \SCF\Models\UserAvatar::defaultUrl() }}" alt="Avatar">
+				<avatar :username="name" :size="100" src="{{ $user->avatarUrl ?? "" }}"></avatar>
 			</div>
 		</div>
 		<div class="card__content">

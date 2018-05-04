@@ -59,7 +59,7 @@
 					@for $i from 1 through 4 {
 						> a:nth-of-type(#{$i}) {
 							animation-duration: .28s;
-							animation-delay: #{($i * 0.0819) + 0.01}s;
+							animation-delay: #{($i * 0.109) + 0.01}s;
 							animation-name: fadeInLeft;
 							animation-fill-mode: both;
 						}
@@ -68,7 +68,7 @@
 			}
 
 			@include has('actions') {
-				font-size: 1.2rem;
+				font-size: 1rem;
 				display: none;
 				position: relative;
 
@@ -79,6 +79,7 @@
 
 				.delete {
 					color: #a44336;
+					font-weight: bold;
 				}
 			}
 		}

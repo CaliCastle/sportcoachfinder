@@ -1,10 +1,10 @@
 {
-    "/js/admin/manage.js": "/js/admin/manage.js",
-    "/js/auth.js": "/js/auth.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/auth.css": "/css/auth.css",
     "/css/admin/core.css": "/css/admin/core.css",
+    "/js/admin/manage.js": "/js/admin/manage.js",
+    "/js/auth.js": "/js/auth.js",
     "/js/core.js": "/js/core.js",
     "/js/plugins/core.js": "/js/plugins/core.js"
 }

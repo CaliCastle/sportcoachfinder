@@ -20,9 +20,9 @@
 				</div>
 				<div class="user-row__status {{ $user->roleClass() }}"></div>
 				<div class="row__actions">
-					<a href="{{ route('admin.users.edit', compact('user')) }}" class="edit"><i class="edit-icon"></i></a>
+					<a href="{{ route('admin.users.edit', compact('user')) }}" class="edit">Edit</a>
 					@unless($user->id == $myself->id)
-					<a href="#" class="delete" @click.prevent="confirmDeleteUser"><i class="delete-icon"></i></a>
+					<a href="#" class="delete" @click.prevent="confirmDeleteUser">Delete</a>
 					@endunless
 				</div>
 			</div>
