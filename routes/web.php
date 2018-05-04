@@ -41,6 +41,8 @@ Route::group([
     // Apply for Coach
     Route::get('apply', 'HomeController@showBecomeACoach')->name('apply');
 
+    // Upload avatar
+    Route::post('avatar', 'ProfileController@uploadAvatar')->name('avatar');
 });
 
 // Admin Routes...

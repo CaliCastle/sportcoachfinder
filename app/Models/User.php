@@ -46,6 +46,16 @@ class User extends Authenticatable
     }
 
     /**
+     * User's avatar.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function avatar()
+    {
+        return $this->hasOne(UserAvatar::class);
+    }
+
+    /**
      * Check if user has the given role.
      *
      * @param string $role
@@ -111,7 +121,7 @@ class User extends Authenticatable
      */
     public function getAvatarUrlAttribute()
     {
-        return optional($this->avatar)->url ?? get_gravatar($this->email);
+        return optional($this->avatar)->url ?? UserAvatar::defaultUrl();
     }
 
     /**

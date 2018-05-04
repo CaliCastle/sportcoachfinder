@@ -24,7 +24,7 @@ class UsersController extends Controller
 
         $user->forceDelete();
 
-        return ['status' => 'success'];
+        return $this->successResponse();
     }
 
     /**
@@ -49,5 +49,7 @@ class UsersController extends Controller
         $user->update($request->all());
 
         $user->verified = $request->input('verified') == 1;
+
+
     }
 }

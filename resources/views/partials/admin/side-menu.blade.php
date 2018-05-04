@@ -1,6 +1,7 @@
-<nav class="side-menu">
+<nav class="side-menu" id="side-menu">
 	<header class="side-menu__user">
-		<div class="avatar">
+		<input type="file" accept="image/*" style="display: none;" name="avatar" @change="avatarSelected($event)" data-url="{{ route('avatar') }}">
+		<div class="avatar" @click.prevent="selectAvatar">
 			<img src="{{ $myself->avatarUrl }}" alt="Avatar">
 		</div>
 		<strong>{{ $myself->name }}</strong>

@@ -26,12 +26,62 @@
 		.avatar {
 			width: 60px;
 			height: 60px;
+			cursor: pointer;
+			position: relative;
+			border-radius: 50%;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			img {
+				pointer-events: none;
 				width: 100%;
 				height: 100%;
 				border-radius: 50%;
 				box-shadow: 0 0 20px rgba(#000, 0.2);
+			}
+
+			input {
+				pointer-events: none;
+			}
+
+			&:before {
+				pointer-events: none;
+				@include icons8-font();
+				content: $icons8-var-plus;
+				color: #fff;
+				font-size: 1.5rem;
+				position: absolute;
+				text-align: center;
+				z-index: 2;
+				opacity: 0;
+				will-change: opacity;
+				transition: opacity ease-in-out .25s;
+			}
+			
+			&:after {
+				content: '';
+				background: transparent;
+				position: absolute;
+				pointer-events: none;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				will-change: background-color;
+				transition: background-color ease-in-out .25s;
+				z-index: 1;
+			}
+
+			&:hover {
+				&:before {
+					opacity: 1;
+				}
+
+				&:after {
+					background: rgba(#000, .5);
+				}
 			}
 		}
 

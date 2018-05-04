@@ -27,6 +27,14 @@
 		justify-content: center;
 		align-items: flex-start;
 		padding: .8rem 0;
+		background: #fff;
+		will-change: background;
+		border-radius: 8px;
+		transition: background ease-in-out .19s;
+
+		&:hover {
+			background: transparent;
+		}
 
 		.row {
 			width: 100%;
@@ -38,10 +46,11 @@
 			padding: .4rem .5rem;
 			margin: .25rem 0;
 			border-radius: 8px;
-			will-change: box-shadow;
-			transition: box-shadow ease-in-out .22s;
+			will-change: box-shadow, background;
+			transition: box-shadow ease-in-out .22s, background ease-in-out .2s;
 
 			&:hover {
+				background: #fff;
 				box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 
 				.row__actions {

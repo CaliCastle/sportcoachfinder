@@ -4,11 +4,8 @@ import ToggleButton from 'vue-js-toggle-button'
 
 window.Vue = Vue
 
+Vue.component('loader', require('./components/Loader.vue'))
 Vue.use(ToggleButton)
-
-Waves.attach('.waves-button')
-Waves.attach('.waves-button-light', ['.waves-button', '.waves-light'])
-Waves.init()
 
 function submitForm(vm, form) {
     // Remove all errors
@@ -50,3 +47,70 @@ window.submitForm = submitForm
 function toggleFormLoading(form, force = null) {
     form.parentNode.classList.toggle('loading', force)
 }
+
+document.querySelector('.side-menu .avatar').addEventListener('click', (e) => {
+
+})
+
+new Vue({
+    el: '#side-menu',
+    data: {
+        croppie: null
+    },
+    methods: {
+        selectAvatar(e) {
+            e.target.parentElement.querySelector('input[type="file"]').click()
+        },
+        avatarSelected($ev) {
+            const file = $ev.target.files[0]
+            let reader = new FileReader()
+            reader.addEventListener('load', this.showAvatarCropper)
+            reader.readAsDataURL(file)
+        },
+        showAvatarCropper(e) {
+            const imageUrl = e.target.result
+
+            let img = document.createElement('img')
+            img.src = imageUrl
+
+            swal({
+                content: img,
+                title: 'Change Avatar',
+                closeOnClickOutside: false,
+                closeOnEsc: false,
+                buttons: {
+                    cancel: true,
+                    confirm: true,
+                }
+            }).then((response) => {
+                if (response && this.croppie != null) {
+                    this.croppie.result('blob').then(this.submitAvatar)
+                }
+            })
+
+            setTimeout(() => {
+                this.croppie = new Croppie(img, {
+                    viewport: {
+                        width: 200,
+                        height: 200,
+                        type: 'square'
+                    },
+                    boundary: {width: 300, height: 300},
+                    enableExif: true
+                })
+            }, 10)
+        },
+        submitAvatar(blob) {
+            const data = new FormData()
+            data.append('avatar', blob)
+
+            axios.post(document.querySelector('input[name="avatar"]').getAttribute('data-url'), data).then((response) => {
+                if (response) {
+                    window.location.reload(true)
+                }
+            }).catch((error) => {
+                showServerError()
+            })
+        }
+    }
+})

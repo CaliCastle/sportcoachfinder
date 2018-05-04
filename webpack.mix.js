@@ -27,7 +27,7 @@ mix.js(`${jsPath}/auth.js`, 'public/js')
 mix.scripts([
     `${jsPath}/plugins/waves.js`,
     `${jsPath}/plugins/iziToast.min.js`,
-    `${jsPath}/plugins/swal.min.js`
+    `${jsPath}/plugins/swal.min.js`,
 ], 'public/js/plugins/core.js');
 
 // Core js custom
