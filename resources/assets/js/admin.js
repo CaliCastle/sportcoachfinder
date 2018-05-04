@@ -95,12 +95,11 @@ new Vue({
             setTimeout(() => {
                 this.croppie = new Croppie(img, {
                     viewport: {
-                        width: 120,
-                        height: 120,
+                        width: 270,
+                        height: 270,
                         type: 'square'
                     },
-                    boundary: {width: 240, height: 240},
-                    enableExif: true
+                    boundary: {width: 300, height: 300}
                 })
             }, 10)
         },

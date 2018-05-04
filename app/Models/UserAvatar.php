@@ -98,7 +98,7 @@ class UserAvatar extends Model
     {
         if ($this->type == static::LOCAL) {
             // Local avatar
-            return isset($this->src) ? url('avatars/' . $this->src) : null;
+            return isset($this->src) ? Storage::url(self::PATH . '/' . $this->src) : null;
         } else {
             // Remote avatar
             return $this->src;
