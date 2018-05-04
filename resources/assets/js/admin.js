@@ -32,14 +32,16 @@ function submitForm(vm, form) {
 
         showSuccessToast('Success', response.data.message)
     }).catch(error => {
-        const response = error.response
+        if (error) {
+            const response = error.response
 
-        switch (response.status) {
-            case 422:
-                form.errors = response.data.errors
-                return
-            case 500:
-                showErrorToast('Server Error', 'If this keeps happening, contact dev!')
+            switch (response.status) {
+                case 422:
+                    form.errors = response.data.errors
+                    return
+                case 500:
+                    showErrorToast('Server Error', 'If this keeps happening, contact dev!')
+            }
         }
     }).then(() => {
         toggleFormLoading(form, false)

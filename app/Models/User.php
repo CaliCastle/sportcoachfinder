@@ -164,6 +164,17 @@ class User extends Authenticatable
     }
 
     /**
+     * Assign a role to user.
+     *
+     * @param string $name
+     */
+    public function assignRole(string $name)
+    {
+        $role = Role::where('name', $name)->first();
+        $this->role()->associate($role);
+    }
+
+    /**
      * Send password reset mail.
      *
      * @param string $token

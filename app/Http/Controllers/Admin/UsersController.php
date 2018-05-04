@@ -2,6 +2,7 @@
 
 namespace SCF\Http\Controllers\Admin;
 
+use Hash;
 use SCF\Models\User;
 use Illuminate\Http\Request;
 use SCF\Http\Controllers\Controller;
@@ -41,15 +42,43 @@ class UsersController extends Controller
 
     public function createUser(UserUpdateRequest $request)
     {
+        $user = User::create([
+            'name'     => $request->input('name'),
+            'email'    => $request->input('email'),
+            'password' => Hash::make($request->input('password'))
+        ]);
 
+        if ($user instanceof User) {
+            $user->verified = $request->input('verified') == true;
+            $user->assignRole($request->input('role'));
+
+            $user->save();
+
+            return $this->successResponse([
+                'redirect' => route('admin.users')
+            ]);
+        }
+
+        return $this->errorResponse();
     }
 
+    /**
+     * Update the user.
+     *
+     * @param UserUpdateRequest $request
+     * @param User              $user
+     *
+     * @return array
+     */
     public function updateUser(UserUpdateRequest $request, User $user)
     {
         $user->update($request->all());
 
-        $user->verified = $request->input('verified') == 1;
+        $user->verified = $request->input('verified') == true;
+        $user->assignRole($request->input('role'));
 
+        $user->save();
 
+        return $this->successResponse('User updated');
     }
 }

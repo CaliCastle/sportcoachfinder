@@ -27,6 +27,15 @@
 							<span v-if="hasError('email')" class="form__input__message">@{{ errors.email[0] }}</span>
 						</transition>
 					</div>
+					@if($user === null)
+						<div class="form__input form__input--vertical" v-bind:class="{ 'has-error': hasError('password') }">
+							<label for="password" class="label" required>Password</label>
+							<input type="password" class="text-input" v-model="password" id="password" required>
+							<transition name="fadeInDown">
+								<span v-if="hasError('password')" class="form__input__message">@{{ errors.password[0] }}</span>
+							</transition>
+						</div>
+					@endif
 					<div class="form__input form__input--horizontal">
 						<label for="gender" class="label">Gender</label>
 						<select name="gender" id="gender" v-model="gender">
@@ -70,6 +79,9 @@
 		        email: '{{ optional($user)->email ?? '' }}',
 		        gender: '{{ optional($user)->gender ?? 'none' }}',
 		        role: '{{ optional($user)->role->name ?? 'normal' }}',
+		        @if($user === null)
+		        password: '',
+		        @endif
 		        errors: []
 	        },
 	        computed: {
@@ -79,7 +91,10 @@
 	                    email: this.email,
 	                    gender: this.gender,
 	                    role: this.role,
-	                    // verified: this.
+	                    @if($user === null)
+                        password: this.password,
+	                    @endif
+	                    verified: this.$children[2].toggled
                     }
                 }
 	        },
