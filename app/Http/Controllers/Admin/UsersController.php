@@ -40,6 +40,13 @@ class UsersController extends Controller
         return view('admin.users.edit', compact('user'));
     }
 
+    /**
+     * Create a user.
+     *
+     * @param UserUpdateRequest $request
+     *
+     * @return array
+     */
     public function createUser(UserUpdateRequest $request)
     {
         $user = User::create([

@@ -85,6 +85,44 @@
 		}
 	}
 
+	.table-pagination {
+		margin: 1rem 0;
+		padding: 1.5rem;
+		background: #f2f2f2;
+		border-radius: 10px;
+
+		.pagination {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.page-item {
+			a, span {
+				padding: .4rem .7rem;
+				margin: 0 .5rem;
+				will-change: background, opacity;
+				transition: background ease-in-out .23s, opacity ease .21s;
+				border-radius: 6px;
+				color: #555;
+				font-size: 1.08rem;
+				font-weight: bold;
+			}
+
+			&.active, &:hover {
+				a, span {
+					opacity: 0.7;
+					background: $theme-primary;
+					color: #fff;
+				}
+			}
+		}
+
+		.page-item a, .page-item span {
+
+		}
+	}
+
 	&.users-table {
 		.user-row {
 			.user-row__avatar {

@@ -15,8 +15,16 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    /**
+     * How many for each page.
+     *
+     * @var int
+     */
     protected $perPage = 30;
 
+    /**
+     * Confirmation code session key.
+     */
     const CONFIRM_CODE_KEY = 'confirmation_code';
 
     /**

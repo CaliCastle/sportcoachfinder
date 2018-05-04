@@ -28,6 +28,9 @@
 			</div>
 		@endforeach
 		</section>
+		<footer class="table-pagination">
+			{!! $users->links() !!}
+		</footer>
 	</div>
 
 @stop

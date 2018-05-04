@@ -42,6 +42,7 @@
 							<option value="none">None</option>
 							<option value="male">Male</option>
 							<option value="female">Female</option>
+							<option value="trans">Trans</option>
 						</select>
 					</div>
 					<div class="form__input form__input--horizontal">
