@@ -1,0 +1,1 @@
+<textarea name="{{ $name }}" id="{{ $name }}" v-model="{{ $name }}" class="textarea-input"></textarea>

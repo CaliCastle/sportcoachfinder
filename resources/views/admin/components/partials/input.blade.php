@@ -1,0 +1,1 @@
+<input type="{{ isset($type) ? $type : 'text' }}" v-model="{{ $name }}" class="text-input" {{ isset($required) && $required ? 'required' : '' }}>

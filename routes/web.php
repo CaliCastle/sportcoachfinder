@@ -61,5 +61,11 @@ Route::name('admin.')->namespace('Admin')->prefix('admin')->middleware(['auth', 
 
     Route::get('reviews', 'DashboardController@reviews')->name('reviews');
     Route::get('report', 'DashboardController@report')->name('report');
-    Route::get('settings', 'DashboardController@settings')->name('settings');
+
+    Route::prefix('settings')->group(function () {
+        Route::get('/', 'DashboardController@settings')->name('settings');
+        Route::put('basic', 'SettingsController@updateBasic')->name('settings.basic');
+        Route::put('smtp', 'SettingsController@updateSmtp')->name('settings.smtp');
+    });
+
 });

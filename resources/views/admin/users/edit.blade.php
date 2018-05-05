@@ -4,7 +4,7 @@
 
 @section('body.content')
 	<div class="card">
-		<div class="card__banner--avatar">
+		<div class="card__banner card__banner--avatar">
 			<div class="avatar">
 				<avatar :username="name" :size="100" src="{{ $user->avatarUrl ?? "" }}"></avatar>
 			</div>
@@ -12,27 +12,42 @@
 		<div class="card__content">
 			<div class="form-wrapper">
 				<Loader></Loader>
-				<form action="{{ url()->current() }}" method="{{ $user === null ? 'POST' : 'PUT' }}" class="form" loadable>
-					<div class="form__input form__input--vertical" v-bind:class="{ 'has-error': hasError('name') }">
-						<label for="name" class="label" required>Full name</label>
-						<input type="text" class="text-input" v-model="name" id="name" required>
-						<transition name="fadeInDown">
-							<span v-if="hasError('name')" class="form__input__message">@{{ errors.name[0] }}</span>
-						</transition>
-					</div>
-					<div class="form__input form__input--vertical" v-bind:class="{ 'has-error': hasError('email') }">
-						<label for="email" class="label" required>Email</label>
-						<input type="email" class="text-input" v-model="email" id="email" required>
-						<transition name="fadeInDown">
-							<span v-if="hasError('email')" class="form__input__message">@{{ errors.email[0] }}</span>
-						</transition>
-					</div>
+				<form action="{{ url()->current() }}" method="{{ $user === null ? 'POST' : 'PUT' }}" class="form"
+				      loadable>
+					@component('admin.components.form-input', [
+						'direction' => 'vertical',
+						'required' => true
+					])
+						@slot('label')
+							Full name
+						@endslot
+
+						@slot('name')
+							name
+						@endslot
+					@endcomponent
+					@component('admin.components.form-input', [
+						'direction' => 'vertical',
+						'required' => true,
+						'type' => 'email'
+					])
+						@slot('label')
+							Email
+						@endslot
+
+						@slot('name')
+							email
+						@endslot
+					@endcomponent
+
 					@if($user === null)
-						<div class="form__input form__input--vertical" v-bind:class="{ 'has-error': hasError('password') }">
+						<div class="form__input form__input--vertical"
+						     v-bind:class="{ 'has-error': hasError('password') }">
 							<label for="password" class="label" required>Password</label>
 							<input type="password" class="text-input" v-model="password" id="password" required>
 							<transition name="fadeInDown">
-								<span v-if="hasError('password')" class="form__input__message">@{{ errors.password[0] }}</span>
+								<span v-if="hasError('password')"
+								      class="form__input__message">@{{ errors.password[0] }}</span>
 							</transition>
 						</div>
 					@endif
@@ -59,11 +74,9 @@
 							@endforeach
 						</select>
 					</div>
-					<div class="form__submit-wrapper">
-						<button class="form__submit waves-button-light" @click.prevent="submit">
-							{{ $user === null ? 'Create' : 'Update' }}
-						</button>
-					</div>
+					@component('admin.components.form-submit')
+						{{ $user === null ? 'Create' : 'Update' }}
+					@endcomponent
 				</form>
 			</div>
 		</div>
@@ -74,41 +87,41 @@
 	<script>
         var vm = new Vue({
             el: '#admin',
-	        data: {
+            data: {
                 creating: {{ $user === null ? 'true' : 'false' }},
-		        name: '{{ optional($user)->name ?? '' }}',
-		        email: '{{ optional($user)->email ?? '' }}',
-		        gender: '{{ optional($user)->gender ?? 'none' }}',
-		        role: '{{ optional($user)->role->name ?? 'normal' }}',
-		        @if($user === null)
-		        password: '',
-		        @endif
-		        errors: []
-	        },
-	        computed: {
+                name: '{{ optional($user)->name ?? '' }}',
+                email: '{{ optional($user)->email ?? '' }}',
+                gender: '{{ optional($user)->gender ?? 'none' }}',
+                role: '{{ optional($user)->role->name ?? 'normal' }}',
+				@if($user === null)
+                password: '',
+				@endif
+                errors: {}
+            },
+            computed: {
                 formData: function () {
                     return {
                         name: this.name,
-	                    email: this.email,
-	                    gender: this.gender,
-	                    role: this.role,
-	                    @if($user === null)
+                        email: this.email,
+                        gender: this.gender,
+                        role: this.role,
+						@if($user === null)
                         password: this.password,
-	                    @endif
-	                    verified: this.$children[2].toggled
+						@endif
+                        verified: this.$children[2].toggled
                     }
                 }
-	        },
-	        methods: {
+            },
+            methods: {
                 hasError: function (name) {
                     return this.errors.hasOwnProperty(name)
                 },
                 submit: function (e) {
-	                var form = e.target.closest('.form');
+                    var form = e.target.closest('.form');
 
-	                submitForm(this, form);
+                    submitForm(this, form);
                 }
-	        }
+            }
         });
 	</script>
 @endpush

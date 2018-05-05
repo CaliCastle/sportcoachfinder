@@ -13,7 +13,7 @@ Vue.use(ToggleButton)
 
 function submitForm(vm, form) {
     // Remove all errors
-    form.errors = []
+    vm.errors = {}
 
     toggleFormLoading(form, true)
 
@@ -37,7 +37,7 @@ function submitForm(vm, form) {
 
             switch (response.status) {
                 case 422:
-                    form.errors = response.data.errors
+                    vm.errors = response.data.errors
                     return
                 case 500:
                     showErrorToast('Server Error', 'If this keeps happening, contact dev!')
@@ -45,7 +45,7 @@ function submitForm(vm, form) {
         }
     }).then(() => {
         toggleFormLoading(form, false)
-    });
+    })
 }
 
 window.submitForm = submitForm
@@ -53,10 +53,6 @@ window.submitForm = submitForm
 function toggleFormLoading(form, force = null) {
     form.parentNode.classList.toggle('loading', force)
 }
-
-document.querySelector('.side-menu .avatar').addEventListener('click', (e) => {
-
-})
 
 new Vue({
     el: '#side-menu',

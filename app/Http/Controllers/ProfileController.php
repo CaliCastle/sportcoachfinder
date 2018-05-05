@@ -2,7 +2,6 @@
 
 namespace SCF\Http\Controllers;
 
-use Storage;
 use SCF\Models\UserAvatar;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
