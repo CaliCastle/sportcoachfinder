@@ -99,7 +99,7 @@ new Vue({
                     },
                     boundary: {width: 300, height: 300}
                 })
-            }, 10)
+            }, 100)
         },
         submitAvatar(blob) {
             const data = new FormData()

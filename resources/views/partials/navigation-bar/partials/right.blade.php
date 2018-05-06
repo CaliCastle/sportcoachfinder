@@ -54,7 +54,7 @@
 				</header>
 				<main>
 					@if($myself->hasRole('admin'))
-					<a href="{{ route('admin.dashboard') }}" class="dropdown-link waves-button-light">
+					<a href="{{ route('admin.dashboard') }}" target="_blank" class="dropdown-link waves-button-light">
 						<i class="dashboard-icon"></i>
 						<span>Manage website</span>
 					</a>

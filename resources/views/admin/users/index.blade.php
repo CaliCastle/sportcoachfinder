@@ -3,6 +3,14 @@
 @section('title', 'Users')
 
 @section('body.content')
+	<div class="search-panel">
+		<div class="search-wrapper">
+			<div class="search">
+				<input type="text" class="search-input">
+				<i class="search-icon"></i>
+			</div>
+		</div>
+	</div>
 	<div class="table users-table" id="users">
 		<header class="table-heading">
 			<h2>Manage users</h2>

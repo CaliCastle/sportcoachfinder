@@ -191,14 +191,14 @@
 			font-size: 1.02rem;
 			padding: .5rem 1rem;
 			margin: .5rem 0;
-			border-radius: 12px;
+			border-radius: 8px;
 			border: 1px solid transparent;
 			transition: background-color ease-in-out .22s, border ease .25s, box-shadow ease-in-out .2s;
 			will-change: background, border, box-shadow;
 
 			&:focus {
-				background: #efefef;
-				border-color: rgba($theme-primary, 0.35);
+				background: rgba($theme-primary, 0.15);
+				border-color: rgba($theme-primary, 0.7);
 				box-shadow: 0 6px 32px rgba(0, 0, 0, .065);
 			}
 		}
@@ -264,6 +264,30 @@
 		margin: .5rem;
 		color: #fff;
 		width: 220px;
+	}
+}
+
+.search-panel {
+	width: 100%;
+
+	.search-wrapper {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		.search {
+			width: 6rem;
+			border-radius: 2rem;
+			background: #f2f2f2;
+
+			.search-input {
+				background: transparent;
+			}
+
+			.search-icon {
+
+			}
+		}
 	}
 }
 

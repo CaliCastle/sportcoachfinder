@@ -28,5 +28,9 @@
 			<i class="website-icon"></i>
 			<span>Settings</span>
 		</a>
+		<a href="{{ route('home') }}" class="menu-link">
+			<i class="back-icon"></i>
+			<span>Home</span>
+		</a>
 	</main>
 </nav>

@@ -14,7 +14,7 @@
 
 @section('body.content')
 	<div class="auth__panel__greeting">
-		<h3 v-text="`Welcome, let's get you signed ${registering ? 'up' : 'in'}`" v-if="!confirming"></h3>
+		<h3 v-text="`Sign ${registering ? 'Up' : 'In'}`" v-if="!confirming"></h3>
 		<transition name="fadeInDown">
 			<h3 v-if="confirming">Enter the code we just sent to your email</h3>
 		</transition>
@@ -89,7 +89,7 @@
 					<div class="auth__form__actions__button auth__form__actions__button--signin waves-button-light"
 					     v-bind:class="{ 'can-submit': !registering }" @click="login">
 						<i class="login-icon"></i>
-						<span v-text="registering ? 'Sign in' : 'Submit'"></span>
+						<span v-text="registering ? 'Sign in' : 'Login'"></span>
 					</div>
 					<div class="auth__form__actions__button auth__form__actions__button--signup waves-button-light"
 					     v-bind:class="{ 'can-submit': registering }" @click="register">
