@@ -3,11 +3,11 @@
 /**
  * Environment file not found.
  */
-const ENV_NOT_FOUND = - 1;
+const ENV_NOT_FOUND = -1;
 /**
  * Environment file is not writable.
  */
-const ENV_DENIED = - 2;
+const ENV_DENIED = -2;
 /**
  * Environment file updated.
  */
@@ -25,7 +25,7 @@ if (! function_exists('env_put')) {
      *
      * @author Cali
      */
-    function env_put($key, $value, $new_line = false) : int
+    function env_put($key, $value, $new_line = false): int
     {
         $path = base_path('.env');
         $key = strtoupper($key);
@@ -67,6 +67,7 @@ if (! function_exists('site')) {
      * Helper for getting the site configuration.
      *
      * @param $name
+     *
      * @return string|null|bool
      *
      * @author Cali
@@ -78,5 +79,24 @@ if (! function_exists('site')) {
         $result = call_user_func_array([$site, $name], []);
 
         return is_null($result) ? $default : $result;
+    }
+}
+
+if (! function_exists('calc_distance')) {
+    function calc_distance($point1, $point2)
+    {
+        $radius = 3958;      // Earth's radius (miles)
+        $deg_per_rad = 57.29578;  // Number of degrees/radian (for conversion)
+
+        $distance = ($radius * pi() * sqrt(
+                ($point1['lat'] - $point2['lat'])
+                * ($point1['lat'] - $point2['lat'])
+                + cos($point1['lat'] / $deg_per_rad)  // Convert these to
+                * cos($point2['lat'] / $deg_per_rad)  // radians for cos()
+                * ($point1['long'] - $point2['long'])
+                * ($point1['long'] - $point2['long'])
+            ) / 180);
+
+        return $distance;  // Returned using the units used for $radius.
     }
 }
