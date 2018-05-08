@@ -88,4 +88,23 @@ class UsersController extends Controller
 
         return $this->successResponse('User updated');
     }
+
+    /**
+     * Search users by keyword.
+     *
+     * @param Request $request
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function search(Request $request)
+    {
+        $keyword = $request->query('q') ?? "";
+
+        $users = User::searchByKeyword($keyword);
+
+        return view('admin.users.index', [
+            'users'   => $users,
+            'keyword' => $keyword
+        ]);
+    }
 }

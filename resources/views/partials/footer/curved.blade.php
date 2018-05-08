@@ -18,19 +18,16 @@
 			</div>
 			<div class="ui-footer__related">
 				<div class="ui-footer__links">
-					<h3 class="ui-footer__links__heading">Explore</h3>
+					<h3 class="ui-footer__links__heading">Links</h3>
 					<ul class="ui-footer__links__list">
 						<li>
 							<a href="#">About us</a>
 						</li>
 						<li>
-							<a href="#">How it works</a>
+							<a href="#">Terms of Use</a>
 						</li>
 						<li>
-							<a href="#">FAQs</a>
-						</li>
-						<li>
-							<a href="#">Privacy &amp; Terms</a>
+							<a href="#">Privacy Policy</a>
 						</li>
 					</ul>
 				</div>
@@ -38,20 +35,27 @@
 					<h3 class="ui-footer__links__heading">Help Center</h3>
 					<ul class="ui-footer__links__list">
 						<li>
-							<a href="#">Terms of use</a>
-						</li>
-						<li>
-							<a href="#">Contact us</a>
+							<a href="#">FAQs</a>
 						</li>
 						<li>
 							<a href="#">Tips</a>
 						</li>
+						<li>
+							<a href="#">Safety</a>
+						</li>
+						<li><a href="#">Reviews</a></li>
+						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="ui-footer__international">
-				<!-- Language selector -->
-				<!-- Region selector -->
+		</div>
+		<div class="ui-footer__international">
+			<!-- Language selector -->
+			<div class="ui-footer__language">
+				<svg viewBox="0 0 48 48">
+					<use xlink:href="#globe"></use>
+				</svg>
+				<span>English (US)</span>
 			</div>
 		</div>
 		<div class="ui-footer__newsletter text-center">

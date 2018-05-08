@@ -1,50 +1,58 @@
 @extends('bases.admin')
 
-@section('title', 'Users')
+@section('title', isset($keyword) ? "Searching '" . $keyword . "'" : 'Users')
 
 @section('body.content')
-	<div class="search-panel">
-		<div class="search-wrapper">
-			<div class="search">
-				<input type="text" class="search-input" placeholder="Search users...">
-				<i class="search-icon"></i>
+	<div id="users">
+		<div class="search-panel">
+			<div class="search-wrapper">
+				<form method="GET" action="{{ route('admin.users.search') }}" class="search">
+					<input type="search" class="search-input" placeholder="Search users..." name="q">
+					<i class="search-icon" @click="$event.target.closest('form').submit()"></i>
+				</form>
 			</div>
 		</div>
+		<div class="table users-table">
+			<header class="table-heading">
+				<h2>{{ $users->total() }} Users</h2>
+				<a href="{{ route('admin.users.new') }}" class="create"><i class="plus-icon"></i></a>
+			</header>
+			<section class="table-content">
+				@foreach($users as $user)
+					<div class="row user-row" user-id="{{ $user->id }}">
+						<div class="user-row__avatar">
+							<avatar username="{{ $user->name }}" src="{{ $user->avatarUrl ?? "" }}" :size="45"></avatar>
+						</div>
+						<div class="user-row__name">
+							<strong>{{ $user->name }}</strong>
+							<span>{{ $user->email }}</span>
+						</div>
+						<div class="user-row__status {{ $user->roleClass() }}"></div>
+						<div class="row__actions">
+							<a href="{{ route('admin.users.edit', compact('user')) }}" class="edit">Edit</a>
+							@unless($user->id == $myself->id)
+								<a href="#" class="delete" @click.prevent="confirmDeleteUser">Delete</a>
+							@endunless
+						</div>
+					</div>
+				@endforeach
+			</section>
+			<footer class="table-pagination">
+				{!! $users->links() !!}
+			</footer>
+		</div>
 	</div>
-	<div class="table users-table" id="users">
-		<header class="table-heading">
-			<h2>Manage users</h2>
-			<a href="{{ route('admin.users.new') }}" class="create"><i class="plus-icon"></i></a>
-		</header>
-		<section class="table-content">
-		@foreach($users as $user)
-			<div class="row user-row" user-id="{{ $user->id }}">
-				<div class="user-row__avatar">
-					<avatar username="{{ $user->name }}" src="{{ $user->avatarUrl ?? "" }}" :size="45"></avatar>
-				</div>
-				<div class="user-row__name">
-					<strong>{{ $user->name }}</strong>
-					<span>{{ $user->email }}</span>
-				</div>
-				<div class="user-row__status {{ $user->roleClass() }}"></div>
-				<div class="row__actions">
-					<a href="{{ route('admin.users.edit', compact('user')) }}" class="edit">Edit</a>
-					@unless($user->id == $myself->id)
-					<a href="#" class="delete" @click.prevent="confirmDeleteUser">Delete</a>
-					@endunless
-				</div>
-			</div>
-		@endforeach
-		</section>
-		<footer class="table-pagination">
-			{!! $users->links() !!}
-		</footer>
-	</div>
-
 @stop
 
 @push('body.scripts')
 	<script>
+		@isset($keyword)
+			var mark = new Mark(document.querySelector('.table-content'));
+			mark.mark("{{ $keyword }}", {
+			    "element": "span"
+			})
+		@endisset
+
 		var vm = new Vue({
 			el: '#users',
 			data: {

@@ -106,6 +106,29 @@
 		}
 	}
 
+	@include has('language') {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: darken($theme-primary, 7);
+		padding: .4rem .7rem;
+		border-radius: 2rem;
+		cursor: pointer;
+		animation: 0.65s fadeIn 0.22s both;
+
+		svg, svg use {
+			width: 30px;
+			height: 30px;
+		}
+
+		span {
+			font-weight: bold;
+			font-size: 1.05rem;
+			color: #fff;
+			margin-left: .3rem;
+		}
+	}
+
 	@include has('newsletter') {
 		width: 100%;
 		max-width: 400px;

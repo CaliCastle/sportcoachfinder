@@ -191,4 +191,16 @@ class User extends Authenticatable
     {
         Mail::to($this)->sendNow(new ResetPassword($this, $token));
     }
+
+    /**
+     * Search users by given keyword.
+     *
+     * @param string $keyword
+     *
+     * @return mixed
+     */
+    public static function searchByKeyword(string $keyword)
+    {
+        return static::where('name', 'like', "%$keyword%")->orWhere('email', 'like', "%$keyword%")->paginate();
+    }
 }
