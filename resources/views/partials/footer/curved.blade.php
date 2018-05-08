@@ -20,14 +20,22 @@
 				<div class="ui-footer__links">
 					<h3 class="ui-footer__links__heading">Links</h3>
 					<ul class="ui-footer__links__list">
+						@guest
+							<li><a href="{{ route('sign-in') }}">Sign in / sign up</a></li>
+							<li><a href="{{ route('apply') }}">Become a Coach</a></li>
+						@else
+							@if(auth()->user()->hasRole('normal'))
+								<li><a href="{{ route('apply') }}">Become a Coach</a></li>
+							@endif
+						@endguest
 						<li>
 							<a href="#">About us</a>
 						</li>
 						<li>
-							<a href="#">Terms of Use</a>
+							<a href="#">Terms of use</a>
 						</li>
 						<li>
-							<a href="#">Privacy Policy</a>
+							<a href="#">Privacy policy</a>
 						</li>
 					</ul>
 				</div>

@@ -130,10 +130,9 @@ body {
 
 		@include has('greeting') {
 			padding: 2rem 4rem 3rem 0;
-			//text-align: center;
 
 			h3 {
-				color: #989898;
+				color: $theme-primary;
 				font-weight: 600;
 				font-size: 1.65rem;
 				line-height: 1.8;
