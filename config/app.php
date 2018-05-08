@@ -161,7 +161,6 @@ return [
         SCF\Providers\RouteServiceProvider::class,
 
         \SCF\Providers\ComposerServiceProvider::class,
-
     ],
 
     /*

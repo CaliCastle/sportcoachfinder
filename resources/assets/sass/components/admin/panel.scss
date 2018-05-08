@@ -276,16 +276,36 @@
 		align-items: center;
 
 		.search {
-			width: 6rem;
+			width: 10rem;
 			border-radius: 2rem;
 			background: #f2f2f2;
+			position: relative;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: .4rem 1.7rem .4rem 1.2rem;
+			height: 1.3rem;
 
 			.search-input {
 				background: transparent;
+				width: 100%;
+				font-size: .87rem;
+
+				&:focus {
+					& + .search-icon {
+						opacity: 1 !important;
+					}
+				}
 			}
 
 			.search-icon {
-
+				position: absolute;
+				right: .5rem;
+				color: $theme-primary;
+				cursor: pointer;
+				opacity: 0.45;
+				will-change: opacity;
+				transition: opacity ease-in-out .2s;
 			}
 		}
 	}

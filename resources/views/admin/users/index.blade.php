@@ -6,7 +6,7 @@
 	<div class="search-panel">
 		<div class="search-wrapper">
 			<div class="search">
-				<input type="text" class="search-input">
+				<input type="text" class="search-input" placeholder="Search users...">
 				<i class="search-icon"></i>
 			</div>
 		</div>
