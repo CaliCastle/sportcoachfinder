@@ -15,7 +15,7 @@ class CreateUserAvatarsTable extends Migration
     {
         Schema::create('user_avatars', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id')->index();
+            $table->unsignedBigInteger('user_id');
             $table->string('src')->nullable()->index();
             // 0: Local, 1: Remote
             $table->unsignedTinyInteger('type');
