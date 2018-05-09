@@ -52,28 +52,41 @@
 			      register-action="{{ route('sign-up') }}">
 				<transition name="fadeInDown">
 					<div class="auth__form__input auth__form__input--name"
-					     v-bind:class="{ 'has-error': hasError('name') }" v-if="registering">
-						<input type="text" placeholder="Full name" name="name" v-model="name" @focus="inputFocused"
+					     v-bind:class="{ 'has-error': hasError('firstName') }" v-if="registering">
+						<input type="text" placeholder="First name" name="firstName" v-model="firstName"
+						       @focus="inputFocused"
 						       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required>
-						<span v-if="hasError('name')" class="auth__form__input__message">@{{ errors.name[0] }}</span>
+						<span v-if="hasError('firstName')"
+						      class="auth__form__input__message">@{{ errors.firstName[0] }}</span>
 					</div>
 				</transition>
 				<transition name="fadeInDown">
-				<div class="auth__form__input auth__form__input--email"
-				     v-bind:class="{ 'has-error': hasError('email') }">
-					<input type="email" placeholder="Email address" name="email" v-model="email" @focus="inputFocused"
-					       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required autofocus>
-					<span v-if="hasError('email')" class="auth__form__input__message">@{{ errors.email[0] }}</span>
-				</div>
+					<div class="auth__form__input auth__form__input--name"
+					     v-bind:class="{ 'has-error': hasError('lastName') }" v-if="registering">
+						<input type="text" placeholder="Last name" name="lastName" v-model="lastName"
+						       @focus="inputFocused"
+						       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required>
+						<span v-if="hasError('lastName')"
+						      class="auth__form__input__message">@{{ errors.lastName[0] }}</span>
+					</div>
 				</transition>
 				<transition name="fadeInDown">
-				<div class="auth__form__input auth__form__input--password"
-				     v-bind:class="{ 'has-error': hasError('password') }">
-					<input type="password" placeholder="Password" name="password" v-model="password"
-					       @focus="inputFocused" @blur="inputBlurred" @keyup.enter.prevent="submitForm" required>
-					<span v-if="hasError('password')"
-					      class="auth__form__input__message">@{{ errors.password[0] }}</span>
-				</div>
+					<div class="auth__form__input auth__form__input--email"
+					     v-bind:class="{ 'has-error': hasError('email') }">
+						<input type="email" placeholder="Email address" name="email" v-model="email"
+						       @focus="inputFocused"
+						       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required autofocus>
+						<span v-if="hasError('email')" class="auth__form__input__message">@{{ errors.email[0] }}</span>
+					</div>
+				</transition>
+				<transition name="fadeInDown">
+					<div class="auth__form__input auth__form__input--password"
+					     v-bind:class="{ 'has-error': hasError('password') }">
+						<input type="password" placeholder="Password" name="password" v-model="password"
+						       @focus="inputFocused" @blur="inputBlurred" @keyup.enter.prevent="submitForm" required>
+						<span v-if="hasError('password')"
+						      class="auth__form__input__message">@{{ errors.password[0] }}</span>
+					</div>
 				</transition>
 				<div class="auth__form__meta">
 					<div class="auth__form__meta__remember" @click="rememberMe = !rememberMe">

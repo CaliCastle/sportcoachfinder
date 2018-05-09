@@ -8,7 +8,8 @@ const app = new Vue({
     el: '#app',
     data() {
         return {
-            name: '',
+            firstName: '',
+            lastName: '',
             email: '',
             password: '',
             passwordConfirmation: '',
@@ -34,7 +35,8 @@ const app = new Vue({
         formData() {
             if (this.registering) {
                 return {
-                    name: this.name,
+                    firstName: this.firstName,
+                    lastName: this.lastName,
                     email: this.email,
                     password: this.password,
                     remember: this.rememberMe
@@ -133,7 +135,7 @@ const app = new Vue({
             if (!this.registering) {
                 this.registering = true
 
-                setTimeout(() => this.$form.querySelector('input[name=name]').focus(), 500)
+                setTimeout(() => this.$form.querySelector('input[name=firstName]').focus(), 500)
 
                 return
             }
