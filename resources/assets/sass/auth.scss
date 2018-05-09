@@ -231,25 +231,40 @@ body {
 				transition: color ease-in-out .268s;
 			}
 
+			@include as('normalized') {
+				&:before {
+					top: .1rem;
+					left: 1.45rem;
+				}
+			}
+
 			@include as('name') {
 				&:before {
 					content: $icons8-var-gender-neutral-user;
-					top: .1rem;
-					left: 1.45rem;
 				}
 			}
 
 			@include as('email') {
 				&:before {
 					content: $icons8-var-email-envelope;
-					top: .1rem;
-					left: 1.45rem;
 				}
 			}
 
 			@include as('password') {
 				&:before {
 					content: $icons8-var-lock;
+				}
+			}
+
+			@include as('location') {
+				&:before {
+					content: $icons8-var-location-marker;
+				}
+			}
+
+			@include as('mobile') {
+				&:before {
+					content: $icons8-var-phone;
 				}
 			}
 

@@ -35,9 +35,7 @@ class ConfirmController extends Controller
 
             $request->user()->verified();
 
-            return [
-                'redirect' => route('home')
-            ];
+            return $this->successResponse();
         }
 
         throw ValidationException::withMessages([

@@ -31,4 +31,9 @@ class ProfileController extends Controller
 
         return $this->errorResponse();
     }
+
+    public function updateEssentialInfo(Request $request)
+    {
+
+    }
 }

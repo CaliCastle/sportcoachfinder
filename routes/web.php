@@ -43,6 +43,9 @@ Route::group([
 
     // Upload avatar
     Route::post('avatar', 'ProfileController@uploadAvatar')->name('avatar');
+
+    // Update info on essential info
+    Route::post('essential-info', 'ProfileController@updateEssentialInfo')->name('essential-info');
 });
 
 // Admin Routes...

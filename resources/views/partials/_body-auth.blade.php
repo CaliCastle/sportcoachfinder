@@ -3,6 +3,8 @@
 	@yield('body')
 </main>
 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnQXERSHAWVWuS0os2cKK7aVBEqxS6qKg"
+        type="text/javascript"></script>
 <script src="/js/plugins/core.js"></script>
 <script src="{{ mix('js/core.js') }}"></script>
 @stack('body.scripts')

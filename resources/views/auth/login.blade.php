@@ -14,7 +14,8 @@
 
 @section('body.content')
 	<div class="auth__panel__greeting">
-		<h3 v-text="`Sign ${registering ? 'Up' : 'In'}`" v-if="!confirming"></h3>
+		<h3 v-text="`Sign ${registering ? 'Up' : 'In'}`" v-if="!confirming && !enteringInfo"></h3>
+		<h3 v-if="enteringInfo">Last step,<br>We'd like to know more about you</h3>
 		<transition name="fadeInDown">
 			<h3 v-if="confirming">Enter the code we just sent to your email</h3>
 		</transition>
@@ -22,6 +23,53 @@
 	<div class="auth__panel__form">
 		<Loader></Loader>
 		<transition name="fadeInLeft" mode="out-in">
+			<form action="{{ route('essential-info') }}" method="POST" loadable class="auth__form auth__form--info"
+			      v-if="enteringInfo">
+				<transition name="fadeInDown">
+					<div class="auth__form__input auth__form__input--location auth__form__input--normalized"
+					     v-bind:class="{ 'has-error': hasError('zipcode') }">
+						<input type="tel" placeholder="Zip code" name="zipcode" v-model="essentialInfo.zipcode"
+						       @focus="inputFocused"
+						       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required>
+						<span v-if="hasError('zipcode')"
+						      class="auth__form__input__message">@{{ errors.zipcode[0] }}</span>
+					</div>
+				</transition>
+				<transition name="fadeInDown">
+					<div class="auth__form__input auth__form__input--mobile auth__form__input--normalized"
+					     v-bind:class="{ 'has-error': hasError('mobile') }">
+						<input type="tel" placeholder="Mobile phone" name="mobile" v-model="essentialInfo.mobile"
+						       @focus="inputFocused"
+						       @blur="inputBlurred" @keyup.enter.prevent="submitForm" required>
+						<span v-if="hasError('mobile')"
+						      class="auth__form__input__message">@{{ errors.mobile[0] }}</span>
+					</div>
+				</transition>
+				<transition name="fadeInDown">
+					<div class="auth__form__input auth__form__input--birthday">
+						<label for="birthday">Date of birth</label>
+						<input type="text" name="birthday" v-model="essentialInfo.dateOfBirth" id="datepicker">
+					</div>
+				</transition>
+				<transition name="fadeInDown">
+					<div class="auth__form__select">
+						<label for="gender">Gender</label>
+						<select name="gender" id="gender" v-model="essentialInfo.gender">
+							<option value="none">None</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+							<option value="trans">Trans</option>
+						</select>
+					</div>
+				</transition>
+				<div class="auth__form__actions padding-v-mid">
+					<div class="auth__form__actions__button auth__form__actions__button--signin waves-button-light"
+					     @click="submitInfo">
+						<i class="login-icon"></i>
+						<span>Submit</span>
+					</div>
+				</div>
+			</form>
 			<form action="{{ route('confirmation') }}" method="POST" loadable class="auth__form auth__form--confirm"
 			      v-if="confirming" resend-message="Confirmation has been re-sent to your email, check your mailbox!">
 				<div class="confirmation-inputs">
@@ -48,7 +96,8 @@
 					</div>
 				</div>
 			</form>
-			<form class="auth__form" v-if="!confirming" loadable method="POST" login-action="{{ route('sign-in') }}"
+			<form class="auth__form" v-if="!confirming && !enteringInfo" loadable method="POST"
+			      login-action="{{ route('sign-in') }}"
 			      register-action="{{ route('sign-up') }}">
 				<transition name="fadeInDown">
 					<div class="auth__form__input auth__form__input--name"
@@ -71,7 +120,7 @@
 					</div>
 				</transition>
 				<transition name="fadeInDown">
-					<div class="auth__form__input auth__form__input--email"
+					<div class="auth__form__input auth__form__input--email auth__form__input--normalized"
 					     v-bind:class="{ 'has-error': hasError('email') }">
 						<input type="email" placeholder="Email address" name="email" v-model="email"
 						       @focus="inputFocused"
@@ -116,7 +165,7 @@
 			</form>
 		</transition>
 		<transition name="fadeInLeft">
-			<div class="auth__social" v-if="!confirming">
+			<div class="auth__social" v-if="!confirming && !enteringInfo">
 				<div class="auth__social__button auth__social__button--google waves-button-light">
 					<i class="google"></i>
 					<span>Login via Google</span>

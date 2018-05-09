@@ -18,6 +18,15 @@ const app = new Vue({
             errors: [],
             registering: false,
             confirming: false,
+            enteringInfo: false,
+            essentialInfo: {
+                sport: '',
+                mobile: '',
+                zipcode: '',
+                gender: '',
+                dateOfBirth: '1999-01-01'
+            },
+            datepicker: null,
             confirmCodes: [
                 null, null, null, null, null, null
             ],
@@ -59,6 +68,30 @@ const app = new Vue({
         }
     },
     methods: {
+        autofillZipcode() {
+            let field = document.getElementById('datepicker')
+            let picker = new Pikaday({
+                field: field,
+                // format: 'YYYY-MM-DD'
+                onSelect(date) {
+                    field.value = picker.toString('DD-MM-YYYY')
+                }
+            });
+            this.datepicker = picker
+
+            const input = document.querySelector('input[name="zipcode"]')
+            postalCodeLookup(input)
+        },
+        submitInfo() {
+
+        },
+        completeAndRedirect() {
+            setTimeout(() => {
+                if (this.redirectTo != null) {
+                    window.location.href = this.redirectTo
+                }
+            }, 100)
+        },
         submitForm() {
             const form = this.$form
 
@@ -221,11 +254,14 @@ const app = new Vue({
                     code: this.confirmationCode
                 }
             }).then(response => {
-                setTimeout(() => {
-                    if (this.redirectTo != null) {
-                        window.location.href = this.redirectTo
-                    }
-                }, 100)
+                if (response && response.data.status == "success") {
+                    this.confirming = false
+                    this.enteringInfo = true
+
+                    setTimeout(() => this.autofillZipcode(), 300)
+                } else {
+                    showServerError()
+                }
             }).catch(error => {
                 const response = error.response
 
