@@ -26,7 +26,6 @@ const app = new Vue({
                 gender: '',
                 dateOfBirth: '1999-01-01'
             },
-            datepicker: null,
             confirmCodes: [
                 null, null, null, null, null, null
             ],
@@ -68,17 +67,10 @@ const app = new Vue({
         }
     },
     methods: {
+        initEssentialInfo(){
+            createBirthdayInput('birthday')
+        },
         autofillZipcode() {
-            let field = document.getElementById('datepicker')
-            let picker = new Pikaday({
-                field: field,
-                // format: 'YYYY-MM-DD'
-                onSelect(date) {
-                    field.value = picker.toString('DD-MM-YYYY')
-                }
-            });
-            this.datepicker = picker
-
             const input = document.querySelector('input[name="zipcode"]')
             postalCodeLookup(input)
         },
@@ -258,6 +250,7 @@ const app = new Vue({
                     this.confirming = false
                     this.enteringInfo = true
 
+                    this.initEssentialInfo()
                     setTimeout(() => this.autofillZipcode(), 300)
                 } else {
                     showServerError()

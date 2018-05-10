@@ -5,7 +5,7 @@
 @endphp
 
 @push('head')
-	<script>
+	<script xmlns:v-bind="http://www.w3.org/1999/xhtml">
         var registering = {{ $registering ? 'true' : 'false' }};
 	</script>
 @endpush
@@ -46,15 +46,21 @@
 					</div>
 				</transition>
 				<transition name="fadeInDown">
-					<div class="auth__form__input auth__form__input--birthday">
+					<div class="auth__form__input auth__form__input--large">
+						<label for="sport">Sport</label>
+						<input type="text" name="sport" v-model="essentialInfo.sport" id="sport" placeholder="Enter sport name... (e.g. Soccer)">
+					</div>
+				</transition>
+				<transition name="fadeInDown">
+					<div class="auth__form__input auth__form__input--large">
 						<label for="birthday">Date of birth</label>
-						<input type="text" name="birthday" v-model="essentialInfo.dateOfBirth" id="datepicker">
+						<input type="text" name="birthday" v-model="essentialInfo.dateOfBirth" id="birthday">
 					</div>
 				</transition>
 				<transition name="fadeInDown">
 					<div class="auth__form__select">
 						<label for="gender">Gender</label>
-						<select name="gender" id="gender" v-model="essentialInfo.gender">
+						<select name="gender" id="gender" v-model="essentialInfo.gender" class="long">
 							<option value="none">None</option>
 							<option value="male">Male</option>
 							<option value="female">Female</option>

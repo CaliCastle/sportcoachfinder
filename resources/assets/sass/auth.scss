@@ -288,6 +288,24 @@ body {
 				}
 			}
 
+			@include as('large') {
+				background: transparent;
+				box-shadow: none;
+				padding: 0 1rem;
+
+				label {
+					font-weight: bold;
+				}
+
+				> input {
+					background: #f4f4f4;
+					width: calc(100% - 2rem - 0.8rem);
+					margin: .8rem 0.4rem;
+					border-radius: 2rem;
+					padding: 0 0.5rem 0 1.5rem;
+				}
+			}
+
 			&.focused {
 				background: #ececec;
 
@@ -313,6 +331,42 @@ body {
 				top: calc(100% + 0.5rem);
 				color: $form-error-red;
 				animation: fadeInDown .4s both;
+			}
+		}
+
+		@include has('select') {
+			display: flex;
+			justify-content: flex-start;
+			align-content: center;
+			width: 100%;
+			padding: .5rem 0;
+			color: #696969;
+
+			label {
+				font-weight: bold;
+				padding: 0 1rem 0 0;
+				vertical-align: middle;
+				line-height: 2;
+			}
+
+			select {
+				-webkit-appearance: button;
+				-moz-appearance: button;
+				appearance: button;
+				border: none;
+				background: #f2f2f2 url("/assets/images/down-arrow.png") 93% / 14% no-repeat;
+				padding: .5rem .4rem;
+				border-radius: 6px;
+				font-size: 0.9rem;
+				font-weight: bold;
+				color: #333;
+				width: 100px;
+				outline: none;
+
+				&.long {
+					width: 160px;
+					background: #f2f2f2 url("/assets/images/down-arrow.png") 96% / 9% no-repeat;
+				}
 			}
 		}
 

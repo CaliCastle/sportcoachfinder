@@ -1,5 +1,5 @@
-import flatpickr from "flatpickr";
-
+import flatpickr from "flatpickr"
+require("flatpickr/dist/themes/light.css");
 window.flatpickr = flatpickr
 
 const GoogleApiUrl = "https://maps.googleapis.com/maps/api/js?key="
@@ -32,16 +32,6 @@ function showSuccessToast(title, message, timeout = 5500, position = 'topLeft') 
 
 function showServerError() {
     showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!')
-}
-
-function highlight(text) {
-    var inputText = document.getElementById("inputText");
-    var innerHTML = inputText.innerHTML;
-    var index = innerHTML.indexOf(text);
-    if (index >= 0) {
-        innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index + text.length) + "</span>" + innerHTML.substring(index + text.length);
-        inputText.innerHTML = innerHTML;
-    }
 }
 
 function postalCodeLookup(input) {
@@ -77,9 +67,18 @@ function postalCodeLookup(input) {
     }
 }
 
+function createBirthdayInput(id) {
+    let field = document.getElementById(id)
+    let picker = flatpickr(field, {
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
+        maxDate: new Date().fp_incr(-10)
+    })
+}
+
 window.showErrorToast = showErrorToast
 window.showServerError = showServerError
 window.showSuccessToast = showSuccessToast
-window.highlightText = highlight
-
 window.postalCodeLookup = postalCodeLookup
+window.createBirthdayInput = createBirthdayInput
