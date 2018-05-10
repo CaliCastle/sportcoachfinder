@@ -36,7 +36,7 @@ class SettingsController extends Controller
     public function updateSmtp(Request $request)
     {
         $this->validate($request, [
-            'adminEmailHost'     => 'required|string|url',
+            'adminEmailHost'     => 'required|string',
             'adminEmailPort'     => 'required|numeric',
             'adminEmailUsername' => 'required|string',
             'adminEmailPassword' => 'required'
@@ -55,10 +55,9 @@ class SettingsController extends Controller
      */
     private function updateSettings(Request $request, $redirect = false): array
     {
-        $requests = $request->all();
-
-        foreach ($requests as $key => $value) {
-            Site::$key($value);
+        foreach ($request->all() as $key => $setting) {
+            $key = strtoupper(str_replace('adminEmail', '', $key));
+            env_put('MAIL_' . $key, $setting);
         }
 
         $return = [

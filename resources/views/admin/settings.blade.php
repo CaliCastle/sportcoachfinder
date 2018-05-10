@@ -160,10 +160,10 @@
         var smtp = new Vue({
             el: '#smtp',
             data: {
-                host: '{{ site('admin_email_host') }}',
-                port: '{{ site('admin_email_port') }}',
-                username: '{{ site('admin_email_username') }}',
-                password: '{{ site('admin_email_password') }}',
+                host: '{{ config('mail.host') }}',
+                port: '{{ config('mail.port') }}',
+                username: '{{ config('mail.username') }}',
+                password: '{{ config('mail.password') }}',
                 errors: {}
             },
             computed: {
