@@ -55,10 +55,9 @@ class SettingsController extends Controller
      */
     private function updateSettings(Request $request, $redirect = false): array
     {
-        $requests = $request->all();
-
-        foreach ($requests as $key => $value) {
-            Site::$key($value);
+        foreach ($request->all() as $key => $setting) {
+            $key = strtoupper(str_replace('adminEmail', ''));
+            env_put('MAIL_' . $key, $setting);
         }
 
         $return = [
