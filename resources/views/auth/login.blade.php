@@ -48,7 +48,7 @@
 				<transition name="fadeInDown">
 					<div class="auth__form__input auth__form__input--large">
 						<label for="sport">Sport</label>
-						<input type="text" name="sport" v-model="essentialInfo.sport" id="sport" placeholder="Enter sport name... (e.g. Soccer)">
+						<input data-url="{{ route('get-sports') }}" type="text" name="sport" v-model="essentialInfo.sport" id="sport" placeholder="Enter sport name... (e.g. Soccer)">
 					</div>
 				</transition>
 				<transition name="fadeInDown">

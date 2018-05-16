@@ -67,8 +67,22 @@ const app = new Vue({
         }
     },
     methods: {
-        initEssentialInfo(){
+        initEssentialInfo() {
             createBirthdayInput('birthday')
+
+            const input = document.querySelector('input#sport')
+            axios.get(input.getAttribute('data-url')).then(response => {
+                let data = response.data.sports
+                if (data) {
+                    createAutocompleteDropdown(input, data, selection => {
+                        this.essentialInfo.sport = selection
+                    })
+                }
+
+                return
+            }).catch(error => {
+                showErrorToast('Server Error', 'If this keeps happening, feel free to contact us!')
+            })
         },
         autofillZipcode() {
             const input = document.querySelector('input[name="zipcode"]')

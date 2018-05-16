@@ -1,6 +1,6 @@
 <?php
 
-namespace SCF;
+namespace SCF\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -32,7 +32,7 @@ class Sport extends Model
      *
      * @return array
      */
-    protected static function defaultData()
+    public static function defaultData()
     {
         return [
             'Badminton', 'Baseball', 'Basketball', 'Bowling',

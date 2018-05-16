@@ -3,6 +3,7 @@
 namespace SCF\Http\Controllers;
 
 use Illuminate\Http\Request;
+use SCF\Sport;
 
 class HomeController extends Controller
 {

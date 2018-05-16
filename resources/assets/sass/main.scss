@@ -136,6 +136,35 @@ button {
 	font-family: inherit !important;
 }
 
+.autocomplete-items {
+	position: absolute;
+	width: 86%;
+	left: 7%;
+	top: 88%;
+	max-height: 240px;
+	z-index: 99;
+	background: #fff;
+	box-shadow: 0 9px 32px rgba(0,0,0, 0.15);
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	& > div {
+		cursor: pointer;
+		padding: .8rem;
+		will-change: background, color;
+		transition: background-color .22s ease-in-out, color .22s ease-in-out;
+		font-size: 1rem;
+		font-weight: 600;
+
+		&:hover, &.autocomplete-active {
+			background: $theme-primary;
+			color: #fff;
+		}
+	}
+}
+
 /**
  Pace loader styles.
 */
