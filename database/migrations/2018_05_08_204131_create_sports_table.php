@@ -19,7 +19,7 @@ class CreateSportsTable extends Migration
             $table->timestamps();
         });
 
-        \SCF\Sport::generateDefaults();
+        \SCF\Models\Sport::generateDefaults();
     }
 
     /**
